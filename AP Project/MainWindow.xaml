@@ -3,10 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AP_Project"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+    <Grid Margin="10,10,0,0">
+        <Label Name="UsernameLbl" Content="Username: " Margin="0,0,668,397"/>
+        <xctk:WatermarkTextBox Name="UsernameTxtBx" Watermark="Enter your Username" Margin="122,0,523,397"/>
     </Grid>
 </Window>
