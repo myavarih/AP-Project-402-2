@@ -6,8 +6,9 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="10,10,0,0">
+    <Canvas Margin="0,0,0,167">
         <Label Name="UsernameLbl" Content="Username: " Margin="0,0,668,397"/>
-        <xctk:WatermarkTextBox Name="UsernameTxtBx" Watermark="Enter your Username" Margin="122,0,523,397"/>
-    </Grid>
+        <xctk:WatermarkTextBox x:Name="UsernameTxtBx" Watermark="Enter your Username"  Height="25" RenderTransformOrigin="0.5,0.5" Width="159" Canvas.Left="121" Canvas.Top="1"/>
+        <TextBox Canvas.Left="305" TextWrapping="Wrap" Text="TextBox" Canvas.Top="5" Width="120"/>
+    </Canvas>
 </Window>

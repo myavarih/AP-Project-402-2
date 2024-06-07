@@ -20,7 +20,7 @@ namespace AP_Project
         public MainWindow()
         {
             InitializeComponent();
-
         }
+
     }
 }
