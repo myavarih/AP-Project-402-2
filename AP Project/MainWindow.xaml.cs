@@ -19,9 +19,27 @@ namespace AP_Project
     {
         private void UserSignUpBtnClick(object sender, RoutedEventArgs e)
         {
-           SignUp signUp = new SignUp();
+            SignUp signUp = new SignUp();
             signUp.Show();
             this.Close();
+        }
+
+        private void LogInButton_Click(object sender, RoutedEventArgs e)
+        {
+            dynamic bUser = null;
+            try
+            {
+                bUser = Validation.PasswordMatch(UsernameTxtBx.Text, PasswordTxtBx.Text);
+            }
+            catch(Exception ex) { MessageBox.Show(ex.Message); }
+            bUser = bUser as User;
+            if (bUser == null)
+            {
+                bUser = bUser as Restaurant;
+                if (bUser == null)
+                    bUser = bUser as Admin;
+            }
+            MessageBox.Show(bUser.Username + " - " + bUser.FirstName);
         }
     }
 }
