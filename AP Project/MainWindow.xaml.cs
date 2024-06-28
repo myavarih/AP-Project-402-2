@@ -15,8 +15,13 @@ namespace AP_Project
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    
     public partial class MainWindow : Window
     {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
         private void UserSignUpBtnClick(object sender, RoutedEventArgs e)
         {
             SignUp signUp = new SignUp();
@@ -26,12 +31,13 @@ namespace AP_Project
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
+            Data.Users.Add(new User("aaa", "aaa", "aaa", "a", "b", 123));
             dynamic bUser = null;
             try
             {
                 bUser = Validation.PasswordMatch(UsernameTxtBx.Text, PasswordTxtBx.Text);
             }
-            catch(Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { MessageBox.Show(ex.Message); return; }
             bUser = bUser as User;
             if (bUser == null)
             {
