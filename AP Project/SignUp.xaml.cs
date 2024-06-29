@@ -27,20 +27,32 @@ namespace AP_Project
 
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
         {
-            string Email = EmailTxtBx.Text;
-            string FirstName = FirstNameTxtBx.Text;
-            string LastName = LastNameTxtBx.Text;
-            string PhoneNumber = PhoneNumberTxtBx.Text;
-            string Username = UsernameTxtBx.Text;
+            
+            Data.CUEmail = EmailTxtBx.Text;
+            Data.CUFirstName = FirstNameTxtBx.Text;
+            Data.CULastName = LastNameTxtBx.Text;
+            Data.CUPhoneNumber = PhoneNumberTxtBx.Text;
+            Data.CUUsername = UsernameTxtBx.Text;
+            Validation.verificationCode = new Random().Next(1000, 9999);
             try
+            {
+                Validation.UserSignUpFieldsCheck(Data.CUFirstName, Data.CULastName, Data.CUPhoneNumber, Data.CUUsername, Data.CUEmail);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message); 
+                return;
+            }
+
+            try // send Email
             {
                 MailMessage mail = new MailMessage();
 
 
                 mail.From = new MailAddress("myavarih@gmail.com");
-                mail.To.Add("myavarih@gmail.com");
-                mail.Subject = "Vertification Code";
-                mail.Body = "Your Vertification Code 618779";
+                mail.To.Add(Data.CUEmail);
+                mail.Subject = "Verification Code";
+                mail.Body = "Your Verification Code " + Validation.verificationCode;
 
 
                 SmtpClient smtp = new SmtpClient();
@@ -55,8 +67,10 @@ namespace AP_Project
             }
             catch
             {
-                Console.WriteLine("didn't work");
+                MessageBox.Show("Failed To Send Email!");
+                return;
             }
+
             PasswordWindow passwordWindow = new PasswordWindow();
             passwordWindow.Show();
             this.Close();

@@ -3,34 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,15 +11,44 @@
       "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:signup.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\DL\\Telegram Desktop\\Program (3).cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\passwordwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:passwordwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\passwordwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:passwordwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:signup.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\baseuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:baseuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\passwordwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:passwordwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -57,57 +58,87 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Program (3).cs",
-              "DocumentMoniker": "D:\\DL\\Telegram Desktop\\Program (3).cs",
-              "ToolTip": "D:\\DL\\Telegram Desktop\\Program (3).cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAJAAAA",
+              "DocumentIndex": 2,
+              "Title": "PasswordWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\PasswordWindow.xaml.cs",
+              "RelativeDocumentMoniker": "PasswordWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\PasswordWindow.xaml.cs",
+              "RelativeToolTip": "PasswordWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAvwBIAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T07:52:27.572Z"
+              "WhenOpened": "2024-06-29T13:32:28.789Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
+              "Title": "Data.cs",
+              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Data.cs",
+              "RelativeDocumentMoniker": "Data.cs",
+              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Data.cs",
+              "RelativeToolTip": "Data.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T04:21:26.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\User.cs",
+              "RelativeDocumentMoniker": "User.cs",
+              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\User.cs",
+              "RelativeToolTip": "User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-26T04:21:58.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PasswordWindow.xaml",
               "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\PasswordWindow.xaml",
               "RelativeDocumentMoniker": "PasswordWindow.xaml",
               "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\PasswordWindow.xaml",
               "RelativeToolTip": "PasswordWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-26T07:25:31.706Z"
+              "WhenOpened": "2024-06-26T07:25:31.706Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "BaseUser.cs",
               "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\BaseUser.cs",
               "RelativeDocumentMoniker": "BaseUser.cs",
               "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\BaseUser.cs",
               "RelativeToolTip": "BaseUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAXAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-26T04:46:00.235Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Validation.cs",
               "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Validation.cs",
               "RelativeDocumentMoniker": "Validation.cs",
               "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Validation.cs",
               "RelativeToolTip": "Validation.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAA7wDsAAAAFAAAA",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAwFsAAAAGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-26T04:28:43.277Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "SignUp.xaml",
               "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\SignUp.xaml",
               "RelativeDocumentMoniker": "SignUp.xaml",
@@ -119,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "Admin.cs",
               "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Admin.cs",
               "RelativeDocumentMoniker": "Admin.cs",
@@ -127,12 +158,11 @@
               "RelativeToolTip": "Admin.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T04:24:36.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T04:24:36.213Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "Restaurant.cs",
               "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Restaurant.cs",
               "RelativeDocumentMoniker": "Restaurant.cs",
@@ -140,71 +170,43 @@
               "RelativeToolTip": "Restaurant.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T04:23:14.973Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-26T04:23:14.973Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\User.cs",
-              "RelativeDocumentMoniker": "User.cs",
-              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\User.cs",
-              "RelativeToolTip": "User.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T04:21:58.178Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Data.cs",
-              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Data.cs",
-              "RelativeDocumentMoniker": "Data.cs",
-              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Data.cs",
-              "RelativeToolTip": "Data.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-26T04:21:26.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "SignUp.xaml.cs",
               "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\SignUp.xaml.cs",
               "RelativeDocumentMoniker": "SignUp.xaml.cs",
               "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\SignUp.xaml.cs",
               "RelativeToolTip": "SignUp.xaml.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAuwCEAAAAxAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAnwDoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T12:04:26.962Z"
+              "WhenOpened": "2024-06-25T12:04:26.962Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAfAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAvwCIAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-25T11:26:55.99Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-25T11:26:55.99Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-02T13:42:17.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-02T13:42:17.662Z"
             }
           ]
         }

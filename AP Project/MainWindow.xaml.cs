@@ -31,7 +31,8 @@ namespace AP_Project
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
-            Data.Users.Add(new User("aaa", "aaa", "aaa", "a", "b", 123));
+            new Data();
+            Data.Users.Add(new User("aaa", "aaaaAAAA12", "myavarih@gmail.com", "Moh", "Yav", "09036090960"));
             dynamic bUser = null;
             try
             {

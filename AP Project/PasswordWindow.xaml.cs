@@ -23,5 +23,20 @@ namespace AP_Project
         {
             InitializeComponent();
         }
+
+        private void CreateAccount_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                Validation.PasswordWindowCheck(VerificationCodeTxtBx.Text, PasswordTxtBx.Text, ConfirmPasswordTxtBx.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            Data.CUPassword = PasswordTxtBx.Text;
+            Data.Users.Add(new(Data.CUUsername, Data.CUPassword, Data.CUEmail, Data.CUFirstName, Data.CULastName, Data.CUPhoneNumber));
+        }
     }
 }
