@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\App.xaml
-11407045341
+3304985388
 
-61627363358
+14515549761
 203-878165655
-MainWindow.xaml;
+MainWindow.xaml;PasswordWindow.xaml;SignUp.xaml;
 
-True
+False
 

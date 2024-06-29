@@ -5,9 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="10,10,0,0">
-        <Label Name="UsernameLbl" Content="Username: " Margin="0,0,668,397"/>
-        <xctk:WatermarkTextBox Name="UsernameTxtBx" Watermark="Enter your Username" Margin="122,0,523,397"/>
-    </Grid>
+        Title="Log In"
+        ResizeMode="NoResize"
+        MinWidth="300" MaxWidth="300"
+        MinHeight="250" MaxHeight="250">
+
+    <Canvas Margin="0,0,0,167">
+        <Label Name="UsernameLbl" Content="Username: " Canvas.Top="12" HorizontalAlignment="Left" Canvas.Left="10" VerticalAlignment="Center"/>
+        <xctk:WatermarkTextBox x:Name="UsernameTxtBx" Watermark="Enter your Username"  Height="25" RenderTransformOrigin="0.5,0.5" Width="159" Canvas.Left="96" Canvas.Top="13" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Label Name="UsenameLbl" Content="Password:" Canvas.Top="64" HorizontalAlignment="Center" Canvas.Left="10" VerticalAlignment="Top"/>
+        <xctk:WatermarkTextBox x:Name="PasswordTxtBx" Watermark="Enter your Password"  Height="25" RenderTransformOrigin="0.5,0.5" Width="159" Canvas.Left="96" Canvas.Top="64" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <Button Content="Log In" Canvas.Left="78" Canvas.Top="118" Height="31" Width="132" HorizontalAlignment="Left" VerticalAlignment="Center" Click="LogInButton_Click" />
+        <Button Content="User Sign Up"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Cursor="Hand"
+                Padding="0"
+                BorderThickness="0"
+                Background="Transparent" Canvas.Left="110" Canvas.Top="171" Click="UserSignUpBtnClick"
+                >
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <TextBlock Text="{TemplateBinding Content}"
+                               Foreground="Gray"
+                               TextDecorations="None">
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="TextDecorations" Value="Underline"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Canvas>
 </Window>
