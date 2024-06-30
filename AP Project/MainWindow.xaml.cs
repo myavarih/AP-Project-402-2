@@ -1,4 +1,5 @@
-﻿using System.Reflection.Emit;
+﻿using SQLitePCL;
+using System.Reflection.Emit;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -9,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity;
 
 namespace AP_Project
 {
@@ -18,9 +20,17 @@ namespace AP_Project
     
     public partial class MainWindow : Window
     {
+        private DataContext _context;
         public MainWindow()
         {
             InitializeComponent();
+            _context = new DataContext();
+            LoadData();
+        }
+        private void LoadData()
+        {
+            var users = _context.Users.ToList();
+            Data.Users = users;
         }
         private void UserSignUpBtnClick(object sender, RoutedEventArgs e)
         {

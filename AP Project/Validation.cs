@@ -62,7 +62,7 @@ namespace AP_Project
                 throw new Exception("Email Format Error");
 
             if (Data.Users.Exists(u => u.Username == username))
-                throw new Exception("Username ALready Used!");
+                throw new Exception("Username Already Used!");
             if (Data.Users.Exists(u => u.PhoneNumber == phoneNumber))
                 throw new Exception("Phone Number Already Used!");
         }
