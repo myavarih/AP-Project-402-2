@@ -18,7 +18,7 @@ namespace AP_Project
     /// <summary>
     /// Interaction logic for SignUp.xaml
     /// </summary>
-    public partial class SignUp : Window
+    public partial class SignUp : Page
     {
         public SignUp()
         {
@@ -28,15 +28,15 @@ namespace AP_Project
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
         {
             
-            Data.CUEmail = EmailTxtBx.Text;
-            Data.CUFirstName = FirstNameTxtBx.Text;
-            Data.CULastName = LastNameTxtBx.Text;
-            Data.CUPhoneNumber = PhoneNumberTxtBx.Text;
-            Data.CUUsername = UsernameTxtBx.Text;
+            Data.CurrentUser.Email = EmailTxtBx.Text;
+            Data.CurrentUser.FirstName = FirstNameTxtBx.Text;
+            Data.CurrentUser.LastName = LastNameTxtBx.Text;
+            Data.CurrentUser.PhoneNumber = PhoneNumberTxtBx.Text;
+            Data.CurrentUser.Username = UsernameTxtBx.Text;
             Validation.verificationCode = new Random().Next(1000, 9999);
             try
             {
-                Validation.UserSignUpFieldsCheck(Data.CUFirstName, Data.CULastName, Data.CUPhoneNumber, Data.CUUsername, Data.CUEmail);
+                Validation.UserSignUpFieldsCheck(Data.CurrentUser.FirstName, Data.CurrentUser.LastName, Data.CurrentUser.PhoneNumber, Data.CurrentUser.Username, Data.CurrentUser.Email);
             }
             catch (Exception ex)
             {
@@ -50,7 +50,7 @@ namespace AP_Project
 
 
                 mail.From = new MailAddress("myavarih@gmail.com");
-                mail.To.Add(Data.CUEmail);
+                mail.To.Add(Data.CurrentUser.Email);
                 mail.Subject = "Verification Code";
                 mail.Body = "Your Verification Code " + Validation.verificationCode;
 
@@ -73,7 +73,7 @@ namespace AP_Project
 
             PasswordWindow passwordWindow = new PasswordWindow();
             passwordWindow.Show();
-            this.Close();
+            // this.Close();
         }
     }
 }

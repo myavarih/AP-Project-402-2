@@ -117,7 +117,7 @@ namespace AP_Project {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AP Project;component/passwordwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AP Project;V1.0.0.0;component/passwordwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\PasswordWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

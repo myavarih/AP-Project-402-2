@@ -35,8 +35,8 @@ namespace AP_Project
                 MessageBox.Show(ex.Message);
                 return;
             }
-            Data.CUPassword = PasswordTxtBx.Text;
-            Data.Users.Add(new(Data.CUUsername, Data.CUPassword, Data.CUEmail, Data.CUFirstName, Data.CULastName, Data.CUPhoneNumber));
+            Data.CurrentUser.Password = PasswordTxtBx.Text;
+            Data.Database.Users.Add(new(Data.CurrentUser.Username, Data.CurrentUser.Password, Data.CurrentUser.Email, Data.CurrentUser.FirstName, Data.CurrentUser.LastName, Data.CurrentUser.PhoneNumber, Data.CurrentUser.Address, Data.CurrentUser.Gender));
         }
     }
 }

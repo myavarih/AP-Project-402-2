@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AP_Project"
         mc:Ignorable="d"
-        Title="UserWindow" Height="650" Width="1200"
-        ResizeMode="NoResize"s>
+        Title="UserWindow" Height="430" Width="350"
+        ResizeMode="NoResize">
     <Grid>
-        
+        <Frame Name ="MainFrame" NavigationUIVisibility="Hidden" Source="UserPanelPage.xaml"/>
     </Grid>
 </Window>

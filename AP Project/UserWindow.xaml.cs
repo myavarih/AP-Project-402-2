@@ -23,5 +23,25 @@ namespace AP_Project
         {
             InitializeComponent();
         }
+
+        private void Profile_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void SearchRestaurants_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OrderHistory_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Complaints_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -7,10 +7,22 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="ChangePassword.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="PasswordWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="SignUp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserPanelPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserProfilePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserWindow.xaml.cs">
@@ -18,6 +30,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="ChangePassword.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -25,6 +43,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SignUp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserPanelPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserProfilePage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UserWindow.xaml">
