@@ -29,6 +29,16 @@
             <TextBox Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10" />
 
             <Button Content="Save" Click="SaveButton_Click" />
+
+            <!-- Service Selection -->
+            <TextBlock Text="Select Service:" FontWeight="Bold" Margin="0,10,0,0" />
+            <ComboBox x:Name="ServiceComboBox" Margin="0,0,0,10">
+                <ComboBoxItem Content="Bronze Service" />
+                <ComboBoxItem Content="Silver Service" />
+                <ComboBoxItem Content="Gold Service" />
+            </ComboBox>
+
+            <Button Content="Apply Service Update" Click="ApplyServiceUpdateButton_Click" Margin="0,10,0,0"/>
         </StackPanel>
     </Grid>
 </Page>

@@ -16,6 +16,12 @@
     <Compile Update="PasswordWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="RestaurantViewPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SearchResaurants.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="SignUp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +46,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PasswordWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RestaurantViewPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SearchResaurants.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SignUp.xaml">

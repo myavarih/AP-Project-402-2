@@ -38,7 +38,8 @@ namespace AP_Project
 
         private void SearchRestaurants_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new SearchResaurants());
+            // NavigationService.Navigate(new RestaurantViewPage());
         }
 
         private void Profile_Click(object sender, RoutedEventArgs e)

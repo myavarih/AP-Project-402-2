@@ -36,7 +36,7 @@ namespace AP_Project
                 return;
             }
             Data.CurrentUser.Password = PasswordTxtBx.Text;
-            Data.Database.Users.Add(new(Data.CurrentUser.Username, Data.CurrentUser.Password, Data.CurrentUser.Email, Data.CurrentUser.FirstName, Data.CurrentUser.LastName, Data.CurrentUser.PhoneNumber, Data.CurrentUser.Address, Data.CurrentUser.Gender));
+            Data.Users.Add(new(Data.CurrentUser.Username, Data.CurrentUser.Password, Data.CurrentUser.Email, Data.CurrentUser.FirstName, Data.CurrentUser.LastName, Data.CurrentUser.PhoneNumber, Data.CurrentUser.Address, Data.CurrentUser.Gender));
         }
     }
 }

@@ -15,13 +15,13 @@ namespace AP_Project
         public static BaseUser PasswordMatch(string username, string password) // May Return Exceptions 
         {
             BaseUser bUser;
-            bUser = Data.Database.Users.First(u => u.Username == username);
+            bUser = Data.Users.First(u => u.Username == username);
             if (bUser == null)
             {
-                bUser = Data.Database.Restaurants.First(u => u.Username == username);
+                bUser = Data.Restaurants.First(u => u.Username == username);
                 if (bUser == null)
                 {
-                    bUser = Data.Database.Admins.First(u => u.Username == username);
+                    bUser = Data.Admins.First(u => u.Username == username);
                     if (bUser == null)
                         throw new Exception("No User Found With This Username");
                 }
@@ -61,9 +61,9 @@ namespace AP_Project
             if (!EmailRegex.IsMatch(email))
                 throw new Exception("Email Format Error");
 
-            if (Data.Database.Users.Any(u => u.Username == username))
+            if (Data.Users.Any(u => u.Username == username))
                 throw new Exception("Username Already Used!");
-            if (Data.Database.Users.Any(u => u.PhoneNumber == phoneNumber))
+            if (Data.Users.Any(u => u.PhoneNumber == phoneNumber))
                 throw new Exception("Phone Number Already Used!");
         }
         public static string RestaurantPasswordGenerator()

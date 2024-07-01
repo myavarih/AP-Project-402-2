@@ -23,12 +23,12 @@ namespace AP_Project
         private static int GenerateUniqueId()
         {
             // Ensure the Data class is fully initialized
-            if (Data.Database.Users == null || Data.Database.Restaurants == null || Data.Database.Admins == null)
+            if (Data.Users == null || Data.Restaurants == null || Data.Admins == null)
             {
                 throw new InvalidOperationException("Data class is not fully initialized.");
             }
 
-            return Data.Database.Users.Count() + Data.Database.Restaurants.Count() + Data.Database.Admins.Count() + 1;
+            return Data.Users.Count() + Data.Restaurants.Count() + Data.Admins.Count() + 1;
         }
     }
 }

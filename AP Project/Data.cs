@@ -11,15 +11,12 @@ namespace AP_Project
 {
     static class Data
     {
-        public static Database Database { get; set; } = new Database();
-        //public static string CUFirstName { get; set; } = "wow"; // current user ...
-        //public static string CULastName { get; set; } = "mow";
-        //public static string CUEmail { get; set; } = "myavarihes@gmail.com";
-        //public static string CUUsername { get; set; } = "moya";
-        //public static string CUPassword { get; set; } = "mmmmMMMM1";
-        //public static string CUPhoneNumber { get; set; } = "09036091960";
-        //public static string CUAddress { get; set; } = "bla bla";
-        //public static Gender? CUGender { get; set; } = Gender.Male;
+         // public static Database Database { get; set; } = new Database();
+        
+        public static List<User> Users { get; set; } = new List<User>();
+        public static List<Restaurant> Restaurants { get; set; } = new List<Restaurant>();
+        public static List<Admin> Admins { get; set; } = new List<Admin>();
+
 
         public static User CurrentUser { get; set; } = null;
         public static Restaurant CurrentRestaurant { get; set; } = null;
@@ -31,7 +28,7 @@ namespace AP_Project
         }
         public static void UpdateCUFields(string address, string email) // only used when we have a current user
         {
-            User u = Database.Users.First(u => u.Username == CurrentUser.Username);
+            User u = Users.First(u => u.Username == CurrentUser.Username);
             u.Email = email;
             u.Address = address;
         }

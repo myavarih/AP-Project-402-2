@@ -31,5 +31,10 @@ namespace AP_Project
         {
             //Data.UpdateCUFields(user.Address, user.Email);
         }
+
+        private void ApplyServiceUpdateButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
