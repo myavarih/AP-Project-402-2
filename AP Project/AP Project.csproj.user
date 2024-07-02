@@ -7,69 +7,69 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="ChangePassword.xaml.cs">
+    <Compile Update="Front\BaseUserActions Window\ChangePassword.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Login.xaml.cs">
+    <Compile Update="Front\BaseUserActions Window\Login.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="OrderHistoryPage.xaml.cs">
+    <Compile Update="Front\User Window\OrderHistoryPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="PasswordPage.xaml.cs">
+    <Compile Update="Front\BaseUserActions Window\PasswordPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="RestaurantViewPage.xaml.cs">
+    <Compile Update="Front\User Window\RestaurantViewPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="SearchResaurants.xaml.cs">
+    <Compile Update="Front\User Window\SearchResaurants.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="SignUp.xaml.cs">
+    <Compile Update="Front\BaseUserActions Window\SignUp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UserPanelPage.xaml.cs">
+    <Compile Update="Front\User Window\UserPanelPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UserProfilePage.xaml.cs">
+    <Compile Update="Front\User Window\UserProfilePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="UserWindow.xaml.cs">
+    <Compile Update="Front\User Window\UserWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="ChangePassword.xaml">
+    <Page Update="Front\BaseUserActions Window\ChangePassword.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Login.xaml">
+    <Page Update="Front\BaseUserActions Window\Login.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Front\BaseUserActions Window\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="OrderHistoryPage.xaml">
+    <Page Update="Front\User Window\OrderHistoryPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="PasswordPage.xaml">
+    <Page Update="Front\BaseUserActions Window\PasswordPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="RestaurantViewPage.xaml">
+    <Page Update="Front\User Window\RestaurantViewPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="SearchResaurants.xaml">
+    <Page Update="Front\User Window\SearchResaurants.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="SignUp.xaml">
+    <Page Update="Front\BaseUserActions Window\SignUp.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="UserPanelPage.xaml">
+    <Page Update="Front\User Window\UserPanelPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="UserProfilePage.xaml">
+    <Page Update="Front\User Window\UserProfilePage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="UserWindow.xaml">
+    <Page Update="Front\User Window\UserWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

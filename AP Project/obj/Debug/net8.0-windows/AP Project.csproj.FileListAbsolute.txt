@@ -160,3 +160,5 @@ C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\n
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\RestaurantViewPage.baml
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\PasswordPage.baml
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\PasswordPage.g.cs
+C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\OrderHistoryPage.baml
+C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\OrderHistoryPage.g.cs

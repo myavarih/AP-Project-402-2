@@ -24,5 +24,9 @@ namespace AP_Project
         {
             InitializeComponent();
         }
+        public void SubmitButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
