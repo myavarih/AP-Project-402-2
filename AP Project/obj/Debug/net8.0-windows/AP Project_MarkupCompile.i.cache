@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\App.xaml
-10821988679
+11-1779918929
 
-27-722882511
+31-1844146758
 221-659772468
-ChangePassword.xaml;Login.xaml;MainWindow.xaml;PasswordWindow.xaml;RestaurantViewPage.xaml;SearchResaurants.xaml;SignUp.xaml;UserPanelPage.xaml;UserProfilePage.xaml;UserWindow.xaml;
+ChangePassword.xaml;Login.xaml;MainWindow.xaml;OrderHistoryPage.xaml;PasswordPage.xaml;RestaurantViewPage.xaml;SearchResaurants.xaml;SignUp.xaml;UserPanelPage.xaml;UserProfilePage.xaml;UserWindow.xaml;
 
-True
+False
 

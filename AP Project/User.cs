@@ -33,5 +33,6 @@ namespace AP_Project
         public string PhoneNumber { get; set; } 
         public string Address { get; set; } = null; // not essential
         public Gender? Gender { get; set; } = null; // not essential
+        public List<Order> Orders { get; set; } = new List<Order>();
     }
 }

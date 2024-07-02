@@ -85,7 +85,7 @@ namespace AP_Project {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AP Project;component/changepassword.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AP Project;V1.0.0.0;component/changepassword.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ChangePassword.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

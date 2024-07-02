@@ -13,7 +13,10 @@
     <Compile Update="Login.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="PasswordWindow.xaml.cs">
+    <Compile Update="OrderHistoryPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PasswordPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="RestaurantViewPage.xaml.cs">
@@ -45,7 +48,10 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="PasswordWindow.xaml">
+    <Page Update="OrderHistoryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PasswordPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="RestaurantViewPage.xaml">

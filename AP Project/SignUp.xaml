@@ -24,5 +24,7 @@
         <xctk:WatermarkTextBox Name="EmailTxtBx" Watermark="Enter your email" HorizontalAlignment="Left" Height="25" Margin="111,171,0,0" VerticalAlignment="Top" Width="150"/>
 
         <Button Content="Sign Up" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="100,239,0,0" Click="SignUpButton_Click"/>
+
+        <Button Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,320,0,0" Click="BackButton_Click"/>
     </Grid>
 </Page>

@@ -37,8 +37,6 @@ C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\n
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\AP Project.csproj.Up2Date
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\SignUp.baml
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\SignUp.g.cs
-C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\PasswordWindow.baml
-C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\PasswordWindow.g.cs
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\bin\Debug\net8.0-windows\Humanizer.dll
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\bin\Debug\net8.0-windows\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\bin\Debug\net8.0-windows\Microsoft.CodeAnalysis.dll
@@ -160,3 +158,5 @@ C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\n
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\SearchResaurants.baml
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\RestaurantViewPage.g.cs
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\RestaurantViewPage.baml
+C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\PasswordPage.baml
+C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\PasswordPage.g.cs

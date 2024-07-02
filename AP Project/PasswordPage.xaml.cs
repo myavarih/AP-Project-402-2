@@ -17,9 +17,9 @@ namespace AP_Project
     /// <summary>
     /// Interaction logic for PasswordWindow.xaml
     /// </summary>
-    public partial class PasswordWindow : Window
+    public partial class PasswordPage : Page
     {
-        public PasswordWindow()
+        public PasswordPage()
         {
             InitializeComponent();
         }
