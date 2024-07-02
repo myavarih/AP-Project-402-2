@@ -61,7 +61,7 @@ namespace AP_Project {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AP Project;V1.0.0.0;component/userwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AP Project;component/userwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\UserWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -16,6 +16,5 @@ namespace AP_Project
         public double TotalCost {  get; set; } // will be calculated
         public double? Rating {  get; set; }
         public bool IsOnlinePaying {  get; set; }
-        //
     }
 }
