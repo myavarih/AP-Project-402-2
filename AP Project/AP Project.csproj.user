@@ -7,21 +7,69 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="PasswordWindow.xaml.cs">
+    <Compile Update="ChangePassword.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Login.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="OrderHistoryPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PasswordPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="RestaurantViewPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SearchResaurants.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="SignUp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserPanelPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserProfilePage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UserWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="ChangePassword.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Login.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="PasswordWindow.xaml">
+    <Page Update="OrderHistoryPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="PasswordPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="RestaurantViewPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SearchResaurants.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="SignUp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserPanelPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserProfilePage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UserWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

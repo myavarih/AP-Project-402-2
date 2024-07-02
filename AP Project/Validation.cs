@@ -61,9 +61,9 @@ namespace AP_Project
             if (!EmailRegex.IsMatch(email))
                 throw new Exception("Email Format Error");
 
-            if (Data.Users.Exists(u => u.Username == username))
-                throw new Exception("Username ALready Used!");
-            if (Data.Users.Exists(u => u.PhoneNumber == phoneNumber))
+            if (Data.Users.Any(u => u.Username == username))
+                throw new Exception("Username Already Used!");
+            if (Data.Users.Any(u => u.PhoneNumber == phoneNumber))
                 throw new Exception("Phone Number Already Used!");
         }
         public static string RestaurantPasswordGenerator()
@@ -88,6 +88,7 @@ namespace AP_Project
                 throw new Exception("Wrong Verification!");
             if (Repeat != Password)
                 throw new Exception("Passwords Don't Match");
+            
         }
     } 
 }

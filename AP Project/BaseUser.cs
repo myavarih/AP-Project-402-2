@@ -1,26 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AP_Project
 {
-    abstract class BaseUser(string username, string password)
+    abstract class BaseUser
     {
-        public int Id { get; set; } = GenerateUniqueId(); // Auto Generated & unique
-        public string Username { get; set; } = username;
-        public string Password { get; set; } = password;
 
-        private static int GenerateUniqueId()
+        // public int Id { get; set; } = GenerateUniqueId(); // Auto Generated & unique
+        [Key]
+        public string Username { get; set; } // unique!!!
+        public string Password { get; set; }
+
+        public BaseUser(string username, string password)
         {
-            // Ensure the Data class is fully initialized
-            if (Data.Users == null || Data.Restaurants == null || Data.Admins == null)
-            {
-                throw new InvalidOperationException("Data class is not fully initialized.");
-            }
-
-            return Data.Users.Count + Data.Restaurants.Count + Data.Admins.Count + 1;
+            Username = username;
+            Password = password;
         }
+
+        //private static int GenerateUniqueId()
+        //{
+        //    // Ensure the Data class is fully initialized
+        //    if (Data.Users == null || Data.Restaurants == null || Data.Admins == null)
+        //    {
+        //        throw new InvalidOperationException("Data class is not fully initialized.");
+        //    }
+
+        //    return Data.Users.Count() + Data.Restaurants.Count() + Data.Admins.Count() + 1;
+        //}
     }
 }
