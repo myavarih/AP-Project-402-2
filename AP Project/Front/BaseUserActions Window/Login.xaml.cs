@@ -33,33 +33,31 @@ namespace AP_Project
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
         {
-            //Data.Database.Users.Add(new("aaa", "aaaaAAAA1", "myavarih@gmail.com", "Moh", "Yav", "09036090960"));
-            //Data.Database.SaveChanges();
-            //dynamic bUser = null;
-            //try
-            //{
-            //    bUser = Validation.PasswordMatch(UsernameTxtBx.Text, PasswordTxtBx.Text);
-            //}
-            //catch (Exception ex) { MessageBox.Show(ex.Message); return; }
-            //if ((bUser = bUser as User) != null)
-            //{
-            //    Data.SetCurrentUser(bUser);
-            //    var userWindow = new UserWindow();
-            //    userWindow.Show();
-            //    Application.Current.Windows[0].Close();
-            //}
-            //else if ((bUser = bUser as Restaurant) != null)
-            //{
-            //    // to be continued!
-            //}
-            //else if ((bUser = bUser as Admin) != null)
-            //{
-            //    // to be continued!
-            //}
-
-            var userWindow = new UserWindow();
-            userWindow.Show();
-            Application.Current.Windows[0].Close();
+            BaseUser buser = null;
+            try
+            {
+                buser = Validation.PasswordMatch(UsernameTxtBx.Text, PasswordTxtBx.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            if (buser is User)
+            {
+                Data.SetCurrentUser((User)buser);
+                var userWindow = new UserWindow();
+                userWindow.Show();
+                Application.Current.Windows[0].Close();
+            }
+            else if (buser is Restaurant)
+            {
+                // todo
+            }
+            else if (buser is Admin)
+            {
+                // todo
+            }
         }
 
         private void ChangePasswordBtnClick(object sender, RoutedEventArgs e)
