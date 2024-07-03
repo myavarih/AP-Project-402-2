@@ -12,6 +12,12 @@ namespace AP_Project
     static class Validation
     {
         public static int verificationCode;
+        static Regex NamesRegex = new Regex(@"^[A-Za-z]{3,32}$");
+        static Regex PhoneNumberRegex = new Regex(@"^09\d{9}$");
+        static Regex EmailRegex = new Regex(@"^[A-Za-z]{3,32}@[A-Za-z]{3,32}\.[A-Za-z]{2,3}$");
+        static Regex UsernameRegex = new Regex(@"^(?=.*[A-Za-z]{3,})[A-Za-z0-9]+$");
+        static Regex PasswordRegex = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,32}$");
+
         public static BaseUser PasswordMatch(string username, string password) // May Return Exceptions 
         {
             BaseUser bUser = Data.GetBaseUserByUsername(username);
@@ -32,31 +38,22 @@ namespace AP_Project
                     throw new Exception("field " + (i + 1) + " is Empty");
             }
         }
-        public static void UserSignUpFieldsCheck(string firstName, string lastName, string phoneNumber, string username, string email)
+        public static void UserSignUpFieldsCheck(User user)
         {
-            string NamesPattern = @"^[A-Za-z]{3,32}$";
-            Regex NamesRegex = new Regex(NamesPattern);
-            string PhoneNumberPattern = @"^09\d{9}$";
-            Regex PhoneNumberRegex = new Regex(PhoneNumberPattern);
-            string EmailPattern = @"^[A-Za-z]{3,32}@[A-Za-z]{3,32}\.[A-Za-z]{2,3}$";
-            Regex EmailRegex = new Regex(EmailPattern);
-            string UsernamePattern = @"^(?=.*[A-Za-z]{3,})[A-Za-z0-9]+$";
-            Regex UsernameRegex = new Regex(UsernamePattern);
-
-            if (!NamesRegex.IsMatch(firstName))
+            if (!NamesRegex.IsMatch(user.FirstName))
                 throw new Exception("First Name Format Error!");
-            if (!NamesRegex.IsMatch(lastName))
+            if (!NamesRegex.IsMatch(user.LastName))
                 throw new Exception("Last Name Format Error!");
-            if (!PhoneNumberRegex.IsMatch(phoneNumber))
+            if (!PhoneNumberRegex.IsMatch(user.PhoneNumber))
                 throw new Exception("Phone Number Format Error!");
-            if (!UsernameRegex.IsMatch(username))
+            if (!UsernameRegex.IsMatch(user.Username))
                 throw new Exception("Username Format Error!");
-            if (!EmailRegex.IsMatch(email))
+            if (!EmailRegex.IsMatch(user.Email))
                 throw new Exception("Email Format Error");
 
-            if (Data.Users.Any(u => u.Username == username))
+            if (Data.Users.Any(u => u.Username == user.Username))
                 throw new Exception("Username Already Used!");
-            if (Data.Users.Any(u => u.PhoneNumber == phoneNumber))
+            if (Data.Users.Any(u => u.PhoneNumber == user.PhoneNumber))
                 throw new Exception("Phone Number Already Used!");
         }
         public static string RestaurantPasswordGenerator()
@@ -73,15 +70,33 @@ namespace AP_Project
             int vc;
             if (!int.TryParse(VerificationCode, out vc))
                 throw new Exception("Verification Code Format Error!");
-            string PasswordPattern = @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,32}$";
-            Regex PasswordRegex = new Regex(PasswordPattern);
-            if (!PasswordRegex.IsMatch(Password))
-                throw new Exception("Password Format Error!");
             if (vc != verificationCode)
                 throw new Exception("Wrong Verification!");
+            if (!PasswordRegex.IsMatch(Password))
+                throw new Exception("Password Format Error!");
             if (Repeat != Password)
                 throw new Exception("Passwords Don't Match");
-            
+        }
+
+        public static void PasswordChange(string username, string password, string newPassword, string confirmPassword)
+        {
+            BaseUser bUser = Data.GetBaseUserByUsername(username);
+            if (bUser == null)
+            {
+                throw new Exception("No User Found With This Username!");
+            }
+            if (bUser.Password != password)
+            {
+                throw new Exception("Wrong Password!");
+            }
+            if (!PasswordRegex.IsMatch(password))
+            {
+                throw new Exception("Password Format Error!");
+            }
+            if (newPassword != confirmPassword)
+            {
+                throw new Exception("Passwords Don't Match!");
+            }
         }
     } 
 }

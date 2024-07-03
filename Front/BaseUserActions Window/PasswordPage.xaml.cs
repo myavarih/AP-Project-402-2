@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AP_Project.Front.Admin_Window;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,6 +38,9 @@ namespace AP_Project
             }
             Data.CurrentUser.Password = PasswordTxtBx.Text;
             Data.AddCurrentUser();
+
+            NavigationService.GoBack();
+            NavigationService.GoBack();
         }
     }
 }
