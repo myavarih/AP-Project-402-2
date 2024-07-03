@@ -6,7 +6,11 @@
       xmlns:local="clr-namespace:AP_Project"
       mc:Ignorable="d"
       Title="UserPage">
-    <Grid>
+    <DockPanel>
+        <!-- Log out button at the bottom -->
+        <Button Content="Log out" Width="100" Height="30" Margin="10" DockPanel.Dock="Bottom" HorizontalAlignment="Left" Click="Logout_Click"/>
+
+        <!-- Main content centered at the top -->
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10">
             <TextBlock Name="Title" Text="Welcome" FontSize="17" FontWeight="Bold" Margin="0,10,0,20" HorizontalAlignment="Center"/>
             <Button Content="Profile" Width="200" Height="40" Margin="0,5" Click="Profile_Click"/>
@@ -14,5 +18,5 @@
             <Button Content="Order History" Width="200" Height="40" Margin="0,5" Click="OrderHistory_Click"/>
             <Button Content="Complaints" Width="200" Height="40" Margin="0,5" Click="Complaints_Click"/>
         </StackPanel>
-    </Grid>
+    </DockPanel>
 </Page>

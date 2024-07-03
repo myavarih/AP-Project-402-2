@@ -44,5 +44,13 @@ namespace AP_Project.Front.Restaurant_Window
         {
 
         }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            Data.CurrentRestaurant = null;
+            var mw = new MainWindow();
+            mw.Show();
+            Application.Current.Windows[0].Close();
+        }
     }
 }
