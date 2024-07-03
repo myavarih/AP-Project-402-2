@@ -30,5 +30,9 @@ namespace AP_Project
 
         }
 
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+        }
     }
 }
