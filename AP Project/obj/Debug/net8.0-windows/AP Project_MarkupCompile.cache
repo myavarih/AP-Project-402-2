@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\
+C:\Users\LENOVO\Desktop\AP-Project\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\
 AP_Project
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\App.xaml
-11-1779918929
+C:\Users\LENOVO\Desktop\AP-Project\AP-Project-402-2\AP Project\App.xaml
+11-447566419
 
-29763681209
-221-659772468
-ChangePassword.xaml;Login.xaml;MainWindow.xaml;OrderHistoryPage.xaml;PasswordPage.xaml;RestaurantViewPage.xaml;SearchResaurants.xaml;SignUp.xaml;UserPanelPage.xaml;UserProfilePage.xaml;UserWindow.xaml;
+29804399566
+221-136780979
+Front\BaseUserActions Window\ChangePassword.xaml;Front\BaseUserActions Window\Login.xaml;Front\BaseUserActions Window\MainWindow.xaml;Front\BaseUserActions Window\PasswordPage.xaml;Front\BaseUserActions Window\SignUp.xaml;Front\User Window\OrderHistoryPage.xaml;Front\User Window\RestaurantViewPage.xaml;Front\User Window\SearchResaurants.xaml;Front\User Window\UserPanelPage.xaml;Front\User Window\UserProfilePage.xaml;Front\User Window\UserWindow.xaml;
 
 False
 

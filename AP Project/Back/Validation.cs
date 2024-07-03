@@ -14,17 +14,10 @@ namespace AP_Project
         public static int verificationCode;
         public static BaseUser PasswordMatch(string username, string password) // May Return Exceptions 
         {
-            BaseUser bUser;
-            bUser = Data.Users.First(u => u.Username == username);
+            BaseUser bUser = Data.GetBaseUserByUsername(username);
             if (bUser == null)
             {
-                bUser = Data.Restaurants.First(u => u.Username == username);
-                if (bUser == null)
-                {
-                    bUser = Data.Admins.First(u => u.Username == username);
-                    if (bUser == null)
-                        throw new Exception("No User Found With This Username");
-                }
+                throw new Exception("No User Found With This Username");
             }
             if (bUser.Password != password)
                 throw new Exception("Wrong Password!");
