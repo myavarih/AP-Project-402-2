@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace AP_Project
 {
     enum Gender { Male, Female}
+    enum SpecialServices { Bronze, Silver, Gold}
     class User : BaseUser
     {
         public User(string username, string password, string email, string firstName, string lastName, string phoneNumber) : base(username, password)
@@ -33,6 +34,7 @@ namespace AP_Project
         public string PhoneNumber { get; set; } 
         public string Address { get; set; } = null; // not essential
         public Gender? Gender { get; set; } = null; // not essential
+        public SpecialServices? SpecialServices { get; set; } = null;
         public List<Order> Orders { get; set; } = new List<Order>();
     }
 }

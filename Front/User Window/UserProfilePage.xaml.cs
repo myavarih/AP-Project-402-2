@@ -22,22 +22,28 @@ namespace AP_Project
         public UserProfilePage()
         {
             InitializeComponent();
+            if (Data.CurrentUser.SpecialServices != null)
+                ServiceComboBox.SelectedIndex = (int)Data.CurrentUser.SpecialServices;
             this.DataContext = Data.CurrentUser;
-        }
-
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
-            // validate email
-        }
-
-        private void ApplyServiceUpdateButton_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            // validate Email
+            if (!Validation.EmailRegex.IsMatch(Data.CurrentUser.Email))
+            {
+                MessageBox.Show("Wrong Email Format!");
+                return;
+            }
+            if (ServiceComboBox.SelectedIndex == 3)
+            {
+                Data.CurrentUser.SpecialServices = null;
+            }
+            else
+            {
+                Data.CurrentUser.SpecialServices = (SpecialServices?)ServiceComboBox.SelectedIndex;
+            }
+            NavigationService.GoBack();
+
         }
     }
 }
