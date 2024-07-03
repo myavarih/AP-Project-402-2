@@ -15,5 +15,6 @@ namespace AP_Project
         public string Category { get; set; } = "";
         public double Rating { get; set; }
         public string RestaurantUsername { get; set; } = "";
+        public int Inventory {  get; set; }
     }
 }

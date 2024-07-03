@@ -20,7 +20,6 @@ namespace AP_Project
     
     public partial class MainWindow : Window
     {
-        private Database _context;
         public MainWindow()
         {
             InitializeComponent();
