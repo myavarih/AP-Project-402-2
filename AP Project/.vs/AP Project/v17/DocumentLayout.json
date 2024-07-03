@@ -1,14 +1,46 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\",
+  "WorkspaceRootPath": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\lenovo\\desktop\\ap-project\\ap-project-402-2\\ap project\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\front\\baseuseractions window\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:front\\baseuseractions window\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\lenovo\\desktop\\ap-project\\ap-project-402-2\\ap project\\back\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\back\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:back\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\front\\admin window\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:front\\admin window\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\front\\baseuseractions window\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:front\\baseuseractions window\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\front\\restaurant window\\orderreservehistory.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:front\\restaurant window\\orderreservehistory.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\front\\restaurant window\\restaurantpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:front\\restaurant window\\restaurantpanel.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\front\\restaurant window\\orderreservehistory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:front\\restaurant window\\orderreservehistory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\back\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:back\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\back\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:back\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\myava\\onedrive\\documents\\github\\ap-project-402-2\\ap project\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +50,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\App.xaml",
-              "RelativeDocumentMoniker": "App.xaml",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\App.xaml*",
-              "RelativeToolTip": "App.xaml*",
+              "DocumentIndex": 2,
+              "Title": "AdminWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Front\\Admin Window\\AdminWindow.xaml",
+              "RelativeDocumentMoniker": "Front\\Admin Window\\AdminWindow.xaml",
+              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Front\\Admin Window\\AdminWindow.xaml",
+              "RelativeToolTip": "Front\\Admin Window\\AdminWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-07-03T08:17:37.771Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T08:56:24.269Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Data.cs",
+              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Back\\Data.cs",
+              "RelativeDocumentMoniker": "Back\\Data.cs",
+              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Back\\Data.cs",
+              "RelativeToolTip": "Back\\Data.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T08:53:23.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Front\\BaseUserActions Window\\Login.xaml.cs",
+              "RelativeDocumentMoniker": "Front\\BaseUserActions Window\\Login.xaml.cs",
+              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Front\\BaseUserActions Window\\Login.xaml.cs",
+              "RelativeToolTip": "Front\\BaseUserActions Window\\Login.xaml.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAvwDAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T08:51:31.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RestaurantPanel.xaml",
+              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Front\\Restaurant Window\\RestaurantPanel.xaml",
+              "RelativeDocumentMoniker": "Front\\Restaurant Window\\RestaurantPanel.xaml",
+              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Front\\Restaurant Window\\RestaurantPanel.xaml",
+              "RelativeToolTip": "Front\\Restaurant Window\\RestaurantPanel.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-03T08:36:08.321Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrderReserveHistory.xaml",
+              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Front\\Restaurant Window\\OrderReserveHistory.xaml",
+              "RelativeDocumentMoniker": "Front\\Restaurant Window\\OrderReserveHistory.xaml",
+              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Front\\Restaurant Window\\OrderReserveHistory.xaml",
+              "RelativeToolTip": "Front\\Restaurant Window\\OrderReserveHistory.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-03T08:35:29.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderReserveHistory.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Front\\Restaurant Window\\OrderReserveHistory.xaml.cs",
+              "RelativeDocumentMoniker": "Front\\Restaurant Window\\OrderReserveHistory.xaml.cs",
+              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Front\\Restaurant Window\\OrderReserveHistory.xaml.cs",
+              "RelativeToolTip": "Front\\Restaurant Window\\OrderReserveHistory.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T08:35:19.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.xaml",
+              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Front\\BaseUserActions Window\\Login.xaml",
+              "RelativeDocumentMoniker": "Front\\BaseUserActions Window\\Login.xaml",
+              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Front\\BaseUserActions Window\\Login.xaml",
+              "RelativeToolTip": "Front\\BaseUserActions Window\\Login.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-03T08:34:07.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Food.cs",
+              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Back\\Food.cs",
+              "RelativeDocumentMoniker": "Back\\Food.cs",
+              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Back\\Food.cs",
+              "RelativeToolTip": "Back\\Food.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T08:30:54.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-03T08:17:37.771Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Back\\User.cs",
+              "DocumentMoniker": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Back\\User.cs",
               "RelativeDocumentMoniker": "Back\\User.cs",
-              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Back\\User.cs",
+              "ToolTip": "C:\\Users\\myava\\OneDrive\\Documents\\GitHub\\AP-Project-402-2\\AP Project\\Back\\User.cs",
               "RelativeToolTip": "Back\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-03T08:16:29.532Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-03T08:16:29.532Z"
             }
           ]
         }

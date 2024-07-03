@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Front\Admin Window\AdminWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Front\BaseUserActions Window\ChangePassword.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -63,6 +66,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Front\Admin Window\AdminWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Front\BaseUserActions Window\ChangePassword.xaml">
       <SubType>Designer</SubType>
     </Page>

@@ -23,11 +23,12 @@ namespace AP_Project
         public static Restaurant CurrentRestaurant { get; set; } = null;
         public static Admin CurrentAdmin { get; set; } = null;
 
-        public static void SetCurrentUser(User user)
-        {
-            CurrentUser = user;
-            // useless
-        }
+        //public static void SetCurrentUser(User user)
+        //{
+        //    CurrentUser = user;
+        //    // useless
+        //}
+
         public static void UpdateCUFields(string address, string email) // only used when we have a current user
         {
             if (CurrentUser == null)

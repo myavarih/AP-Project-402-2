@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AP_Project.Front.Admin_Window;
+using AP_Project.Front.Restaurant_Window;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -45,18 +47,24 @@ namespace AP_Project
             }
             if (buser is User)
             {
-                Data.SetCurrentUser((User)buser);
+                Data.CurrentUser = (User)buser;
                 var userWindow = new UserWindow();
                 userWindow.Show();
                 Application.Current.Windows[0].Close();
             }
             else if (buser is Restaurant)
             {
-                // todo
+                Data.CurrentRestaurant = (Restaurant)buser; 
+                var restaurantWindow = new RestaurantWindow();
+                restaurantWindow.Show();
+                Application.Current.Windows[0].Close();
             }
             else if (buser is Admin)
             {
-                // todo
+                Data.CurrentAdmin = (Admin)buser;
+                var adminWindow = new AdminWindow();
+                adminWindow.Show();
+                Application.Current.Windows[0].Close();
             }
         }
 
