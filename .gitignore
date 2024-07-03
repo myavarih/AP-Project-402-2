@@ -190,5 +190,7 @@ git_stats/*
 StyleCop.Cache
 bin
 obj
-"AP Project"/bin
-"AP Project"/obj
+AP Project/bin
+AP Project/obj
+Ap Project/.vs
+.vs
