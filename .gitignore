@@ -190,54 +190,7 @@ git_stats/*
 StyleCop.Cache
 bin
 obj
-"AP Project/bin"
-"AP Project/obj"
-*.dll
-*.exe
-*.pdb
-*.cache
-"AP Project/bin/Debug/net8.0-windows/AP Project.dll"
-"AP Project/bin/Debug/net8.0-windows/AP Project.exe"
-"AP Project/bin/Debug/net8.0-windows/AP Project.pdb"
-AP Project/obj/Debug/net8.0-windows/AP Project.AssemblyInfo.cs
-AP Project/obj/Debug/net8.0-windows/AP Project.AssemblyInfoInputs.cache
-AP Project/obj/Debug/net8.0-windows/AP Project.csproj.CoreCompileInputs.cache
-AP Project/obj/Debug/net8.0-windows/AP Project.csproj.FileListAbsolute.txt
-AP Project/obj/Debug/net8.0-windows/AP Project.dll
-AP Project/obj/Debug/net8.0-windows/AP Project.g.resources
-AP Project/obj/Debug/net8.0-windows/AP Project.pdb
-AP Project/obj/Debug/net8.0-windows/AP Project.sourcelink.json
-AP Project/obj/Debug/net8.0-windows/apphost.exe
-AP Project/obj/Debug/net8.0-windows/Front/Restaurant Window/OrderReserveHistory.g.i.cs
-AP Project/obj/Debug/net8.0-windows/ref/AP Project.dll
-AP Project/obj/Debug/net8.0-windows/refint/AP Project.dll
-AP Project/.vs/AP Project/v17/.suo
-"/AP Project/.vs"
-AP Project/.vs/AP Project/v17/.suo
-*.vsidx
-*.json
-*.dll
-*.exe
-*.pdb
-AP Project/.vs/AP Project/FileContentIndex/bf7ff6ce-b39a-44d1-9995-81ddaa2c77d1.vsidx
-AP Project/.vs/AP Project/v17/.suo
-AP Project/.vs/AP Project/v17/DocumentLayout.json
-AP Project/bin/Debug/net8.0-windows/AP Project.dll
-AP Project/bin/Debug/net8.0-windows/AP Project.exe
-AP Project/bin/Debug/net8.0-windows/AP Project.pdb
-AP Project/obj/Debug/net8.0-windows/AP Project.AssemblyInfo.cs
-AP Project/obj/Debug/net8.0-windows/AP Project.AssemblyInfoInputs.cache
-AP Project/obj/Debug/net8.0-windows/AP Project.csproj.CoreCompileInputs.cache
-AP Project/obj/Debug/net8.0-windows/AP Project.csproj.FileListAbsolute.txt
-AP Project/obj/Debug/net8.0-windows/AP Project.dll
-AP Project/obj/Debug/net8.0-windows/AP Project.g.resources
-AP Project/obj/Debug/net8.0-windows/AP Project.pdb
-AP Project/obj/Debug/net8.0-windows/AP Project.sourcelink.json
-AP Project/obj/Debug/net8.0-windows/apphost.exe
-AP Project/obj/Debug/net8.0-windows/Front/Restaurant Window/OrderReserveHistory.g.i.cs
-AP Project/obj/Debug/net8.0-windows/ref/AP Project.dll
-AP Project/obj/Debug/net8.0-windows/refint/AP Project.dll
-/AP Project/.vs
-/AP Project/.vs
-*.json
-/AP Project/.vs
+AP Project/bin
+AP Project/obj
+AP Project/.vs
+.vs
