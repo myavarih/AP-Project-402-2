@@ -38,13 +38,20 @@ namespace AP_Project
 
         private void SearchRestaurants_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SearchResaurants());
-            // NavigationService.Navigate(new RestaurantViewPage());
+            NavigationService.Navigate(new RestaurantViewPage());
         }
 
         private void Profile_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new UserProfilePage());
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            Data.CurrentUser = null;
+            var mw = new MainWindow();
+            mw.Show();
+            Application.Current.Windows[0].Close(); 
         }
     }
 }

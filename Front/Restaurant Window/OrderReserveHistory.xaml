@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AP_Project.Front.Restaurant_Window"
         mc:Ignorable="d"
-        Title="Orders and Reserves" Height="600" Width="900">
+        Title="Orders and Reserves" Height="600" Width="1500">
     <Page.Resources>
         <Style TargetType="ListBox" x:Key="OrdersListBoxStyle">
             <Setter Property="Background" Value="#F0F0F0"/>

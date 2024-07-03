@@ -19,22 +19,25 @@ namespace AP_Project
     /// </summary>
     public partial class UserProfilePage : Page
     {
-        //User user = new User(Data.CurrentUser.Username, Data.CurrentUser.Password, Data.CurrentUser.Email, Data.CurrentUser.FirstName, Data.CurrentUser.LastName, Data.CurrentUser.PhoneNumber, Data.CurrentUser.Address, Data.CurrentUser.Gender);
-
         public UserProfilePage()
         {
             InitializeComponent();
-            //this.DataContext = user;
+            this.DataContext = Data.CurrentUser;
         }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            //Data.UpdateCUFields(user.Address, user.Email);
+            // validate email
         }
 
         private void ApplyServiceUpdateButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            // validate Email
         }
     }
 }

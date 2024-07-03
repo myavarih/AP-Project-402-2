@@ -3,7 +3,11 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       Title="User Profile Page">
 
-    <Grid>
+    <DockPanel>
+        <!-- Back button at the bottom left -->
+        <Button Content="Back" Width="100" Height="30" Margin="10" DockPanel.Dock="Bottom" HorizontalAlignment="Left" Click="BackButton_Click"/>
+
+        <!-- Main content centered -->
         <StackPanel Margin="10">
             <TextBlock Text="User Details" FontSize="20" FontWeight="Bold" Margin="0,0,0,10" />
 
@@ -40,5 +44,5 @@
 
             <Button Content="Apply Service Update" Click="ApplyServiceUpdateButton_Click" Margin="0,10,0,0"/>
         </StackPanel>
-    </Grid>
+    </DockPanel>
 </Page>
