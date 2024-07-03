@@ -7,16 +7,22 @@
       "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:front\\baseuseractions window\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\lenovo\\desktop\\ap-project\\ap-project-402-2\\ap project\\back\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:back\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\lenovo\\desktop\\ap-project\\ap-project-402-2\\ap project\\back\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:back\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\lenovo\\desktop\\ap-project\\ap-project-402-2\\ap project\\front\\restaurant window\\orderreservehistory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:front\\restaurant window\\orderreservehistory.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\lenovo\\desktop\\ap-project\\ap-project-402-2\\ap project\\back\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:back\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+<<<<<<< Updated upstream
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\lenovo\\desktop\\ap-project\\ap-project-402-2\\ap project\\back\\restaurant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,12 +43,15 @@
     {
       "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\lenovo\\desktop\\ap-project\\ap-project-402-2\\ap project\\back\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:back\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+>>>>>>> Stashed changes
     },
     {
       "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\lenovo\\desktop\\ap-project\\ap-project-402-2\\ap project\\back\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:back\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\lenovo\\desktop\\ap-project\\ap-project-402-2\\ap project\\front\\user window\\orderhistorypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:front\\user window\\orderhistorypage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -53,6 +62,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\lenovo\\desktop\\ap-project\\ap-project-402-2\\ap project\\back\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:back\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\lenovo\\desktop\\ap-project\\ap-project-402-2\\ap project\\front\\restaurant window\\orderreservehistory.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:front\\restaurant window\\orderreservehistory.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|c:\\users\\lenovo\\desktop\\ap-project\\ap-project-402-2\\ap project\\back\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CC0D85E4-EAF6-43AB-9958-5DFC32DF11E2}|AP Project.csproj|solutionrelative:back\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -62,10 +79,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 0,
               "Title": "Login.xaml.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Front\\BaseUserActions Window\\Login.xaml.cs",
@@ -75,10 +93,22 @@
               "ViewState": "AQIAAB4AAAAAAAAAAAAYwCkAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-03T06:30:29.916Z",
+=======
+              "DocumentIndex": 2,
+              "Title": "Validation.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Back\\Validation.cs",
+              "RelativeDocumentMoniker": "Back\\Validation.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Back\\Validation.cs",
+              "RelativeToolTip": "Back\\Validation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T09:06:52.484Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< Updated upstream
               "DocumentIndex": 6,
               "Title": "PasswordPage.xaml",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Front\\BaseUserActions Window\\PasswordPage.xaml",
@@ -99,11 +129,47 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T10:55:14.808Z",
+=======
+              "DocumentIndex": 4,
+              "Title": "OrderReserveHistory.xaml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Front\\Restaurant Window\\OrderReserveHistory.xaml",
+              "RelativeDocumentMoniker": "Front\\Restaurant Window\\OrderReserveHistory.xaml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Front\\Restaurant Window\\OrderReserveHistory.xaml",
+              "RelativeToolTip": "Front\\Restaurant Window\\OrderReserveHistory.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-03T08:37:07.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderReserveHistory.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Front\\Restaurant Window\\OrderReserveHistory.xaml.cs",
+              "RelativeDocumentMoniker": "Front\\Restaurant Window\\OrderReserveHistory.xaml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Front\\Restaurant Window\\OrderReserveHistory.xaml.cs",
+              "RelativeToolTip": "Front\\Restaurant Window\\OrderReserveHistory.xaml.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAD4vxgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T08:36:38.883Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Front\\BaseUserActions Window\\Login.xaml.cs",
+              "RelativeDocumentMoniker": "Front\\BaseUserActions Window\\Login.xaml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Front\\BaseUserActions Window\\Login.xaml.cs",
+              "RelativeToolTip": "Front\\BaseUserActions Window\\Login.xaml.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAtwCUAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T08:33:23.147Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
+<<<<<<< Updated upstream
               "Title": "BaseUser.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Back\\BaseUser.cs",
               "RelativeDocumentMoniker": "Back\\BaseUser.cs",
@@ -116,11 +182,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
+=======
+              "Title": "Food.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Back\\Food.cs",
+              "RelativeDocumentMoniker": "Back\\Food.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Back\\Food.cs",
+              "RelativeToolTip": "Back\\Food.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T08:30:55.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+>>>>>>> Stashed changes
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Back\\User.cs",
               "RelativeDocumentMoniker": "Back\\User.cs",
               "ToolTip": "C:\\Users\\LENOVO\\Desktop\\AP-Project\\AP-Project-402-2\\AP Project\\Back\\User.cs",
               "RelativeToolTip": "Back\\User.cs",
+<<<<<<< Updated upstream
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T06:50:20.478Z"
@@ -221,6 +302,11 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T07:48:04.812Z"
+=======
+              "ViewState": "AQIAAAgAAAAAAAAAAAAzwBcAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T08:16:29.532Z"
+>>>>>>> Stashed changes
             }
           ]
         }

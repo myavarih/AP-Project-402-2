@@ -95,13 +95,17 @@ namespace AP_Project {
         /// InitializeComponent
         /// </summary>
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.3.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.4.0")]
         public void InitializeComponent() {
             if (_contentLoaded) {
                 return;
             }
             _contentLoaded = true;
+<<<<<<< Updated upstream:AP Project/obj/Debug/net8.0-windows/Login.g.cs
             System.Uri resourceLocater = new System.Uri("/AP Project;component/login.xaml", System.UriKind.Relative);
+=======
+            System.Uri resourceLocater = new System.Uri("/AP Project;component/front/restaurant%20window/addfood.xaml", System.UriKind.Relative);
+>>>>>>> Stashed changes:AP Project/obj/Debug/net8.0-windows/Front/Restaurant Window/AddFood.g.i.cs
             
             #line 1 "..\..\..\Login.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
@@ -111,7 +115,7 @@ namespace AP_Project {
         }
         
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.3.0")]
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "8.0.4.0")]
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Design", "CA1033:InterfaceMethodsShouldBeCallableByChildTypes")]
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
