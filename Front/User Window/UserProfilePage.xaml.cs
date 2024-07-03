@@ -28,16 +28,17 @@ namespace AP_Project
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             // validate email
+            // binding?! how does it even work?
         }
 
         private void ApplyServiceUpdateButton_Click(object sender, RoutedEventArgs e)
         {
-
+            // changing SpecialService of the Current user, with payment?
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            // validate Email
+            NavigationService.GoBack();
         }
     }
 }
