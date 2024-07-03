@@ -27,7 +27,18 @@ namespace AP_Project
 
         private void ChangePasswordButton_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                Validation.PasswordChange(UsernameTextBox.Text, CurrentPasswordBox.Password, NewPasswordBox.Password, ConfirmPasswordBox.Password);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            BaseUser buser = Data.GetBaseUserByUsername(UsernameTextBox.Text);
+            buser.Password = NewPasswordBox.Password;
+            NavigationService.GoBack();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
