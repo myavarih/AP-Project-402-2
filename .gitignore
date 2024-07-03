@@ -196,9 +196,9 @@ obj
 *.exe
 *.pdb
 *.cache
-AP Project/bin/Debug/net8.0-windows/AP Project.dll
-AP Project/bin/Debug/net8.0-windows/AP Project.exe
-AP Project/bin/Debug/net8.0-windows/AP Project.pdb
+"AP Project/bin/Debug/net8.0-windows/AP Project.dll"
+"AP Project/bin/Debug/net8.0-windows/AP Project.exe"
+"AP Project/bin/Debug/net8.0-windows/AP Project.pdb"
 AP Project/obj/Debug/net8.0-windows/AP Project.AssemblyInfo.cs
 AP Project/obj/Debug/net8.0-windows/AP Project.AssemblyInfoInputs.cache
 AP Project/obj/Debug/net8.0-windows/AP Project.csproj.CoreCompileInputs.cache
@@ -212,7 +212,7 @@ AP Project/obj/Debug/net8.0-windows/Front/Restaurant Window/OrderReserveHistory.
 AP Project/obj/Debug/net8.0-windows/ref/AP Project.dll
 AP Project/obj/Debug/net8.0-windows/refint/AP Project.dll
 AP Project/.vs/AP Project/v17/.suo
-/AP Project/.vs
+"/AP Project/.vs"
 AP Project/.vs/AP Project/v17/.suo
 *.vsidx
 *.json
@@ -238,4 +238,6 @@ AP Project/obj/Debug/net8.0-windows/Front/Restaurant Window/OrderReserveHistory.
 AP Project/obj/Debug/net8.0-windows/ref/AP Project.dll
 AP Project/obj/Debug/net8.0-windows/refint/AP Project.dll
 /AP Project/.vs
+/AP Project/.vs
+*.json
 /AP Project/.vs
