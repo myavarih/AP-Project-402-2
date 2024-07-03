@@ -10,31 +10,36 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,9" Width="666">
+            <TextBlock Text="Filter by Name:" Margin="5" Height="23"/>
+            <TextBox x:Name="NameFilterTextBox" Width="563" Margin="5" Height="23"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,7,0,10" Width="852" Grid.Row="1">
             <TextBlock Text="Filter by Name:" Margin="5"/>
-            <TextBox x:Name="NameFilterTextBox" Width="150" Margin="5"/>
+            <TextBox x:Name="CityFilterTextBox" Width="150" Margin="5"/>
 
             <TextBlock Text="Filter by Serving Mode:" Margin="5"/>
             <ComboBox x:Name="ServingModeFilterComboBox" Width="150" Margin="5">
+                <ComboBoxItem Content="No Filter"/>
                 <ComboBoxItem Content="Dine-in"/>
-                <ComboBoxItem Content="Takeaway"/>
+                <ComboBoxItem Content="Delivery"/>
+                <ComboBoxItem Content="Dine-in and Delivery"/>
             </ComboBox>
 
-            <TextBlock Text="Sort by Rating:" Margin="5"/>
-            <ComboBox x:Name="RatingSortComboBox" Width="150" Margin="5">
-                <ComboBoxItem Content="Don't Sort"/>
-                <ComboBoxItem Content="Sort Ascending"/>
-                <ComboBoxItem Content="Sort Descending"/>
-            </ComboBox>
+            <TextBlock Text="Min Rating:" Margin="5"/>
+            <TextBox x:Name="MinRateTextBox" Width="150" Margin="5"/>
+
 
             <Button Content="Apply Filters" Margin="5" Click="ApplyFiltersButton_Click"/>
         </StackPanel>
 
-        <ListView x:Name="RestaurantsListView" Grid.Row="1" MouseDoubleClick="RestaurantsListView_MouseDoubleClick">
+        <ListView x:Name="RestaurantsListView" Grid.Row="2" MouseDoubleClick="RestaurantsListView_MouseDoubleClick">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Restaurant Name" DisplayMemberBinding="{Binding Name}" Width="200"/>
