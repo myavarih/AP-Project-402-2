@@ -53,8 +53,7 @@ namespace AP_Project.Front.Restaurant_Window {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/AP Project;V1.0.0.0;component/front/restaurant%20window/orderreservehistory.xaml" +
-                    "", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/AP Project;component/front/restaurant%20window/orderreservehistory.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Front\Restaurant Window\OrderReserveHistory.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

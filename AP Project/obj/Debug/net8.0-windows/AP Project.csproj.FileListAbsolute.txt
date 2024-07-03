@@ -342,3 +342,5 @@ C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\n
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\Front\User Window\SearchResaurants.baml
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\Front\User Window\UserPanelPage.baml
 C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\Front\User Window\UserWindow.baml
+C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\Front\Admin Window\AdminWindow.g.cs
+C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\AP Project\obj\Debug\net8.0-windows\Front\Admin Window\AdminWindow.baml

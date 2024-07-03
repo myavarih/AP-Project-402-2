@@ -44,7 +44,7 @@ namespace AP_Project
             {
                 MessageBox.Show(ex.Message);
                 return;
-            }
+            }//
             if (buser is User)
             {
                 Data.CurrentUser = (User)buser;
