@@ -8,7 +8,7 @@ namespace AP_Project
 {
     class Restaurant : BaseUser
     {
-        public Restaurant(string username, string password, string name, string city, string address, bool dineIn, bool delivery, double totalRate, List<Food> foods, List<Order> orders) : base(username, password)
+        public Restaurant(string username, string password, string name, string city, string address, bool dineIn, bool delivery, double totalRate, List<Food> foods, List<Order> orders, List<string> categories) : base(username, password)
         {
             Name = name;
             City = city;
@@ -18,6 +18,7 @@ namespace AP_Project
             TotalRate = totalRate;
             Foods = foods;
             Orders = orders;
+            Categories = categories;
         }
 
         public string Name { get; set; } = "";

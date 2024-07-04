@@ -69,5 +69,10 @@ namespace AP_Project
         {
             NavigationService.Navigate(new RestaurantViewPage((sender as Button).Tag.ToString()));
         }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack(); 
+        }
     }
 }

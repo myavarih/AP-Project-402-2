@@ -30,7 +30,6 @@ namespace AP_Project
         private void UserSignUpBtnClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new SignUp());
-            Application.Current.Windows[0].Title = "Sign Up";
             // totest
             Data.CurrentUser = new User("000Ali000", "Abcd1234", "alimozdian@gmail.com", "Ali", "Mozdian", "09903322694");
             Data.AddCurrentUser();

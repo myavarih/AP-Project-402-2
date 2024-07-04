@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AP_Project.Front.User_Window;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,7 +30,7 @@ namespace AP_Project
             foodList = (List<Food>)(DataContext as Restaurant).Foods.Select(x => x);
         }
 
-        private void ApplyFiltersButton_Click(object sender, RoutedEventArgs e)
+        private void ApplyFilters(object sender, RoutedEventArgs e)
         {
             // todo (Ali)
             if (DropdownMenu.SelectedItem == "All")
@@ -37,6 +38,25 @@ namespace AP_Project
                 foodList = (List<Food>)(DataContext as Restaurant).Foods.Select(x => x);
             }
             foodList = (List<Food>)foodList.Where(x => x.Category == (string)DropdownMenu.SelectedItem);
+        }
+
+        private void ReserveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void CommentRateButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PaymentPage());
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }

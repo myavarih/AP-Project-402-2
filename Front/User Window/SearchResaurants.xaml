@@ -13,13 +13,16 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
             <RowDefinition/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,9" Width="666">
+        <!-- Filter by Name Section -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,9" Width="666" Grid.Row="0">
             <TextBlock Text="Filter by Name:" Margin="5" Height="23"/>
             <TextBox x:Name="NameFilterTextBox" Width="563" Margin="5" Height="23"/>
         </StackPanel>
 
+        <!-- Filter by City Section -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,7,0,10" Width="852" Grid.Row="1">
             <TextBlock Text="Filter by City:" Margin="5"/>
             <TextBox x:Name="CityFilterTextBox" Width="150" Margin="5"/>
@@ -38,6 +41,7 @@
             <Button Content="Apply Filters" Margin="5" Click="ApplyFiltersButton_Click"/>
         </StackPanel>
 
+        <!-- ListView for displaying restaurants -->
         <ListView x:Name="RestaurantsListView" Grid.Row="2">
             <ListView.View>
                 <GridView>
@@ -56,5 +60,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
+
+        <!-- Back Button at Bottom Left -->
+        <Button Content="Back" Width="100" Height="50" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" Click="BackButton_Click" Grid.Row="3"/>
     </Grid>
 </Page>
