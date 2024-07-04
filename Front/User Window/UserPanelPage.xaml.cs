@@ -28,12 +28,12 @@ namespace AP_Project
 
         private void Complaints_Click(object sender, RoutedEventArgs e)
         {
-
+            // todo
         }
 
         private void OrderHistory_Click(object sender, RoutedEventArgs e)
         {
-
+            // todo
         }
 
         private void SearchRestaurants_Click(object sender, RoutedEventArgs e)

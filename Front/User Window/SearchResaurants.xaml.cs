@@ -24,6 +24,7 @@ namespace AP_Project
         public SearchResaurants()
         {
             InitializeComponent();
+            
         }
 
         private void ApplyFiltersButton_Click(object sender, RoutedEventArgs e)
@@ -62,7 +63,12 @@ namespace AP_Project
         }
         private void RestaurantsListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-
+            string username = ""; // todo: get it by the property of wpf for each row of the list (represents the username of a restaurant)
+            if (Data.GetRestaurantByUsername(username) == null)
+            {
+                throw new Exception("There is no restaurant with this username");
+            }
+            NavigationService.Navigate(new RestaurantViewPage(username));
         }
     }
 }
