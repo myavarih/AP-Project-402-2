@@ -20,16 +20,6 @@ namespace AP_Project
     /// </summary>
     public partial class RestaurantViewPage : Page
     {
-        Restaurant restaurant = null;
-        public RestaurantViewPage(string restaurantUsername = null)
-        {
-            InitializeComponent();
-            this.DataContext = restaurant;
-            if (restaurantUsername != null)
-            {
-                restaurant = Data.GetRestaurantByUsername(restaurantUsername);
-            }
-        }
         public RestaurantViewPage(string restaurantUsername)
         {
             InitializeComponent();
