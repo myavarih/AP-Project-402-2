@@ -5,37 +5,54 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AP_Project"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="800"
+      d:DesignHeight="800" d:DesignWidth="1100"
       Title="RestaurantViewPage">
 
     <Grid>
-        <ItemsControl ItemsSource="{Binding FoodSections}">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Margin="10">
-                        <TextBlock Text="{Binding SectionName}" FontSize="24" FontWeight="Bold" Margin="10"/>
-                        <ItemsControl ItemsSource="{Binding FoodItems}">
-                            <ItemsControl.ItemTemplate>
-                                <DataTemplate>
-                                    <StackPanel Orientation="Horizontal" Margin="10">
-                                        <Image Source="{Binding ImagePath}" Width="100" Height="100" Margin="10"/>
-                                        <StackPanel>
-                                            <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold"/>
-                                            <TextBlock Text="{Binding Price}" FontSize="16" Foreground="Green"/>
-                                            <StackPanel Orientation="Horizontal" Margin="10,0,0,0">
-                                                <Button Content="Reserve" Margin="5"/>
-                                                <Button Content="Order" Margin="5"/>
-                                                <Button Content="Comment" Margin="5"/>
-                                                <Button Content="Rate" Margin="5"/>
-                                            </StackPanel>
-                                        </StackPanel>
-                                    </StackPanel>
-                                </DataTemplate>
-                            </ItemsControl.ItemTemplate>
-                        </ItemsControl>
-                    </StackPanel>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Row for Filter by Section -->
+            <RowDefinition Height="*"/>
+            <!-- Row for ListView -->
+        </Grid.RowDefinitions>
+
+        <!-- Filter by Section -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+            <TextBlock Text="Filter by Section:" VerticalAlignment="Center" Margin="5"/>
+            <ComboBox x:Name="DropdownMenu" Width="200" Margin="5" ItemsSource="{Binding Categories}">
+            </ComboBox>
+            <Button Content="Apply Filter" Margin="5" Click="ApplyFiltersButton_Click"/>
+        </StackPanel>
+
+        <!-- ListView for displaying foods -->
+        <ListView ItemsSource="{Binding Foods}" Grid.Row="1">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Food Name" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                    <GridViewColumn Header="Ingredients" DisplayMemberBinding="{Binding Ingredients}" Width="200"/>
+                    <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="80"/>
+                    <GridViewColumn Header="Rating" DisplayMemberBinding="{Binding Rating}" Width="80"/>
+                    <GridViewColumn Header="Image" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding ImagePath}" Width="100" Height="100"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Actions" Width="250">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Button Content="Reserve" Margin="5" Click="ReserveButton_Click" Tag="{Binding Name}"/>
+                                    <Button Content="Order" Margin="5" Click="OrderButton_Click" Tag="{Binding Name}"/>
+                                    <Button Content="Rate" Margin="5" Click="RateButton_Click" Tag="{Binding Name}"/>
+                                    <Button Content="Comment" Margin="5" Click="CommentButton_Click" Tag="{Binding Name}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>

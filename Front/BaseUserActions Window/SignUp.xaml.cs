@@ -27,7 +27,12 @@ namespace AP_Project
 
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
         {
-            Data.CurrentUser = new User(UsernameTxtBx.Text, "", EmailTxtBx.Text, FirstNameTxtBx.Text, LastNameTxtBx.Text, PhoneNumberTxtBx.Text);
+            Gender? gender = null;
+            if(GenderComboBox.Text == "Male")
+                gender = Gender.MALE;
+            else if (GenderComboBox.Text == "Female")
+                gender = Gender.FEMALE;
+            Data.CurrentUser = new User(UsernameTxtBx.Text, "", EmailTxtBx.Text, FirstNameTxtBx.Text, LastNameTxtBx.Text, PhoneNumberTxtBx.Text, "", gender);
             Validation.verificationCode = new Random().Next(1000, 9999);
             try
             {

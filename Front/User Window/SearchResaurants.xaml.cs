@@ -20,11 +20,11 @@ namespace AP_Project
     /// Interaction logic for SearchResaurants.xaml
     /// </summary>
     public partial class SearchResaurants : Page
-    {
+    {  
         public SearchResaurants()
         {
             InitializeComponent();
-            
+            RestaurantsListView.ItemsSource = Data.Restaurants;
         }
 
         private void ApplyFiltersButton_Click(object sender, RoutedEventArgs e)
@@ -58,17 +58,12 @@ namespace AP_Project
                     // no filter
                     break;
             }
-            // todo: give filteredRestaurants to the front (doing by mmd) to display them
+            RestaurantsListView.ItemsSource = filteredRestaurants;
 
         }
-        private void RestaurantsListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void InfoButton_Click(object sender, EventArgs e)
         {
-            string username = ""; // todo: get it by the property of wpf for each row of the list (represents the username of a restaurant)
-            if (Data.GetRestaurantByUsername(username) == null)
-            {
-                throw new Exception("There is no restaurant with this username");
-            }
-            NavigationService.Navigate(new RestaurantViewPage(username));
+            NavigationService.Navigate(new RestaurantViewPage((sender as Button).Tag.ToString()));
         }
     }
 }

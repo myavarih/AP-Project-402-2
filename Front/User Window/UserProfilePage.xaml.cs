@@ -22,22 +22,25 @@ namespace AP_Project
         public UserProfilePage()
         {
             InitializeComponent();
+            if (Data.CurrentUser.SpecialService != null)
+                ServiceComboBox.SelectedIndex = (int)Data.CurrentUser.SpecialService;
             this.DataContext = Data.CurrentUser;
         }
-
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
-        {
-            // validate email
-            // binding?! how does it even work?
-        }
-
-        private void ApplyServiceUpdateButton_Click(object sender, RoutedEventArgs e)
-        {
-            // changing SpecialService of the Current user, with payment?
-        }
-
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!Validation.EmailRegex.IsMatch(Data.CurrentUser.Email))
+            {
+                MessageBox.Show("Wrong Email Format!");
+                return;
+            }
+            if (ServiceComboBox.SelectedIndex == 3)
+            {
+                Data.CurrentUser.SpecialService = null;
+            }
+            else
+            {
+                Data.CurrentUser.SpecialService = (SpecialService?)ServiceComboBox.SelectedIndex;
+            }
             NavigationService.GoBack();
         }
     }

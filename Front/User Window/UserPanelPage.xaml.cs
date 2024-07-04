@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace AP_Project
 {
@@ -38,6 +27,22 @@ namespace AP_Project
 
         private void SearchRestaurants_Click(object sender, RoutedEventArgs e)
         {
+            Data.Restaurants.Add(new Restaurant(
+                username: "user1",
+                password: "pass1",
+                name: "The Gourmet Spot",
+                city: "Tehran",
+                address: "123 Delicious Avenue",
+                dineIn: true,
+                delivery: true,
+                totalRate: 4.7,
+                foods: new List<Food>
+                {
+                    new Food { Name = "Pasta", Price = 8.5 },
+                    new Food { Name = "Salad", Price = 4.5 }
+                },
+                orders: new List<Order>()
+                ));
             NavigationService.Navigate(new SearchResaurants());
         }
 
@@ -51,7 +56,7 @@ namespace AP_Project
             Data.CurrentUser = null;
             var mw = new MainWindow();
             mw.Show();
-            Application.Current.Windows[0].Close(); 
+            Application.Current.Windows[0].Close();
         }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AP_Project.Front.Restaurant_Window"
         mc:Ignorable="d"
-        Title="RestaurantWindow" Height="700" Width="800">
+        Title="RestaurantWindow" Height="900" Width="1200">
     <Grid>
         <Frame Name="MainFrame" NavigationUIVisibility="Hidden" Source="RestaurantPanel.xaml"/>
     </Grid>

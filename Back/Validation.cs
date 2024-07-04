@@ -12,11 +12,11 @@ namespace AP_Project
     static class Validation
     {
         public static int verificationCode;
-        static Regex NamesRegex = new Regex(@"^[A-Za-z]{3,32}$");
-        static Regex PhoneNumberRegex = new Regex(@"^09\d{9}$");
-        static Regex EmailRegex = new Regex(@"^[A-Za-z]{3,32}@[A-Za-z]{3,32}\.[A-Za-z]{2,3}$");
-        static Regex UsernameRegex = new Regex(@"^(?=.*[A-Za-z]{3,})[A-Za-z0-9]+$");
-        static Regex PasswordRegex = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,32}$");
+        public static Regex NamesRegex = new Regex(@"^[A-Za-z]{3,32}$");
+        public static Regex PhoneNumberRegex = new Regex(@"^09\d{9}$");
+        public static Regex EmailRegex = new Regex(@"^[A-Za-z]{3,32}@[A-Za-z]{3,32}\.[A-Za-z]{2,3}$");
+        public static Regex UsernameRegex = new Regex(@"^(?=.*[A-Za-z]{3,})[A-Za-z0-9]+$");
+        public static Regex PasswordRegex = new Regex(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,32}$");
 
         public static BaseUser PasswordMatch(string username, string password) // May Return Exceptions 
         {

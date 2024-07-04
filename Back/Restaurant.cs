@@ -25,8 +25,18 @@ namespace AP_Project
         public string Address { get; set; } = "";
         public bool DineIn { get; set; }
         public bool Delivery {  get; set; }
+        public string ServingMode { get
+            {
+                if (DineIn && Delivery)
+                    return "Dine-in and Delivery";
+                else if (DineIn)
+                    return "Dine-in";
+                else
+                    return "Delivery";
+            } }
         public double TotalRate { get; set; }
         public List<Food> Foods { get; set; } = new List<Food>();
         public List<Order> Orders { get; set; } = new List<Order>();
+        public List<string> Categories { get; set; } = new List<string>();
     }
 }

@@ -5,7 +5,7 @@
 
     <DockPanel>
         <!-- Back button at the bottom left -->
-        <Button Content="Back" Width="100" Height="30" Margin="10" DockPanel.Dock="Bottom" HorizontalAlignment="Left" Click="BackButton_Click"/>
+        <Button Content="Back And Save" Width="100" Height="30" Margin="10" DockPanel.Dock="Bottom" HorizontalAlignment="Left" Click="BackButton_Click"/>
 
         <!-- Main content centered -->
         <StackPanel Margin="10">
@@ -32,17 +32,14 @@
             <TextBlock Text="Address:" FontWeight="Bold" />
             <TextBox Text="{Binding Address, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,10" />
 
-            <Button Content="Save" Click="SaveButton_Click" />
-
             <!-- Service Selection -->
             <TextBlock Text="Select Service:" FontWeight="Bold" Margin="0,10,0,0" />
             <ComboBox x:Name="ServiceComboBox" Margin="0,0,0,10">
                 <ComboBoxItem Content="Bronze Service" />
                 <ComboBoxItem Content="Silver Service" />
                 <ComboBoxItem Content="Gold Service" />
+                <ComboBoxItem Content="Normal Service" />
             </ComboBox>
-
-            <Button Content="Apply Service Update" Click="ApplyServiceUpdateButton_Click" Margin="0,10,0,0"/>
         </StackPanel>
     </DockPanel>
 </Page>

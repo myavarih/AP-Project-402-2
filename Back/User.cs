@@ -9,7 +9,7 @@ namespace AP_Project
     enum Gender { MALE, FEMALE}
 
     enum SpecialService { BRONZE, SILVER, GOLD} // null for none of them
-
+    
     class User : BaseUser
     {
         public User(string username, string password, string email, string firstName, string lastName, string phoneNumber) : base(username, password)

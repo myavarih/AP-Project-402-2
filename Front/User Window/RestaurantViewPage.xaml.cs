@@ -30,5 +30,15 @@ namespace AP_Project
                 restaurant = Data.GetRestaurantByUsername(restaurantUsername);
             }
         }
+        public RestaurantViewPage(string restaurantUsername)
+        {
+            InitializeComponent();
+            DataContext = Data.GetRestaurantByUsername(restaurantUsername);
+        }
+
+        private void ApplyFiltersButton_Click(object sender, RoutedEventArgs e)
+        {
+            // todo (Ali)
+        }
     }
 }
