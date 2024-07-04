@@ -11,7 +11,7 @@ namespace AP_Project
         public string Name { get; set; } = "";
         public string Ingredients { get; set; } = "";
         public string ImageName { get; set; } = "";
-        public int Price {  get; set; }
+        public double Price {  get; set; }
         public string Category { get; set; } = "";
         public double Rating { get; set; }
         public string RestaurantUsername { get; set; } = "";

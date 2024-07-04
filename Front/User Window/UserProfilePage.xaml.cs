@@ -22,8 +22,8 @@ namespace AP_Project
         public UserProfilePage()
         {
             InitializeComponent();
-            if (Data.CurrentUser.SpecialServices != null)
-                ServiceComboBox.SelectedIndex = (int)Data.CurrentUser.SpecialServices;
+            if (Data.CurrentUser.SpecialService != null)
+                ServiceComboBox.SelectedIndex = (int)Data.CurrentUser.SpecialService;
             this.DataContext = Data.CurrentUser;
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -35,11 +35,11 @@ namespace AP_Project
             }
             if (ServiceComboBox.SelectedIndex == 3)
             {
-                Data.CurrentUser.SpecialServices = null;
+                Data.CurrentUser.SpecialService = null;
             }
             else
             {
-                Data.CurrentUser.SpecialServices = (SpecialServices?)ServiceComboBox.SelectedIndex;
+                Data.CurrentUser.SpecialService = (SpecialService?)ServiceComboBox.SelectedIndex;
             }
             NavigationService.GoBack();
         }

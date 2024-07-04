@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AP_Project"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="900"
+      d:DesignHeight="800" d:DesignWidth="1100"
       Title="SearchRestaurants">
 
     <Grid>
@@ -21,7 +21,7 @@
         </StackPanel>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,7,0,10" Width="852" Grid.Row="1">
-            <TextBlock Text="Filter by Name:" Margin="5"/>
+            <TextBlock Text="Filter by City:" Margin="5"/>
             <TextBox x:Name="CityFilterTextBox" Width="150" Margin="5"/>
 
             <TextBlock Text="Filter by Serving Mode:" Margin="5"/>
@@ -35,23 +35,21 @@
             <TextBlock Text="Min Rating:" Margin="5"/>
             <TextBox x:Name="MinRateTextBox" Width="150" Margin="5"/>
 
-
             <Button Content="Apply Filters" Margin="5" Click="ApplyFiltersButton_Click"/>
         </StackPanel>
 
-        <ListView x:Name="RestaurantsListView" Grid.Row="2" MouseDoubleClick="RestaurantsListView_MouseDoubleClick">
+        <ListView x:Name="RestaurantsListView" Grid.Row="2">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Restaurant Name" DisplayMemberBinding="{Binding Name}" Width="200"/>
-                    <GridViewColumn Header="Rating" DisplayMemberBinding="{Binding Rating}" Width="100"/>
+                    <GridViewColumn Header="Rating" DisplayMemberBinding="{Binding TotalRate}" Width="100"/>
+                    <GridViewColumn Header="City" DisplayMemberBinding="{Binding City}" Width="200"/>
                     <GridViewColumn Header="Address" DisplayMemberBinding="{Binding Address}" Width="300"/>
-                    <GridViewColumn Header="Serving Mode" Width="200">
+                    <GridViewColumn Header="Serving Mode" DisplayMemberBinding="{Binding ServingMode}" Width="200"/>
+                    <GridViewColumn Header="Info" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <ComboBox SelectedValue="{Binding ServingMode}">
-                                    <ComboBoxItem Content="Dine-in"/>
-                                    <ComboBoxItem Content="Takeaway"/>
-                                </ComboBox>
+                                <Button Content="Info" Click="InfoButton_Click" Tag="{Binding Username}" Margin="5,0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

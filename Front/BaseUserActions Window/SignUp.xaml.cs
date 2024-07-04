@@ -29,9 +29,9 @@ namespace AP_Project
         {
             Gender? gender = null;
             if(GenderComboBox.Text == "Male")
-                gender = Gender.Male;
+                gender = Gender.MALE;
             else if (GenderComboBox.Text == "Female")
-                gender = Gender.Female;
+                gender = Gender.FEMALE;
             Data.CurrentUser = new User(UsernameTxtBx.Text, "", EmailTxtBx.Text, FirstNameTxtBx.Text, LastNameTxtBx.Text, PhoneNumberTxtBx.Text, "", gender);
             Validation.verificationCode = new Random().Next(1000, 9999);
             try

@@ -24,5 +24,9 @@ namespace AP_Project
         {
             InitializeComponent();
         }
+        public RestaurantViewPage(string restaurantUsername)
+        {
+            InitializeComponent();
+        }
     }
 }
