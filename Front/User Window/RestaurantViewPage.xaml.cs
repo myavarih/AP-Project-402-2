@@ -1,4 +1,5 @@
-﻿using AP_Project.Front.User_Window;
+﻿using AP_Project.Back;
+using AP_Project.Front.User_Window;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,24 +22,23 @@ namespace AP_Project
     /// </summary>
     public partial class RestaurantViewPage : Page
     {
-        List<Food> foodList;
         string RestaurantUsername;
 
         public RestaurantViewPage(string restaurantUsername)
         {
             InitializeComponent();
             RestaurantUsername = restaurantUsername;
-            DataContext = Data.GetRestaurantByUsername(restaurantUsername);
-            foodList = Data.GetRestaurantByUsername(restaurantUsername).Foods.Select(x => x).ToList();
+            
+            DataContext = new ViewModelForRestaurantViewPage(restaurantUsername);
         }
 
-        private void ApplyFilters(object sender, RoutedEventArgs e)
+        private void ApplyFilters(object sender, RoutedEventArgs e) // Doesn't Apply!!!!!
         {
-            if (DropdownMenu.SelectedItem == "All")
-            {
-                foodList = Data.GetRestaurantByUsername(RestaurantUsername).Foods.Select(x => x).ToList();
-            }
-            foodList = foodList.Where(x => x.Category == (string)DropdownMenu.SelectedItem).ToList();
+            //if (DropdownMenu.SelectedItem == "All")
+            //{
+            //    Foods = Data.GetRestaurantByUsername(RestaurantUsername).Foods.Select(x => x).ToList();
+            //}
+            //Foods = Foods.Where(x => x.Category == (string)DropdownMenu.SelectedItem).ToList();
         }
 
         private void ReserveButton_Click(object sender, RoutedEventArgs e)
