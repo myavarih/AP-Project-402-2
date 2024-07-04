@@ -37,5 +37,6 @@ namespace AP_Project
         public double TotalRate { get; set; }
         public List<Food> Foods { get; set; } = new List<Food>();
         public List<Order> Orders { get; set; } = new List<Order>();
+        public List<string> Categories { get; set; } = new List<string>();
     }
 }

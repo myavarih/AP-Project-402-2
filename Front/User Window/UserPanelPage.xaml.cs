@@ -28,21 +28,21 @@ namespace AP_Project
         private void SearchRestaurants_Click(object sender, RoutedEventArgs e)
         {
             Data.Restaurants.Add(new Restaurant(
-        username: "user1",
-        password: "pass1",
-        name: "The Gourmet Spot",
-        city: "Tehran",
-        address: "123 Delicious Avenue",
-        dineIn: true,
-        delivery: true,
-        totalRate: 4.7,
-        foods: new List<Food>
-        {
-            new Food { Name = "Pasta", Price = 8.5 },
-            new Food { Name = "Salad", Price = 4.5 }
-        },
-        orders: new List<Order>()
-        ));
+                username: "user1",
+                password: "pass1",
+                name: "The Gourmet Spot",
+                city: "Tehran",
+                address: "123 Delicious Avenue",
+                dineIn: true,
+                delivery: true,
+                totalRate: 4.7,
+                foods: new List<Food>
+                {
+                    new Food { Name = "Pasta", Price = 8.5 },
+                    new Food { Name = "Salad", Price = 4.5 }
+                },
+                orders: new List<Order>()
+                ));
             NavigationService.Navigate(new SearchResaurants());
         }
 

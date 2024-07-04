@@ -8,7 +8,7 @@ namespace AP_Project
 {
     internal class Food
     {
-        public string Name { get; set; } = "";
+        public string Name { get; set; } = ""; // Should be Unique
         public string Ingredients { get; set; } = "";
         public string ImageName { get; set; } = "";
         public double Price {  get; set; }
