@@ -36,7 +36,11 @@ namespace AP_Project
             if (city == null || city == "") { city = ".*"; }
             Regex cityRegex = new Regex("^" + city);
             double minRate;
-            if (!double.TryParse(MinRateTextBox.Text, out minRate))
+            if (MinRateTextBox.Text == "")
+            {
+                minRate = 0;
+            }
+            else if (!double.TryParse(MinRateTextBox.Text, out minRate))
             {
                 MessageBox.Show("The Min Rate Should Be A Number (double)");
                 return;
