@@ -16,7 +16,7 @@ namespace AP_Project
     new Restaurant("restaurant_1", "password123", "Tasty Bites", "New York", "123 Main St", true, true, 4.2,
         new List<Food>
         {
-            new Food("Cheeseburger at Tasty Bites", "Beef, Cheese, Lettuce", "", 12.50, "Fast Food", 4.5, "restaurant_1", 50),
+            new Food("Cheeseburger at Tasty Bites", "Beef, Cheese, Lettuce", "/Images/1.jpg", 12.50, "Fast Food", 4.5, "restaurant_1", 50),
             new Food("Pizza at Tasty Bites", "Tomato Sauce, Cheese, Pepperoni", "", 15.75, "Italian", 4.0, "restaurant_1", 45)
         },
         new List<Order>(),

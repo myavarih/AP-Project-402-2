@@ -22,28 +22,34 @@ namespace AP_Project
     public partial class RestaurantViewPage : Page
     {
         List<Food> foodList;
+        string RestaurantUsername;
 
         public RestaurantViewPage(string restaurantUsername)
         {
             InitializeComponent();
+            RestaurantUsername = restaurantUsername;
             DataContext = Data.GetRestaurantByUsername(restaurantUsername);
-            foodList = (List<Food>)(DataContext as Restaurant).Foods.Select(x => x);
+            foodList = Data.GetRestaurantByUsername(restaurantUsername).Foods.Select(x => x).ToList();
         }
 
         private void ApplyFilters(object sender, RoutedEventArgs e)
         {
-            // todo (Ali)
             if (DropdownMenu.SelectedItem == "All")
             {
-                foodList = (List<Food>)(DataContext as Restaurant).Foods.Select(x => x);
+                foodList = Data.GetRestaurantByUsername(RestaurantUsername).Foods.Select(x => x).ToList();
             }
-            foodList = (List<Food>)foodList.Where(x => x.Category == (string)DropdownMenu.SelectedItem);
+            foodList = foodList.Where(x => x.Category == (string)DropdownMenu.SelectedItem).ToList();
         }
 
         private void ReserveButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
+        private void AddOrderButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        
         private void CommentRateButton_Click(object sender, RoutedEventArgs e)
         {
 
