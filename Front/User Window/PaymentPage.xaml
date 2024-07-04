@@ -1,0 +1,45 @@
+﻿<Page x:Class="AP_Project.Front.User_Window.PaymentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AP_Project.Front.User_Window"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="525"
+      Title="PaymentPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Cart Items List -->
+        <ListView Grid.Row="0" x:Name="CartItemsListView" Margin="10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Food Item" DisplayMemberBinding="{Binding Name}" Width="200"/>
+                    <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="100"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <!-- Total Cost -->
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+            <TextBlock Text="Total: " FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
+            <TextBlock x:Name="TotalCostTextBlock" FontWeight="Bold" FontSize="16" VerticalAlignment="Center" Foreground="Green"/>
+        </StackPanel>
+
+        <!-- Payment Options -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <TextBlock Text="Payment Method: " VerticalAlignment="Center" Margin="0,0,10,0"/>
+            <RadioButton x:Name="OnlinePaymentRadioButton" Content="Online" GroupName="PaymentMethod"/>
+            <RadioButton x:Name="CashPaymentRadioButton" Content="Cash" GroupName="PaymentMethod" Margin="10,0,0,0" IsChecked="True"/>
+        </StackPanel>
+
+        <!-- Confirm Button -->
+        <Button Grid.Row="3" Content="Confirm Payment" HorizontalAlignment="Center" Margin="10" Click="ConfirmPaymentButton_Click"/>
+    </Grid>
+</Page>

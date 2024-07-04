@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AP_Project.Front.User_Window;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,11 +29,31 @@ namespace AP_Project
         {
             InitializeComponent();
             DataContext = Data.GetRestaurantByUsername(restaurantUsername);
+            
         }
 
-        private void ApplyFiltersButton_Click(object sender, RoutedEventArgs e)
+        private void ApplyFilters(object sender, RoutedEventArgs e)
         {
             // todo (Ali)
+        }
+
+        private void ReserveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void CommentRateButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void OrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PaymentPage());
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }

@@ -5,23 +5,25 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AP_Project"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="1100"
+      d:DesignHeight="900" d:DesignWidth="1100"
       Title="RestaurantViewPage">
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <!-- Row for Filter by Section -->
             <RowDefinition Height="*"/>
-            <!-- Row for ListView -->
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
         <!-- Filter by Section -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5" Grid.Row="0">
             <TextBlock Text="Filter by Section:" VerticalAlignment="Center" Margin="5"/>
-            <ComboBox x:Name="DropdownMenu" Width="200" Margin="5" ItemsSource="{Binding Categories}">
+            <ComboBox x:Name="DropdownMenu" Width="200" Margin="5" ItemsSource="{Binding Categories}" SelectionChanged="ApplyFilters" SelectedIndex="0">
             </ComboBox>
-            <Button Content="Apply Filter" Margin="5" Click="ApplyFiltersButton_Click"/>
+            <Button Content="Reserve" Margin="5" Click="ReserveButton_Click"/>
         </StackPanel>
 
         <!-- ListView for displaying foods -->
@@ -39,20 +41,38 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Actions" Width="250">
+                    <GridViewColumn Header="Actions" Width="150">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                    <Button Content="Reserve" Margin="5" Click="ReserveButton_Click" Tag="{Binding Name}"/>
-                                    <Button Content="Order" Margin="5" Click="OrderButton_Click" Tag="{Binding Name}"/>
-                                    <Button Content="Rate" Margin="5" Click="RateButton_Click" Tag="{Binding Name}"/>
-                                    <Button Content="Comment" Margin="5" Click="CommentButton_Click" Tag="{Binding Name}"/>
+                                    <Button Content="Comment/Rate" Margin="5" Click="CommentRateButton_Click" Tag="{Binding Name}"/>
                                 </StackPanel>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Count" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Count}" Width="50"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
+
+        <!-- Bottom Buttons Row -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Back Button at Bottom Left -->
+            <Button Content="Back" Width="100" Height="50" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" Click="BackButton_Click" Grid.Column="0"/>
+
+            <!-- Order Button at Bottom Right -->
+            <Button Content="Order" Width="100" Height="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Click="OrderButton_Click" Grid.Column="1"/>
+        </Grid>
     </Grid>
 </Page>
