@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -27,6 +28,36 @@ namespace AP_Project
 
         private void ApplyFiltersButton_Click(object sender, RoutedEventArgs e)
         {
+            string name = NameFilterTextBox.Text;
+            if (name == null || name == "") { name = ".*"; }
+            Regex nameRegex = new Regex("^" + name);
+            string city = CityFilterTextBox.Text;
+            if (city == null || city == "") { city = ".*"; }
+            Regex cityRegex = new Regex("^" + city);
+            double minRate;
+            if (!double.TryParse(MinRateTextBox.Text, out minRate))
+            {
+                MessageBox.Show("The Min Rate Should Be A Number (double)");
+                return;
+            }
+            string servingMode = ServingModeFilterComboBox.Text;
+            var filteredRestaurants = Data.Restaurants.Where(x => nameRegex.IsMatch(x.Name) && cityRegex.IsMatch(x.City) && x.TotalRate >= minRate);
+            switch (servingMode)
+            {
+                case "Delivery":
+                    filteredRestaurants = filteredRestaurants.Where(x => x.Delivery);
+                    break;
+                case "Dine-in":
+                    filteredRestaurants = filteredRestaurants.Where(x => x.DineIn);
+                    break;
+                case "Dine-in and Delivery":
+                    filteredRestaurants = filteredRestaurants.Where(x => x.Delivery && x.DineIn);
+                    break;
+                default:
+                    // no filter
+                    break;
+            }
+            // todo: give filteredRestaurants to the front (doing by mmd) to display them
 
         }
         private void RestaurantsListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)

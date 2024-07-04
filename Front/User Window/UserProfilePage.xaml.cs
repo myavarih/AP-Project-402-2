@@ -26,7 +26,6 @@ namespace AP_Project
                 ServiceComboBox.SelectedIndex = (int)Data.CurrentUser.SpecialServices;
             this.DataContext = Data.CurrentUser;
         }
-
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             if (!Validation.EmailRegex.IsMatch(Data.CurrentUser.Email))
@@ -43,7 +42,6 @@ namespace AP_Project
                 Data.CurrentUser.SpecialServices = (SpecialServices?)ServiceComboBox.SelectedIndex;
             }
             NavigationService.GoBack();
-
         }
     }
 }

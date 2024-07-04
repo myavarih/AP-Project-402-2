@@ -31,6 +31,9 @@ namespace AP_Project
         {
             NavigationService.Navigate(new SignUp());
             Application.Current.Windows[0].Title = "Sign Up";
+            // totest
+            Data.CurrentUser = new User("000Ali000", "Abcd1234", "alimozdian@gmail.com", "Ali", "Mozdian", "09903322694");
+            Data.AddCurrentUser();
         }
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
@@ -44,7 +47,7 @@ namespace AP_Project
             {
                 MessageBox.Show(ex.Message);
                 return;
-            }//
+            }
             if (buser is User)
             {
                 Data.CurrentUser = (User)buser;
