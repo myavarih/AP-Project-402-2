@@ -22,7 +22,7 @@ namespace AP_Project
 
         private void OrderHistory_Click(object sender, RoutedEventArgs e)
         {
-            // todo
+            NavigationService.Navigate(new OrderHistoryPage());
         }
 
         private void SearchRestaurants_Click(object sender, RoutedEventArgs e)

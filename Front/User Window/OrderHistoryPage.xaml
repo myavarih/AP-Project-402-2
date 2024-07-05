@@ -3,7 +3,10 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       Title="Order History">
     <Grid>
-        <ListView Name="OrderListView" ItemsSource="{Binding Orders}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="350">
+        <!-- Title -->
+        <TextBlock Text="Order History" HorizontalAlignment="Center" Margin="0,0,0,10" FontSize="22" FontWeight="Bold"/>
+
+        <ListView Name="OrderListView" ItemsSource="{Binding Orders}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="Auto" Margin="0,40,0,40">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Food Names" Width="250">
@@ -43,5 +46,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
+
+        <!-- Back Button -->
+        <Button Content="Back" Click="BackButton_Click" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10"/>
     </Grid>
 </Page>
