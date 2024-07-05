@@ -18,7 +18,7 @@ namespace AP_Project
             }
         }
         public List<Food> Cart { get; set; } = new List<Food>();
-        public double TotalCost {  get; set; } // will be calculated
+        public double TotalCost { get { return Cart.Select(x => x.Count * x.Price).Sum(); } }
         public double? Rating {  get; set; }
         public bool IsOnlinePaying {  get; set; }
         public DateTime TimeCreated { get; set; }
@@ -27,6 +27,14 @@ namespace AP_Project
                 DateTimeOffset dtos = new DateTimeOffset(TimeCreated);
                 return (int)dtos.ToUnixTimeSeconds();
             }  }
-
+        public Order(string userUsername, string restaurantUsername, DateTime timeCreated)
+        {
+            UserUsername = userUsername;
+            RestaurantUsername = restaurantUsername;
+            TimeCreated = timeCreated;
+            Cart = new List<Food>();
+            Rating = null;
+            IsOnlinePaying = false; // default -> change it in PaymentPage
+        }
     }
 }

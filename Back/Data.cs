@@ -11,6 +11,8 @@ namespace AP_Project
         public static List<Restaurant> Restaurants { get; set; } = new List<Restaurant>();
         public static List<Admin> Admins { get; set; } = new List<Admin>();
 
+        public static List<Order> UnfinalizedOrders { get; set; } = new List<Order>();
+
         public static List<Restaurant>  restaurants = new List<Restaurant>
 {
     new Restaurant("restaurant_1", "password123", "Tasty Bites", "New York", "123 Main St", true, true, 4.2,
@@ -146,6 +148,11 @@ namespace AP_Project
         public static Admin GetAdminByUsername(string username)
         {
             return Admins.FirstOrDefault(x => x.Username == username);
+        }
+
+        public static Order GetOrderByCode(int code)
+        {
+            return UnfinalizedOrders.FirstOrDefault(x => x.Code == code);
         }
     }
 }
