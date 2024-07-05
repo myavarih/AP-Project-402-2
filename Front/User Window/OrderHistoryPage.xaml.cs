@@ -25,13 +25,7 @@ namespace AP_Project
             InitializeComponent();
             DataContext = Data.CurrentUser;
         }
-
-        public void RateComment_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void BackButton_Click(object sender, RoutedEventArgs e)  // Validate Rating
         {
             NavigationService.GoBack();
         }
