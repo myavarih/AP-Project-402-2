@@ -29,17 +29,30 @@
                     </GridViewColumn>
                     <GridViewColumn Header="Time" DisplayMemberBinding="{Binding TimeCreated}" Width="150"/>
                     <GridViewColumn Header="Restaurant Name" DisplayMemberBinding="{Binding RestaurantName}" Width="150"/>
-                    <GridViewColumn Header="Rating" Width="50">
+                    <GridViewColumn Header="Rating" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Rating}" Width="40"/>
+                                <ComboBox SelectedItem="{Binding Rating, Mode=TwoWay}" Width="80">
+                                    <ComboBoxItem Content="1" />
+                                    <ComboBoxItem Content="2" />
+                                    <ComboBoxItem Content="3" />
+                                    <ComboBoxItem Content="4" />
+                                    <ComboBoxItem Content="5" />
+                                </ComboBox>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Comment" Width="250">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding Comment, Mode=TwoWay}" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Height="100" Width="240"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="Actions" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Rate/Comment" Click="RateComment_Click" Tag="{Binding}"/>
+                                <Button Content="Submit" Click="Submit_Click" Tag="{Binding Code}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

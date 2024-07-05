@@ -5,11 +5,12 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AP_Project.Front.User_Window"
       mc:Ignorable="d" 
-      d:DesignHeight="350" d:DesignWidth="325"
+      d:DesignHeight="350" d:DesignWidth="425"
       Title="PaymentPage">
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
@@ -17,33 +18,37 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
+        <!-- Page Title -->
+        <TextBlock Grid.Row="0" Text="{Binding RestaurantName}" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" Margin="10"/>
+
         <!-- Cart Items List -->
-        <ListView Grid.Row="0" x:Name="CartItemsListView" Margin="10" ItemsSource="{Binding Cart}">
+        <ListView Grid.Row="1" x:Name="CartItemsListView" Margin="10" ItemsSource="{Binding Cart}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Food Item" DisplayMemberBinding="{Binding Name}" Width="200"/>
                     <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="100"/>
+                    <GridViewColumn Header="Count" DisplayMemberBinding="{Binding Count}" Width="100"/>
                 </GridView>
             </ListView.View>
         </ListView>
 
         <!-- Total Cost -->
-        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10">
             <TextBlock Text="Total: " FontWeight="Bold" FontSize="16" VerticalAlignment="Center"/>
             <TextBlock Text="{Binding TotalCost}" x:Name="TotalCostTextBlock" FontWeight="Bold" FontSize="16" VerticalAlignment="Center" Foreground="Green"/>
         </StackPanel>
 
         <!-- Payment Options -->
-        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+        <StackPanel Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
             <TextBlock Text="Payment Method: " VerticalAlignment="Center" Margin="0,0,10,0"/>
             <RadioButton x:Name="OnlinePaymentRadioButton" Content="Online" GroupName="PaymentMethod"/>
             <RadioButton x:Name="CashPaymentRadioButton" Content="Cash" GroupName="PaymentMethod" Margin="10,0,0,0" IsChecked="True"/>
         </StackPanel>
 
         <!-- Confirm Button -->
-        <Button Grid.Row="3" Content="Confirm Payment" HorizontalAlignment="Center" Margin="10" Click="ConfirmPaymentButton_Click"/>
+        <Button Grid.Row="4" Content="Confirm Payment" HorizontalAlignment="Center" Margin="10" Click="ConfirmPaymentButton_Click"/>
 
         <!-- Back Button -->
-        <Button Grid.Row="4" Content="Back" HorizontalAlignment="Left" Margin="10" Click="BackButton_Click"/>
+        <Button Grid.Row="5" Content="Back" HorizontalAlignment="Left" Margin="10" Click="BackButton_Click"/>
     </Grid>
 </Page>
