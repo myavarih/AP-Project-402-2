@@ -62,7 +62,7 @@
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Tag="{Binding Name}">
                                     <TextBox Text="0" Tag="{Binding Name}"/>
-                                    <Button Content="Add To Cart" Margin="5" Click="AddOrderButton_Click" Tag="{Binding Name}"/>
+                                    <Button Content="Order" Margin="5" Click="AddOrderButton_Click" Tag="{Binding Name}"/>
                                 </StackPanel>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
@@ -82,7 +82,7 @@
             <Button Content="Back" Width="100" Height="50" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" Click="BackButton_Click" Grid.Column="0"/>
 
             <!-- Order Button at Bottom Right -->
-            <Button Content="Order" Width="100" Height="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Click="OrderButton_Click" Grid.Column="1"/>
+            <Button Content="Finalize Order" Width="100" Height="50" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" Click="OrderButton_Click" Grid.Column="1"/>
         </Grid>
     </Grid>
 </Page>

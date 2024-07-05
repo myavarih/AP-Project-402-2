@@ -20,6 +20,7 @@ namespace AP_Project.Front.User_Window
     /// </summary>
     public partial class PaymentPage : Page
     {
+
         public PaymentPage()
         {
             InitializeComponent();
@@ -28,6 +29,11 @@ namespace AP_Project.Front.User_Window
         private void ConfirmPaymentButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }

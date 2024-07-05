@@ -22,5 +22,10 @@ namespace AP_Project
         public double? Rating {  get; set; }
         public bool IsOnlinePaying {  get; set; }
         public DateTime TimeCreated { get; set; }
+        public int Code { get
+            {
+                DateTimeOffset dtos = new DateTimeOffset(TimeCreated);
+                return (int)dtos.ToUnixTimeSeconds();
+            }  }
     }
 }
