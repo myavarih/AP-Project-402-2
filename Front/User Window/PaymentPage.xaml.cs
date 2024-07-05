@@ -20,14 +20,21 @@ namespace AP_Project.Front.User_Window
     /// </summary>
     public partial class PaymentPage : Page
     {
-        public PaymentPage()
+        Order order;
+        public PaymentPage(long orderCode)
         {
             InitializeComponent();
+            order = Data.GetOrderByCode(orderCode);
+            if (order == null)
+            {
+                throw new Exception("There is no order with this code!");
+            }
+            DataContext = order;
         }
 
         private void ConfirmPaymentButton_Click(object sender, RoutedEventArgs e)
         {
-
+            // remember to substract the count of each food from the restaurants Foods list
         }
     }
 }

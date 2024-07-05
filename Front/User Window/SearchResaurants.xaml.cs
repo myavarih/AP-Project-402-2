@@ -42,7 +42,7 @@ namespace AP_Project
             }
             else if (!double.TryParse(MinRateTextBox.Text, out minRate))
             {
-                MessageBox.Show("The Min Rate Should Be A Number (double)");
+                MessageBox.Show("The Min Rate Should Be A Number (double)!");
                 return;
             }
             string servingMode = ServingModeFilterComboBox.Text;

@@ -20,7 +20,7 @@ namespace AP_Project
             Count = count;
         }
 
-        public string Name { get; set; } = ""; // Should be Unique
+        public string Name { get; set; } = ""; // Should be Unique (in the scale of a restaurant)
         public string Ingredients { get; set; } = "";
         public string ImageName { get; set; } = "";
         public double Price {  get; set; }
@@ -28,5 +28,15 @@ namespace AP_Project
         public double Rating { get; set; }
         public string RestaurantUsername { get; set; } = "";
         public int Count {  get; set; }
+
+        public static Food DeepCopy(Food food)
+        {
+            if (food == null)
+            {
+                return null;
+            }
+            Food newFood = new Food(food.Name, food.Ingredients, food.ImageName, food.Price, food.Category, food.Rating, food.RestaurantUsername, food.Count);
+            return newFood;
+        }
     }
 }
