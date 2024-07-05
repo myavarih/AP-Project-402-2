@@ -9,7 +9,7 @@
         <ListView Name="OrderListView" ItemsSource="{Binding Orders}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="Auto" Margin="0,40,0,40">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Food Names" Width="250">
+                    <GridViewColumn Header="Food Names" Width="300">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <ItemsControl ItemsSource="{Binding Cart}">
@@ -20,7 +20,14 @@
                                     </ItemsControl.ItemsPanel>
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate>
-                                            <TextBlock Text="{Binding Name}" Margin="0,0,10,0"/>
+                                            <TextBlock>
+                                                <TextBlock.Text>
+                                                    <MultiBinding StringFormat="{}{0} (x{1})">
+                                                        <Binding Path="Name"/>
+                                                        <Binding Path="Count"/>
+                                                    </MultiBinding>
+                                                </TextBlock.Text>
+                                            </TextBlock>
                                         </DataTemplate>
                                     </ItemsControl.ItemTemplate>
                                 </ItemsControl>
