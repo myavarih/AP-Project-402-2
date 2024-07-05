@@ -18,12 +18,14 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Filter by Section -->
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5" Grid.Row="0">
-            <TextBlock Text="Filter by Section:" VerticalAlignment="Center" Margin="5"/>
-            <ComboBox x:Name="DropdownMenu" Width="200" Margin="5" ItemsSource="{Binding Categories}" SelectionChanged="ApplyFilters" SelectedIndex="0">
-            </ComboBox>
-            <Button Content="Reserve" Margin="5" Click="ReserveButton_Click"/>
+        <!-- Filter by Section and Title -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Margin="5" Grid.Row="0">
+            <TextBlock Text="{Binding RestaurantName}" FontSize="24" FontWeight="Bold" Margin="5" HorizontalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                <TextBlock Text="Filter by Section:" VerticalAlignment="Center" Margin="5"/>
+                <ComboBox x:Name="DropdownMenu" Width="200" Margin="5" ItemsSource="{Binding Categories}" SelectionChanged="ApplyFilters" SelectedIndex="0"/>
+                <Button Content="Reserve" Margin="5" Click="ReserveButton_Click"/>
+            </StackPanel>
         </StackPanel>
 
         <!-- ListView for displaying foods -->
@@ -61,7 +63,7 @@
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Tag="{Binding Name}">
-                                    <TextBox Text="0" Tag="{Binding Name}"/>
+                                    <TextBox Text="0" Width="20" Tag="{Binding Name}"/>
                                     <Button Content="Order" Margin="5" Click="AddOrderButton_Click" Tag="{Binding Name}"/>
                                 </StackPanel>
                             </DataTemplate>

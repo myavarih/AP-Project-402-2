@@ -18,7 +18,7 @@ namespace AP_Project.Front.Restaurant_Window
     /// <summary>
     /// Interaction logic for EditMenu.xaml
     /// </summary>
-    public partial class EditMenu : Page
+    public partial class EditMenu : Page 
     {
         public EditMenu()
         {
@@ -40,7 +40,7 @@ namespace AP_Project.Front.Restaurant_Window
         }
         private void EditFood_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new EditFood());
+            NavigationService.Navigate(new EditFood()); // give me the food somehow for the next page
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

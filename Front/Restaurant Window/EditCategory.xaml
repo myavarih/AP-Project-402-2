@@ -20,23 +20,23 @@
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,20">
                 <TextBox Name="NewCategoryTextBox" Width="150" Height="30" Margin="0,0,10,0"/>
-                <Button Content="Add New Category" Width="150" Height="30"/>
+                <Button Content="Add New Category" Width="150" Height="30" Click="AddCategoryButton_Click"/>
             </StackPanel>
         </StackPanel>
 
-        <ListView Name="CategoriesListView" Width="350" Height="300" Grid.Row="1" HorizontalAlignment="Center">
+        <ListView Name="CategoriesListView" Width="350" Height="300" Grid.Row="1" HorizontalAlignment="Center" ItemsSource="{Binding Categories}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Margin="10" VerticalAlignment="Center">
-                        <TextBlock Text="{Binding CategoryName}" FontSize="18" FontWeight="Bold" Margin="0,0,10,0"/>
+                        <TextBox Text="{Binding , Mode=TwoWay}" FontSize="18" FontWeight="Bold" Width="150" Margin="0,0,10,0"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
-                            <Button Content="Edit" Width="75" Height="30" Margin="5"/>
-                            <Button Content="Remove" Width="75" Height="30" Margin="5"/>
+                            <Button Content="Remove" Width="75" Height="30" Margin="5" Click="RemoveCategoryButton_Click" Tag="{Binding}"/>
                         </StackPanel>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
 
         <!-- Back Button -->
         <Button Content="Back" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" Grid.Row="2" Click="BackButton_Click"/>

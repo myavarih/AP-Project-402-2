@@ -25,7 +25,7 @@ namespace AP_Project.Front.Restaurant_Window
             InitializeComponent();
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void BackButton_Click(object sender, RoutedEventArgs e) // validate inventory (Count) Inputted by user Before going Back (sakht nagir in rahat tare!) // todo : Ali
         {
             NavigationService.GoBack();
         }

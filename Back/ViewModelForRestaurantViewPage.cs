@@ -13,9 +13,11 @@ namespace AP_Project.Back
         {
             Categories = new ObservableCollection<string>(Data.GetRestaurantByUsername(restaurantUsername).Categories);
             Foods = new ObservableCollection<Food>(Data.GetRestaurantByUsername(restaurantUsername).Foods);
+            RestaurantName = Data.GetRestaurantByUsername(restaurantUsername).Name;
         }
 
         public ObservableCollection<Food> Foods {  get; set; }
         public ObservableCollection<string> Categories { get; set; }
+        public string RestaurantName { get; set; }
     }
 }

@@ -23,11 +23,22 @@ namespace AP_Project.Front.Restaurant_Window
         public EditCategory()
         {
             InitializeComponent();
+            DataContext = Data.CurrentRestaurant;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+        }
+
+        private void RemoveCategoryButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddCategoryButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
