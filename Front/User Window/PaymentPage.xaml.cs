@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -34,8 +35,41 @@ namespace AP_Project.Front.User_Window
 
         private void ConfirmPaymentButton_Click(object sender, RoutedEventArgs e)
         {
-            // remember to substract the count of each food from the restaurants Foods list (done)
-            // todo: HERE
+            order.IsOnlinePaying = OnlinePaymentRadioButton.IsChecked == true;
+            if (order.IsOnlinePaying)
+            {
+                string orderCart = string.Join('\n', order.Cart.Select(x => "\t" + x.Name + $" x{x.Count}"));
+                string message = "Your online order is finalized.\n" +
+                    $"Code: {order.Code}\n" +
+                    $"your Username: {order.UserUsername}\n" +
+                    $"Restaurant Name: {order.RestaurantName}\n" +
+                    $"Cart:\n{orderCart}\n" +
+                    $"Total Cost: {order.TotalCost}\n" +
+                    $"Time: {order.TimeCreated}\n" +
+                    "Payment Methode: Online :)";
+                try // send Email
+                {
+                    MailMessage mail = new MailMessage();
+                    mail.From = new MailAddress("ap.project.restaurantapp@gmail.com");
+                    mail.To.Add(Data.CurrentUser.Email);
+                    mail.Subject = "Online Payment Receipt";
+                    mail.Body = message;
+
+                    SmtpClient smtp = new SmtpClient();
+                    smtp.Host = "smtp.gmail.com";
+                    smtp.UseDefaultCredentials = false;
+                    smtp.Port = 587;
+                    smtp.Credentials = new System.Net.NetworkCredential("ap.project.restaurantapp@gmail.com", "cvkj hhou ygnm ylcp");
+                    smtp.EnableSsl = true;
+
+                    smtp.Send(mail);
+                }
+                catch
+                {
+                    MessageBox.Show("Failed To Send Email!");
+                    return;
+                }
+            }
             User user = Data.GetUserByUsername(order.UserUsername);
             if (user == null)
             {
@@ -61,11 +95,6 @@ namespace AP_Project.Front.User_Window
                     }
                     restFood.Count -= food.Count;
                 }
-            }
-            order.IsOnlinePaying = OnlinePaymentRadioButton.IsChecked == true;
-            if (order.IsOnlinePaying)
-            {
-                // todo: email
             }
             MessageBox.Show("Order Completed.");
             NavigationService.GoBack();
