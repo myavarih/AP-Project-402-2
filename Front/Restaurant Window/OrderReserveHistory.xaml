@@ -65,42 +65,46 @@
             </Grid>
         </Border>
 
-        <!-- Orders ListBox -->
-        <ListBox Grid.Row="1" ItemsSource="{Binding FilteredOrders}" Style="{StaticResource OrdersListBoxStyle}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Border Background="#FFFFFF" BorderBrush="#DDDDDD" BorderThickness="0,0,0,1" Margin="10">
-                        <Grid Margin="10">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                            </Grid.RowDefinitions>
+        <!-- Orders -->
+        <ListView Grid.Row="1" ItemsSource="{Binding FilteredOrders}" Width="Auto" Height="Auto" HorizontalAlignment="Center" Style="{StaticResource OrdersListViewStyle}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="User Username" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding UserUsername}" FontWeight="Bold" Margin="10,0"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Cart" Width="250">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <ItemsControl ItemsSource="{Binding Cart}" Margin="10,0">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Name}" Margin="0,0,10,0"/>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Total Cost" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding TotalCost, StringFormat='Total Cost: ${0:F2}'}" Margin="10,0"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
 
-                            <!-- User Username -->
-                            <TextBlock Text="{Binding UserUsername}" FontWeight="Bold" Grid.Row="0"/>
-                            <!-- Restaurant Username -->
-                            <TextBlock Text="{Binding RestaurantUsername}" Grid.Row="1"/>
-                            <!-- Cart -->
-                            <ItemsControl ItemsSource="{Binding Cart}" Grid.Row="2" Margin="0,5">
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextBlock Text="{Binding Name}" Margin="10,0"/>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                            </ItemsControl>
-                            <!-- Total Cost -->
-                            <TextBlock Text="{Binding TotalCost, StringFormat='Total Cost: ${0:F2}'}" Grid.Row="3"/>
-                        </Grid>
-                    </Border>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
 
-        <!-- Reserves TextBlock -->
-        <Border Grid.Row="1" Grid.Column="1" Background="#FFFFFF" BorderBrush="#CCCCCC" BorderThickness="1" Margin="10">
-            <TextBlock Text="Reserves will be displayed here" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
-        </Border>
     </Grid>
 </Page>
