@@ -18,14 +18,14 @@ namespace AP_Project.Front.Restaurant_Window
     /// <summary>
     /// Interaction logic for EditFood.xaml
     /// </summary>
-    public partial class EditFood : Page
+    public partial class EditFood : Page // give me a Food Object for DataContext // todo : Ali
     {
         public EditFood()
         {
             InitializeComponent();
         }
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+        private void BackButton_Click(object sender, RoutedEventArgs e) // validate Before Allowing to go Back (No Save Button - Binding)
         {
             NavigationService.GoBack();
         }

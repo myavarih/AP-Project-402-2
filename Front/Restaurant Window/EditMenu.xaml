@@ -43,7 +43,7 @@
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                         <!-- Inventory Column -->
-                        <GridViewColumn Header="Inventory" DisplayMemberBinding="{Binding Inventory}" />
+                        <GridViewColumn Header="Inventory" DisplayMemberBinding="{Binding Count}" />
                         <!-- Actions Column -->
                         <GridViewColumn Header="Actions" Width="150">
                             <GridViewColumn.CellTemplate>

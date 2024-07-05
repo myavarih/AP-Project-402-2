@@ -35,6 +35,8 @@ namespace AP_Project
             Cart = new List<Food>();
             Rating = null;
             IsOnlinePaying = false; // default -> change it in PaymentPage
+            Comment = "";
         }
+        public string Comment { get; set; }
     }
 }

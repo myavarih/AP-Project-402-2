@@ -20,9 +20,11 @@ namespace AP_Project.Front.Restaurant_Window
     /// </summary>
     public partial class AddFood : Page
     {
+        Food newFood = new Food("", "", "", 0, "", 0, Data.CurrentRestaurant.Username, 0);
         public AddFood()
         {
             InitializeComponent();
+            DataContext = newFood;
         }
 
         private void AddFoodButton_Click(object sender, RoutedEventArgs e)

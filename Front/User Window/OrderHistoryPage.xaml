@@ -9,7 +9,7 @@
         <ListView Name="OrderListView" ItemsSource="{Binding Orders}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="Auto" Margin="0,40,0,40">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Food Names" Width="250">
+                    <GridViewColumn Header="Food Names" Width="300">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <ItemsControl ItemsSource="{Binding Cart}">
@@ -20,7 +20,14 @@
                                     </ItemsControl.ItemsPanel>
                                     <ItemsControl.ItemTemplate>
                                         <DataTemplate>
-                                            <TextBlock Text="{Binding Name}" Margin="0,0,10,0"/>
+                                            <TextBlock>
+                                                <TextBlock.Text>
+                                                    <MultiBinding StringFormat="{}{0} (x{1})">
+                                                        <Binding Path="Name"/>
+                                                        <Binding Path="Count"/>
+                                                    </MultiBinding>
+                                                </TextBlock.Text>
+                                            </TextBlock>
                                         </DataTemplate>
                                     </ItemsControl.ItemTemplate>
                                 </ItemsControl>
@@ -29,17 +36,17 @@
                     </GridViewColumn>
                     <GridViewColumn Header="Time" DisplayMemberBinding="{Binding TimeCreated}" Width="150"/>
                     <GridViewColumn Header="Restaurant Name" DisplayMemberBinding="{Binding RestaurantName}" Width="150"/>
-                    <GridViewColumn Header="Rating" Width="50">
+                    <GridViewColumn Header="Rating" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Rating}" Width="40"/>
+                                <TextBox Name ="{Binding Code}" Text="{Binding Rating, Mode=TwoWay}" Width="80"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Actions" Width="100">
+                    <GridViewColumn Header="Comment" Width="250">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Rate/Comment" Click="RateComment_Click" Tag="{Binding}"/>
+                                <TextBox Text="{Binding Comment, Mode=TwoWay}" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Height="100" Width="230"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

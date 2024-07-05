@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AP_Project.Front.Restaurant_Window"
       mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="1000"
       Title="FoodInventoryPanel">
 
     <Grid>
@@ -19,24 +19,48 @@
             <TextBlock Text="Food Inventory" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" TextAlignment="Center"/>
         </StackPanel>
 
-        <ListView Name="FoodInventoryListView" Width="750" Height="600" Grid.Row="1" HorizontalAlignment="Center">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal" Margin="10" VerticalAlignment="Center">
-                        <Image Source="{Binding ImageName}" Width="100" Height="100" Margin="10"/>
-                        <StackPanel VerticalAlignment="Center" Width="400">
-                            <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold" Margin="0,0,0,5"/>
-                            <TextBlock Text="Group: {Binding Category}" FontSize="14" Foreground="Gray" Margin="0,0,0,5"/>
-                            <TextBlock Text="Price: {Binding Price}" FontSize="14" Foreground="Gray" Margin="0,0,0,5"/>
-                        </StackPanel>
-                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                            <TextBox Name="InventoryTextBox" Width="100" Height="30" Margin="0,0,10,0" Text="{Binding Inventory, Mode=TwoWay}"/>
-                            <Button Content="Update Inventory" Width="150" Height="30" Margin="0,0,0,0" Command="{Binding UpdateInventoryCommand}"/>
-                        </StackPanel>
-                    </StackPanel>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+        <ListView Name="FoodInventoryListView" Height="600" Grid.Row="1" HorizontalAlignment="Center" ItemsSource="{Binding Foods}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Image" Width="120">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding ImageName}" Width="100" Height="100" Margin="10"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Name" Width="200">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold" Margin="0,0,0,5"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Category" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Category}" FontSize="14" Foreground="Gray" Margin="0,0,0,5"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Price" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Price, StringFormat='{}{0:C}'}" FontSize="14" Foreground="Gray" Margin="0,0,0,5"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Inventory" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding Inventory, Mode=TwoWay}" Width="80" Height="30" Margin="0,0,10,0"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
         </ListView>
+
 
         <!-- Back Button -->
         <Button Content="Back" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" Grid.Row="2" Click="BackButton_Click"/>
