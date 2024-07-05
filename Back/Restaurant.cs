@@ -39,5 +39,10 @@ namespace AP_Project
         public List<Food> Foods { get; set; } = new List<Food>();
         public List<Order> Orders { get; set; } = new List<Order>();
         public List<string> Categories { get; set; } = new List<string>();
+
+        public Food GetFoodByName(string name)
+        {
+            return Foods.FirstOrDefault(x => x.Name == name);
+        }
     }
 }

@@ -31,10 +31,10 @@ namespace AP_Project
         {
             string name = NameFilterTextBox.Text;
             if (name == null || name == "") { name = ".*"; }
-            Regex nameRegex = new Regex("^" + name);
+            Regex nameRegex = new Regex("^" + name, RegexOptions.IgnoreCase);
             string city = CityFilterTextBox.Text;
             if (city == null || city == "") { city = ".*"; }
-            Regex cityRegex = new Regex("^" + city);
+            Regex cityRegex = new Regex("^" + city, RegexOptions.IgnoreCase);
             double minRate;
             if (MinRateTextBox.Text == "")
             {
@@ -42,7 +42,7 @@ namespace AP_Project
             }
             else if (!double.TryParse(MinRateTextBox.Text, out minRate))
             {
-                MessageBox.Show("The Min Rate Should Be A Number (double)");
+                MessageBox.Show("The Min Rate Should Be A Number (double)!");
                 return;
             }
             string servingMode = ServingModeFilterComboBox.Text;
