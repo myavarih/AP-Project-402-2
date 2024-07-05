@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,11 @@ namespace AP_Project.Back
     {
         public ViewModelForRestaurantViewPage(string restaurantUsername)
         {
-            Categories = Data.GetRestaurantByUsername(restaurantUsername).Categories.Select(x => x).ToList();
-            Foods = Data.GetRestaurantByUsername(restaurantUsername).Foods.Select(x => x).ToList();
+            Categories = new ObservableCollection<string>(Data.GetRestaurantByUsername(restaurantUsername).Categories);
+            Foods = new ObservableCollection<Food>(Data.GetRestaurantByUsername(restaurantUsername).Foods);
         }
 
-        public List<Food> Foods {  get; set; }
-        public List<string> Categories { get; set; }
+        public ObservableCollection<Food> Foods {  get; set; }
+        public ObservableCollection<string> Categories { get; set; }
     }
 }

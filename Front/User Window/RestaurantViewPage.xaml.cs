@@ -20,32 +20,35 @@ namespace AP_Project
     /// <summary>
     /// Interaction logic for RestaurantViewPage.xaml
     /// </summary>
-    public partial class RestaurantViewPage : Page
+    public partial class RestaurantViewPage : Page // todo: Ali -> Complete This Page
     {
         string RestaurantUsername;
-
-        public RestaurantViewPage(string restaurantUsername)
+        ViewModelForRestaurantViewPage vm;
+        public RestaurantViewPage(string restaurantUsername) // A Cart Should be Created and used
         {
             InitializeComponent();
             RestaurantUsername = restaurantUsername;
-            
-            DataContext = new ViewModelForRestaurantViewPage(restaurantUsername);
+            vm = new ViewModelForRestaurantViewPage(restaurantUsername);
+            DataContext = vm;
         }
 
-        private void ApplyFilters(object sender, RoutedEventArgs e) // Doesn't Apply!!!!!
+        private void ApplyFilters(object sender, RoutedEventArgs e)
         {
-            //if (DropdownMenu.SelectedItem == "All")
-            //{
-            //    Foods = Data.GetRestaurantByUsername(RestaurantUsername).Foods.Select(x => x).ToList();
-            //}
-            //Foods = Foods.Where(x => x.Category == (string)DropdownMenu.SelectedItem).ToList();
+            var selectedCategory = DropdownMenu.SelectedItem.ToString();
+            var allFoods = Data.GetRestaurantByUsername(RestaurantUsername).Foods;
+            var filteredFoods = selectedCategory == "All"
+                ? allFoods
+                : allFoods.Where(x => x.Category == selectedCategory).ToList();
+
+            vm.Foods.Clear();
+            foreach (var food in filteredFoods)
+            {
+                vm.Foods.Add(food);
+            }
         }
+
 
         private void ReserveButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-        private void AddOrderButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
@@ -58,6 +61,27 @@ namespace AP_Project
         private void OrderButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new PaymentPage());
+        }
+        private void AddOrderButton_Click(object sender, RoutedEventArgs e)
+        {
+            Button clickedButton = sender as Button;
+            string foodName = clickedButton.Tag.ToString();
+
+            // Find the parent StackPanel of the clicked button
+            StackPanel parentPanel = clickedButton.Parent as StackPanel;
+
+            // Find the TextBox within the same StackPanel
+            TextBox orderTextBox = parentPanel.Children
+                                               .OfType<TextBox>()
+                                               .FirstOrDefault(tb => tb.Tag.ToString() == foodName);
+
+            if (orderTextBox != null)
+            {
+                string orderCount = orderTextBox.Text;
+                // Now you have the order count value in orderCount variable
+                MessageBox.Show($"Food: {foodName}, Order Count: {orderCount}");
+                // Implement your logic to add the item to the cart
+            }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
