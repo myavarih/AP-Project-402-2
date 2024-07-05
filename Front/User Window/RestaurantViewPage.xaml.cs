@@ -86,7 +86,8 @@ namespace AP_Project
             if (orderTextBox != null)
             {
                 int orderCount;
-                if (!int.TryParse(orderTextBox.Text, out orderCount) || orderCount < 0)
+                if (orderTextBox.Text == "") { orderCount = 0; }
+                else if (!int.TryParse(orderTextBox.Text, out orderCount) || orderCount < 0)
                 {
                     MessageBox.Show("Order Count Must Be A Non-negative Integer!");
                     return;
