@@ -23,6 +23,7 @@ namespace AP_Project.Front.Restaurant_Window
         public RestaurantPanel()
         {
             InitializeComponent();
+            DataContext = Data.CurrentRestaurant;
         }
 
         private void ChangeMenu_Click(object sender, RoutedEventArgs e)

@@ -29,6 +29,10 @@ namespace AP_Project.Front.Restaurant_Window
         {
             NavigationService.Navigate(new AddFood());
         }
+        private void RemoveFood_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
 
         private void EditCategories_Click(object sender, RoutedEventArgs e)
         {

@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AP_Project.Front.Restaurant_Window"
       mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="800"
+      d:DesignHeight="700" d:DesignWidth="1000"
       Title="FoodListPanel">
 
     <Grid>
@@ -17,23 +17,49 @@
                 <Button Content="Edit Food Categories" Width="150" Height="40" Margin="10" Click="EditCategories_Click"/>
             </StackPanel>
 
-            <ListView Name="FoodListView" Width="700" Height="500">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal" Margin="10" VerticalAlignment="Center">
-                            <Image Source="{Binding ImagePath}" Width="100" Height="100" Margin="10"/>
-                            <StackPanel VerticalAlignment="Center">
-                                <TextBlock Text="{Binding Name}" FontSize="18" FontWeight="Bold" Margin="0,0,0,5"/>
-                                <TextBlock Text="{Binding Category}" FontSize="14" Foreground="Gray"/>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10">
-                                <Button Content="Edit" Width="75" Height="30" Margin="5" Click="EditFood_Click"/>
-                                <Button Content="Remove" Width="75" Height="30" Margin="5"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
+            <ListView Name="FoodListView" Height="500" ItemsSource="{Binding Foods}">
+                <ListView.View>
+                    <GridView>
+                        <!-- Image Column -->
+                        <GridViewColumn Header="Image" Width="120">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding ImageName}" Width="100" Height="100" Margin="10"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <!-- Name Column -->
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150"/>
+                        <!-- Category Column -->
+                        <GridViewColumn Header="Category" DisplayMemberBinding="{Binding Category}" Width="100"/>
+                        <!-- Price Column -->
+                        <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="80"/>
+                        <!-- Ingredients Column -->
+                        <GridViewColumn Header="Ingredients" Width="200">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Ingredients}" TextWrapping="Wrap" Width="180"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <!-- Inventory Column -->
+                        <GridViewColumn Header="Inventory" DisplayMemberBinding="{Binding Inventory}" />
+                        <!-- Actions Column -->
+                        <GridViewColumn Header="Actions" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                                        <Button Content="Edit" Width="75" Height="30" Margin="5" Click="EditFood_Click" Tag="{Binding Name}"/>
+                                        <Button Content="Remove" Width="75" Height="30" Margin="5" Click="RemoveFood_Click" Tag="{Binding Name}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
             </ListView>
+
+
         </StackPanel>
 
         <!-- Back Button -->

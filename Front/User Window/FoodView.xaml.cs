@@ -24,5 +24,15 @@ namespace AP_Project.Front.User_Window
         {
             InitializeComponent();
         }
+
+        private void CommentSubmit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SubmitRatingBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
