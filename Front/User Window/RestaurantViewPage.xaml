@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AP_Project"
       mc:Ignorable="d" 
-      d:DesignHeight="900" d:DesignWidth="1100"
+      d:DesignHeight="800" d:DesignWidth="1100"
       Title="RestaurantViewPage">
 
     <Grid>
@@ -37,7 +37,7 @@
                     <GridViewColumn Header="Image" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Image Source="{Binding ImagePath}" Width="100" Height="100"/>
+                                <Image Source="{Binding ImageName}" Width="100" Height="100"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

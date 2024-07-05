@@ -13,27 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace AP_Project
+namespace AP_Project.Front.User_Window
 {
     /// <summary>
-    /// Interaction logic for OrderHistoryPage.xaml
+    /// Interaction logic for FoodView.xaml
     /// </summary>
-    public partial class OrderHistoryPage : Page
+    public partial class FoodView : Page
     {
-        public OrderHistoryPage()
+        public FoodView()
         {
             InitializeComponent();
-            DataContext = Data.CurrentUser;
-        }
-
-        public void RateComment_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.GoBack();
         }
     }
 }
