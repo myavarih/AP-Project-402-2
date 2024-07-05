@@ -39,7 +39,7 @@
                     <GridViewColumn Header="Rating" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox Name ="{Binding Code}" Text="{Binding Rating, Mode=TwoWay}" Width="80"/>
+                                <TextBox Text="{Binding Rating, Mode=TwoWay}" Width="80"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
