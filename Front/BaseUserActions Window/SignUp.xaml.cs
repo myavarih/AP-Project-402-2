@@ -49,7 +49,7 @@ namespace AP_Project
                 MailMessage mail = new MailMessage();
 
 
-                mail.From = new MailAddress("myavarih@gmail.com");
+                mail.From = new MailAddress("ap.project.restaurantapp@gmail.com");
                 mail.To.Add(Data.CurrentUser.Email);
                 mail.Subject = "Verification Code";
                 mail.Body = "Your Verification Code " + Validation.verificationCode;
@@ -60,7 +60,7 @@ namespace AP_Project
                 smtp.Host = "smtp.gmail.com";
                 smtp.UseDefaultCredentials = false;
                 smtp.Port = 587;
-                smtp.Credentials = new System.Net.NetworkCredential("myavarih@gmail.com", "gxey vnsz vbvt damr");
+                smtp.Credentials = new System.Net.NetworkCredential("ap.project.restaurantapp@gmail.com", "cvkj hhou ygnm ylcp");
                 smtp.EnableSsl = true;
 
                 smtp.Send(mail);

@@ -6,27 +6,37 @@
         <ListView Name="OrderListView" ItemsSource="{Binding Orders}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="350">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="Food Name" DisplayMemberBinding="{Binding FoodName}" Width="120"/>
-                    <GridViewColumn Header="Time" DisplayMemberBinding="{Binding Time}" Width="150"/>
+                    <GridViewColumn Header="Food Names" Width="250">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <ItemsControl ItemsSource="{Binding Cart}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Name}" Margin="0,0,10,0"/>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn Header="Time" DisplayMemberBinding="{Binding TimeCreated}" Width="150"/>
                     <GridViewColumn Header="Restaurant Name" DisplayMemberBinding="{Binding RestaurantName}" Width="150"/>
                     <GridViewColumn Header="Rating" Width="50">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox Text="{Binding Rating, UpdateSourceTrigger=PropertyChanged}" Width="40"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn Header="Comments" Width="200">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding Comments, UpdateSourceTrigger=PropertyChanged}" Width="180"/>
+                                <TextBlock Text="{Binding Rating}" Width="40"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                     <GridViewColumn Header="Actions" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Submit" Click="SubmitButton_Click" Tag="{Binding}"/>
+                                <Button Content="Rate/Comment" Click="RateComment_Click" Tag="{Binding}"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
