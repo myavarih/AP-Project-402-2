@@ -38,7 +38,7 @@ namespace AP_Project.Front.User_Window
             order.IsOnlinePaying = OnlinePaymentRadioButton.IsChecked == true;
             if (order.IsOnlinePaying)
             {
-                string orderCart = string.Join('\n', order.Cart.Select(x => "\t" + x.Name + $" x{x.Count}"));
+                string orderCart = string.Join('\n', order.Cart.Select(x => "\t" + x.Name + $" (x{x.Count})"));
                 string message = "Your online order is finalized.\n" +
                     $"Code: {order.Code}\n" +
                     $"your Username: {order.UserUsername}\n" +

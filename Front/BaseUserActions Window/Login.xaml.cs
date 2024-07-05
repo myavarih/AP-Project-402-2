@@ -33,6 +33,7 @@ namespace AP_Project
             // totest
             Data.CurrentUser = new User("000Ali000", "Abcd1234", "alimozdian@gmail.com", "Ali", "Mozdian", "09903322694");
             Data.AddCurrentUser();
+            Data.CurrentUser = null;
         }
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
@@ -73,6 +74,10 @@ namespace AP_Project
         private void ChangePasswordBtnClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ChangePassword());
+            // totest
+            Data.CurrentRestaurant = new Restaurant("TestRest", "Passw0rd", "Toranj", "Tehran", "TehranVila, Sohrab Street", true, true);
+            Data.AddCurrentRestaurants();
+            Data.CurrentRestaurant = null;
         }
     }
 }

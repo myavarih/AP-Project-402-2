@@ -13,7 +13,7 @@ namespace AP_Project
 
         public static List<Order> UnfinalizedOrders { get; set; } = new List<Order>();
 
-        public static List<Restaurant>  restaurants = new List<Restaurant>
+        public static List<Restaurant>  restaurants { get; set; } = new List<Restaurant>
 {
     new Restaurant("restaurant_1", "password123", "Tasty Bites", "New York", "123 Main St", true, true, 4.2,
         new List<Food>
@@ -103,18 +103,6 @@ namespace AP_Project
         public static Restaurant CurrentRestaurant { get; set; } = null;
         public static Admin CurrentAdmin { get; set; } = null;
 
-
-        public static void UpdateCUFields(string address, string email) // only used when we have a current user
-        {
-            if (CurrentUser == null)
-            {
-                throw new Exception("No current user!");
-            }
-            // validation
-            CurrentUser.Address = address;
-            CurrentUser.Email = email;
-        }
-
         public static void AddCurrentUser()
         {
             Users.Add(CurrentUser);
@@ -124,7 +112,7 @@ namespace AP_Project
         public static void AddCurrentRestaurants()
         {
             Restaurants.Add(CurrentRestaurant);
-            BaseUsers.Add(CurrentUser);
+            BaseUsers.Add(CurrentRestaurant);
         }
 
         public static void AddCurrentAdmin()

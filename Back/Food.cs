@@ -8,7 +8,7 @@ namespace AP_Project
 {
     class Food
     {
-        public Food(string name, string ingredients, string imageName, double price, string category, double rating, string restaurantUsername, int count)
+        public Food(string name, string ingredients, string imageName, double price, string category, double? rating, string restaurantUsername, int count)
         {
             Name = name;
             Ingredients = ingredients;
@@ -25,7 +25,7 @@ namespace AP_Project
         public string ImageName { get; set; } = "";
         public double Price {  get; set; }
         public string Category { get; set; } = "";
-        public double Rating { get; set; }
+        public double? Rating { get; set; }
         public string RestaurantUsername { get; set; } = "";
         public int Count {  get; set; }
 

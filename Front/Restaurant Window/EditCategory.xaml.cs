@@ -33,12 +33,31 @@ namespace AP_Project.Front.Restaurant_Window
 
         private void RemoveCategoryButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Button button = sender as Button;
+            string category = button.Tag.ToString();
+            if (Data.CurrentRestaurant.Categories.Any(x => x == category))
+            {
+                Data.CurrentRestaurant.Categories.Remove(category);
+                Data.CurrentRestaurant.Foods = Data.CurrentRestaurant.Foods.Where(x => x.Category != category).ToList(); // delete all the foods in this category as well
+                // todo: Refresh the list view
+            }
+            else
+            {
+                MessageBox.Show("There is no such a category to remove! (refresh the page)");
+            }
         }
 
         private void AddCategoryButton_Click(object sender, RoutedEventArgs e)
         {
-
+            string newCat = NewCategoryTextBox.Text;
+            if (Data.CurrentRestaurant.Categories.Any(x => x == newCat))
+            {
+                MessageBox.Show("There is already a category with this name!");
+                return;
+            }
+            Data.CurrentRestaurant.Categories.Add(newCat);
+            MessageBox.Show("Category Added.");
+            // todo: Refresh the list view
         }
     }
 }

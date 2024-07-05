@@ -38,12 +38,12 @@ namespace AP_Project.Front.Restaurant_Window
 
         private void ReserveService_Click(object sender, RoutedEventArgs e) // The button should depend on reserve state
         {
-
+            // todo: RESERVE
         }
 
         private void OrderReserveHIstory_Click(object sender, RoutedEventArgs e)
         {
-
+            // todo
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)

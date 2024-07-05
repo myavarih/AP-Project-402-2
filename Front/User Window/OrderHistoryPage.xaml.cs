@@ -27,6 +27,8 @@ namespace AP_Project
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)  // Validate Rating
         {
+            // todo: validate (check) the value of Rating TextBoxes (if not between 0 and 5, MessageBox and return)
+            // challenge: how to reach and read all the Rating TextBoxes?
             NavigationService.GoBack();
         }
     }

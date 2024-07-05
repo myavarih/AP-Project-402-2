@@ -23,24 +23,42 @@ namespace AP_Project.Front.Restaurant_Window
         public EditMenu()
         {
             InitializeComponent();
+            DataContext = Data.CurrentRestaurant;
         }
 
         private void AddFood_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new AddFood());
+            NavigationService.Navigate(new AddFood()); // done
         }
         private void RemoveFood_Click(object sender, RoutedEventArgs e)
         {
-            
+            Button button = sender as Button;
+            string foodName = button.Tag.ToString();
+            Food food = Data.CurrentRestaurant.GetFoodByName(foodName);
+            if (food == null)
+            {
+                MessageBox.Show("There is no such a food! Weird!");
+                return;
+            }
+            Data.CurrentRestaurant.Foods.Remove(food);
+            MessageBox.Show($"{food.Name} removed.");
         }
 
         private void EditCategories_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new EditCategory());
+            NavigationService.Navigate(new EditCategory()); // done
         }
         private void EditFood_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new EditFood()); // give me the food somehow for the next page
+            Button button = sender as Button;
+            string foodName = button.Tag.ToString();
+            Food food = Data.CurrentRestaurant.GetFoodByName(foodName);
+            if (food == null)
+            {
+                MessageBox.Show("There is no such a food! Weird!");
+                return;
+            }
+            NavigationService.Navigate(new EditFood(food.Name)); // give me the food somehow for the next page (done)
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

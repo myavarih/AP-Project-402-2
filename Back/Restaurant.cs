@@ -8,7 +8,7 @@ namespace AP_Project
 {
     class Restaurant : BaseUser
     {
-        public Restaurant(string username, string password, string name, string city, string address, bool dineIn, bool delivery, double totalRate, List<Food> foods, List<Order> orders, List<string> categories) : base(username, password)
+        public Restaurant(string username, string password, string name, string city, string address, bool dineIn, bool delivery, double? totalRate=null, List<Food> foods=null, List<Order> orders=null, List<string> categories=null) : base(username, password)
         {
             Name = name;
             City = city;
@@ -16,6 +16,9 @@ namespace AP_Project
             DineIn = dineIn;
             Delivery = delivery;
             TotalRate = totalRate;
+            if (foods == null) foods = new List<Food>();
+            if (orders == null) orders = new List<Order>();
+            if (categories == null) categories = new List<string>();
             Foods = foods;
             Orders = orders;
             Categories = categories;
@@ -35,7 +38,7 @@ namespace AP_Project
                 else
                     return "Delivery";
             } }
-        public double TotalRate { get; set; }
+        public double? TotalRate { get; set; }
         public List<Food> Foods { get; set; } = new List<Food>();
         public List<Order> Orders { get; set; } = new List<Order>();
         public List<string> Categories { get; set; } = new List<string>();
