@@ -150,7 +150,7 @@ namespace AP_Project
             return Admins.FirstOrDefault(x => x.Username == username);
         }
 
-        public static Order GetOrderByCode(long code)
+        public static Order GetOrderByCode(int code)
         {
             return UnfinalizedOrders.FirstOrDefault(x => x.Code == code);
         }

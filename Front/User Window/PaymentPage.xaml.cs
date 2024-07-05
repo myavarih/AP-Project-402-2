@@ -21,7 +21,7 @@ namespace AP_Project.Front.User_Window
     public partial class PaymentPage : Page
     {
         Order order;
-        public PaymentPage(long orderCode)
+        public PaymentPage(int orderCode)
         {
             InitializeComponent();
             order = Data.GetOrderByCode(orderCode);
