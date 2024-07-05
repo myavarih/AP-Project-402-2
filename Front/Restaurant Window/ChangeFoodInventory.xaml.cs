@@ -23,10 +23,20 @@ namespace AP_Project.Front.Restaurant_Window
         public ChangeFoodInventory()
         {
             InitializeComponent();
+            DataContext = Data.CurrentRestaurant;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e) // validate inventory (Count) Inputted by user Before going Back (sakht nagir in rahat tare!) // todo : Ali
         {
+            // Ali's response: ok :)
+            foreach (var food in Data.CurrentRestaurant.Foods)
+            {
+                if (food.Count < 0)
+                {
+                    MessageBox.Show($"The count of a food in inventory cannot be a negative integer! (\"{food.Name}\")");
+                    return;
+                }
+            }
             NavigationService.GoBack();
         }
     }

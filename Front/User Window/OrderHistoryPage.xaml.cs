@@ -29,6 +29,14 @@ namespace AP_Project
         {
             // todo: validate (check) the value of Rating TextBoxes (if not between 0 and 5, MessageBox and return)
             // challenge: how to reach and read all the Rating TextBoxes?
+            foreach (var order in Data.CurrentUser.Orders)
+            {
+                if (order.Rating < 0 || order.Rating > 5)
+                {
+                    MessageBox.Show($"The rating for an order is not valid! It must be at least 0 and at most 5 (Code: {order.Code})");
+                    return;
+                }
+            }
             NavigationService.GoBack();
         }
     }

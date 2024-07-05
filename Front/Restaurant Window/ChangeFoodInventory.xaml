@@ -53,7 +53,7 @@
                     <GridViewColumn Header="Inventory" Width="100">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox Text="{Binding Inventory, Mode=TwoWay}" Width="80" Height="30" Margin="0,0,10,0"/>
+                                <TextBox Text="{Binding Count, Mode=TwoWay}" Width="80" Height="30" Margin="0,0,10,0"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
