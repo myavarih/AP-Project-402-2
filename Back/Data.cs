@@ -7,7 +7,7 @@ namespace AP_Project
 {
     static class Data
     {
-        // public static Database Database { get; set; } = new Database();
+        public static Database Database { get; set; } = new Database();
 
         public static List<BaseUser> BaseUsers { get; set; } = new List<BaseUser>();
         public static List<User> Users { get; set; } = new List<User>();

@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
 
 namespace AP_Project
 {
     class Restaurant : BaseUser
     {
-        public Restaurant(string username, string password, string name, string city, string address, bool dineIn, bool delivery, double? totalRate=null, List<Food> foods=null, List<Order> orders=null, List<string> categories=null) : base(username, password)
+        public Restaurant(string username, string password, string name, string city, string address, bool dineIn, bool delivery, double? totalRate = null, List<Food> foods = null, List<Order> orders = null, List<string> categories = null) : base(username, password)
         {
             Name = name;
             City = city;
@@ -24,12 +20,18 @@ namespace AP_Project
             Categories = categories;
         }
 
+        public Restaurant(string username, string password) : base(username, password) 
+        {
+        }
+
         public string Name { get; set; } = "";
         public string City { get; set; } = "";
         public string Address { get; set; } = "";
         public bool DineIn { get; set; }
-        public bool Delivery {  get; set; }
-        public string ServingMode { get
+        public bool Delivery { get; set; }
+        public string ServingMode
+        {
+            get
             {
                 if (DineIn && Delivery)
                     return "Dine-in and Delivery";
@@ -37,10 +39,33 @@ namespace AP_Project
                     return "Dine-in";
                 else
                     return "Delivery";
-            } }
+            }
+        }
         public double? TotalRate { get; set; }
-        public List<Food> Foods { get; set; } = new List<Food>();
-        public List<Order> Orders { get; set; } = new List<Order>();
+        private string _foodJson;
+        public List<Food> Foods
+        {
+            get
+            {
+                return JsonSerializer.Deserialize<List<Food>>(_foodJson) ?? new List<Food>();
+            }
+            set
+            {
+                _foodJson = JsonSerializer.Serialize(Foods);
+            }
+        }
+        private string _ordersJson;
+        public List<Order> Orders
+        {
+            get
+            {
+                return JsonSerializer.Deserialize<List<Order>>(_ordersJson) ?? new List<Order>();
+            }
+            set
+            {
+                _ordersJson = JsonSerializer.Serialize(Orders);
+            }
+        }
         public List<string> Categories { get; set; } = new List<string>();
 
         public Food GetFoodByName(string name)

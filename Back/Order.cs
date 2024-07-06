@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +24,17 @@ namespace AP_Project
         public double? Rating {  get; set; }
         public bool IsOnlinePaying {  get; set; }
         public DateTime TimeCreated { get; set; }
+        [Key]
         public int Code { get
             {
                 DateTimeOffset dtos = new DateTimeOffset(TimeCreated);
                 return (int)dtos.ToUnixTimeSeconds();
-            }  }
+            }
+            set
+            {
+
+            }
+        }
         public Order(string userUsername, string restaurantUsername, DateTime timeCreated)
         {
             UserUsername = userUsername;

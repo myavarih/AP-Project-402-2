@@ -11,7 +11,5 @@ namespace AP_Project
         public Admin(string username, string password) : base(username, password)
         {
         }
-
-        public string Name { get; set; } = "";
     }
 }

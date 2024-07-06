@@ -95,7 +95,6 @@ namespace AP_Project.Front.Restaurant_Window
                 phoneRegex.IsMatch((Data.GetUserByUsername(x.UserUsername) ?? new User("", "", "", "", "", "")).PhoneNumber) &&
                 x.Cart.Any(food => foodNameRegex.IsMatch(food.Name)) &&
                 x.TotalCost >= minPrice && x.TotalCost <= maxPrice).ToList();
-            vm.FilteredOrders = filteredOrders;
             DataContext = null;
             DataContext = vm;
         }

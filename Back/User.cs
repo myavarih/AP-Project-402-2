@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace AP_Project
@@ -38,6 +39,12 @@ namespace AP_Project
         public string Address { get; set; } = null; // not essential
         public Gender? Gender { get; set; } = null; // not essential
         public SpecialService? SpecialService { get; set; } = null; // upgrade later (in profile)
-        public List<Order> Orders { get; set; } = new List<Order>();
+        private string _ordersJson;
+        public List<Order> Orders { get {
+                return JsonSerializer.Deserialize<List<Order>>(_ordersJson) ?? new List<Order>();
+            } set 
+            {
+                _ordersJson =  JsonSerializer.Serialize(Orders);
+            } }
     }
 }
