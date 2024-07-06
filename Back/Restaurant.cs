@@ -15,7 +15,7 @@ namespace AP_Project
             Address = address;
             DineIn = dineIn;
             Delivery = delivery;
-            // todo: HERE: Remove totalRate
+            // todo: Remove totalRate
             if (foods == null) foods = new List<Food>();
             if (orders == null) orders = new List<Order>();
             if (categories == null) categories = new List<string>() { "All" };
