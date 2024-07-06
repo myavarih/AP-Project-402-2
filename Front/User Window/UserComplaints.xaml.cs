@@ -36,7 +36,7 @@ namespace AP_Project.Front.User_Window
         {
             if (!Data.Database.Restaurants.Any(r => RestaurantNameTextBox.Text == r.Name))
             {
-                MessageBox.Show("No such Restaurant!");
+                MessageBox.Show("There is no restaurant with that name!");
                 return;
             }
             Complaint newComplaint = new Complaint(TitleTextBox.Text, BodyTextBox.Text, Data.CurrentUser.Username, Data.Database.Restaurants.First(r => RestaurantNameTextBox.Text == r.Name).Username, DateTime.Now, "");

@@ -56,12 +56,29 @@ namespace AP_Project
             if (Data.Database.Users.Any(u => u.PhoneNumber == user.PhoneNumber))
                 throw new Exception("Phone Number Already Used!");
         }
+        public static void RestaurantCreationFieldsCheck(Restaurant restaurant)
+        {
+            if (!UsernameRegex.IsMatch(restaurant.Username) || restaurant.Username == "")
+                throw new Exception("Username Format Error!");
+            if (Data.Database.Restaurants.Any(r => r.Username == restaurant.Username))
+                throw new Exception("Username Already Used!");
+            if (Data.Database.Restaurants.Any(r => r.Name == restaurant.Name) || restaurant.Name == "")
+                throw new Exception("Name Already Used!");
+            if (restaurant.City == "")
+                throw new Exception("City field cannnot be empty!");
+            if (restaurant.Address == "")
+                throw new Exception("Address field cannot be empty!");
+            if (!restaurant.DineIn && !restaurant.Delivery)
+                throw new Exception("At leas one of the two types of service should be available (Delivery or DineIn)");
+
+        }
         public static string RestaurantPasswordGenerator()
         {
             string password = "";
+            Random random = new Random();
             for (int i = 0; i < 8; i++)
             {
-                password += new Random().Next() % 10;
+                password += random.Next() % 10;
             }
             return password;
         }

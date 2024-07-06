@@ -28,16 +28,16 @@ namespace AP_Project
             BaseUsers.Add(CurrentUser);
         }
 
-        public static void AddCurrentRestaurants()
+        public static void AddRestaurant(Restaurant restaurant)
         {
-            Database.Restaurants.Add(CurrentRestaurant);
-            BaseUsers.Add(CurrentRestaurant);
+            Database.Restaurants.Add(restaurant);
+            BaseUsers.Add(restaurant);
         }
 
-        public static void AddCurrentAdmin()
+        public static void AddAdmin(Admin admin)
         {
-            Database.Admins.Add(CurrentAdmin);
-            BaseUsers.Add(CurrentAdmin);
+            Database.Admins.Add(admin);
+            BaseUsers.Add(admin);
         }
 
         public static BaseUser GetBaseUserByUsername(string username)

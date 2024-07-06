@@ -7,7 +7,8 @@ namespace AP_Project
     {
         public Restaurant(string username, string password, string name, string city, string address, bool dineIn, bool delivery, double? totalRate = null, List<Food> foods = null, List<Order> orders = null, List<string> categories = null) : base(username, password)
         {
-            Name = name;
+            // username is unique (because of BaseUser and other identifications in the program (code)
+            Name = name; // unique -> just because of User Complaints
             City = city;
             Address = address;
             DineIn = dineIn;

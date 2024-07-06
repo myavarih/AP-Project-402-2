@@ -29,7 +29,25 @@ namespace AP_Project.Front.Admin_Window
 
         private void SubmitButton_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                Validation.RestaurantCreationFieldsCheck(newRestaurant);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            Data.AddRestaurant(newRestaurant);
+            Data.Database.Restaurants = Data.Database.Restaurants;
+            Data.Database.SaveChanges();
+            MessageBox.Show("The restaurant successfully created.");
+            NavigationService.GoBack();
+        }
 
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
         }
     }
 }

@@ -40,9 +40,9 @@ namespace AP_Project
             {
                 minRate = 0;
             }
-            else if (!double.TryParse(MinRateTextBox.Text, out minRate))
+            else if (!double.TryParse(MinRateTextBox.Text, out minRate) || minRate < 0)
             {
-                MessageBox.Show("The Min Rate Should Be A Number (double)!");
+                MessageBox.Show("The Min Rate Should Be A Non-negative Number (double)!");
                 return;
             }
             string servingMode = ServingModeFilterComboBox.Text;

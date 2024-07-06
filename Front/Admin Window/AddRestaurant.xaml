@@ -27,5 +27,7 @@
 
             <Button Content="Submit" Click="SubmitButton_Click" Margin="10" Width="100" HorizontalAlignment="Center"/>
         </StackPanel>
+        <!-- Back Button -->
+        <Button Grid.Row="3" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" Click="BackButton_Click"/>
     </Grid>
 </Page>

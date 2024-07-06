@@ -27,10 +27,13 @@
             <TextBlock Text="Filter by City:" Margin="5"/>
             <TextBox x:Name="CityFilterTextBox" Width="150" Margin="5"/>
 
-            <TextBlock Text="Filter by Serving Mode:" Margin="5"/>
-            <ComboBox x:Name="HasComplaintFilterComboBox" Width="150" Margin="5">
-                <ComboBoxItem Content="Yes"/>
-                <ComboBoxItem Content="No"/>
+            <TextBlock Text="Filter by Complaints:" Margin="5"/>
+            <!-- The index is important -->
+            <ComboBox x:Name="HasComplaintFilterComboBox" Width="200" Margin="5">
+                <ComboBoxItem Content="No Filter"/>
+                <ComboBoxItem Content="Has Unsolved Complaints"/>
+                <ComboBoxItem Content="Has Only Solved Complaints"/>
+                <ComboBoxItem Content="Has No Complaints"/>
             </ComboBox>
 
             <TextBlock Text="Min Rating:" Margin="5"/>
@@ -47,6 +50,7 @@
                     <GridViewColumn Header="Rating" DisplayMemberBinding="{Binding TotalRate}" Width="100"/>
                     <GridViewColumn Header="City" DisplayMemberBinding="{Binding City}" Width="200"/>
                     <GridViewColumn Header="Address" DisplayMemberBinding="{Binding Address}" Width="300"/>
+                    <GridViewColumn Header="Serving Mode" DisplayMemberBinding="{Binding ServingMode}" Width="200"/>
                 </GridView>
             </ListView.View>
         </ListView>
