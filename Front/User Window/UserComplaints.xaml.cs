@@ -24,7 +24,7 @@ namespace AP_Project.Front.User_Window
         public UserComplaints()
         {
             InitializeComponent();
-            ComplaintsListView.ItemsSource = Data.Complaints;
+            ComplaintsListView.ItemsSource = Data.Database.Complaints;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -34,15 +34,15 @@ namespace AP_Project.Front.User_Window
 
         private void AddComplaintButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!Data.Restaurants.Any(r => RestaurantNameTextBox.Text == r.Name))
+            if (!Data.Database.Restaurants.Any(r => RestaurantNameTextBox.Text == r.Name))
             {
                 MessageBox.Show("No such Restaurant!");
                 return;
             }
-            Complaint newComplaint = new Complaint(TitleTextBox.Text, BodyTextBox.Text, Data.CurrentUser.Username, Data.Restaurants.First(r => RestaurantNameTextBox.Text == r.Name).Username, DateTime.Now, "");
-            Data.Complaints.Add(newComplaint);
+            Complaint newComplaint = new Complaint(TitleTextBox.Text, BodyTextBox.Text, Data.CurrentUser.Username, Data.Database.Restaurants.First(r => RestaurantNameTextBox.Text == r.Name).Username, DateTime.Now, "");
+            Data.Database.Complaints.Add(newComplaint);
             ComplaintsListView.ItemsSource = null;
-            ComplaintsListView.ItemsSource = Data.Complaints;
+            ComplaintsListView.ItemsSource = Data.Database.Complaints;
         }
     }
 }

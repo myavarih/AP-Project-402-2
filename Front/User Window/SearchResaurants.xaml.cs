@@ -24,7 +24,7 @@ namespace AP_Project
         public SearchResaurants()
         {
             InitializeComponent();
-            RestaurantsListView.ItemsSource = Data.Restaurants;
+            RestaurantsListView.ItemsSource = Data.Database.Restaurants;
         }
 
         private void ApplyFiltersButton_Click(object sender, RoutedEventArgs e)
@@ -46,7 +46,7 @@ namespace AP_Project
                 return;
             }
             string servingMode = ServingModeFilterComboBox.Text;
-            var filteredRestaurants = Data.Restaurants.Where(x => nameRegex.IsMatch(x.Name) && cityRegex.IsMatch(x.City) && x.TotalRate >= minRate);
+            var filteredRestaurants = Data.Database.Restaurants.Where(x => nameRegex.IsMatch(x.Name) && cityRegex.IsMatch(x.City) && x.TotalRate >= minRate);
             switch (servingMode)
             {
                 case "Delivery":

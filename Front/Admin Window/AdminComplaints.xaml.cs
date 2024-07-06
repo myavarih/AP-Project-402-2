@@ -23,7 +23,7 @@ namespace AP_Project.Front.Admin_Window
         public AdminComplaints()
         {
             InitializeComponent();
-            DataContext = Data.Complaints;
+            DataContext = Data.Database.Complaints;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

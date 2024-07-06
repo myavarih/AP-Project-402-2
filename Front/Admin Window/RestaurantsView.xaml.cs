@@ -23,7 +23,7 @@ namespace AP_Project.Front.Admin_Window
         public RestaurantsView()
         {
             InitializeComponent();
-            RestaurantsListView.ItemsSource = Data.Restaurants;
+            RestaurantsListView.ItemsSource = Data.Database.Restaurants;
         }
 
         private void ApplyFiltersButton_Click(object sender, RoutedEventArgs e)
