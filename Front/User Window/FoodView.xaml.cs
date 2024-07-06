@@ -41,8 +41,29 @@ namespace AP_Project.Front.User_Window
 
         private void CommentSubmit_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
+        private void EditCommentButton_Click(object sender, RoutedEventArgs e)
+        {
+            // open a new Window
+
+            //Sample usage of InputDialoge : 
+            //private void EditCommentButton_Click(object sender, RoutedEventArgs e)
+            //{
+            //    Button button = sender as Button;
+            //    CommentForFood comment = button.Tag as CommentForFood;
+
+            //    // Open the InputDialog to edit the comment text
+            //    InputDialog inputDialog = new InputDialog(comment.Text);
+            //    if (inputDialog.ShowDialog() == true)
+            //    {
+            //        comment.Text = inputDialog.InputText;
+            //        comment.IsEdited = true;
+            //        ComplaintsListView.Items.Refresh();
+            //    }
+            //}
+        }
+
 
         private void SubmitRatingBtn_Click(object sender, RoutedEventArgs e)
         {
