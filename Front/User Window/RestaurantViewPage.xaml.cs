@@ -63,6 +63,9 @@ namespace AP_Project
         private void CommentRateButton_Click(object sender, RoutedEventArgs e)
         {
             // todo (FoodViewPage)
+            Button clickedButton = sender as Button;
+            string foodName = clickedButton.Tag.ToString();
+            NavigationService.Navigate(new FoodView(restaurant.Username, foodName));
         }
 
         private void OrderButton_Click(object sender, RoutedEventArgs e)

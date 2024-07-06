@@ -35,7 +35,7 @@ namespace AP_Project
         public List<ScoreForFood> Scores { get; set; } = new List<ScoreForFood>();
         public string RestaurantUsername { get; set; } = "";
         public int Count { get; set; }
-        public List<CommentForFood> CommentsForFood { get; set; } = new List<CommentForFood>();
+        public List<CommentForFood> Comments { get; set; } = new List<CommentForFood>();
 
         public static Food DeepCopy(Food food)
         {

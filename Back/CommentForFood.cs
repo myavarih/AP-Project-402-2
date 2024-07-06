@@ -22,9 +22,12 @@ namespace AP_Project
                 DateTimeOffset dtos = new DateTimeOffset(CreatedTime);
                 return (int)dtos.ToUnixTimeSeconds();
             } }
-        public double Rate { get 
+        public double? Rate { get 
             {
-                Data.GetRestaurantByUsername(RestaurantUsername).GetFoodByName(FoodName).
+                ScoreForFood score = Data.GetRestaurantByUsername(RestaurantUsername).GetFoodByName(FoodName)
+                    .Scores.FirstOrDefault(x => x.UserUsername == this.UserUsername);
+                if (score != null) return score.Score;
+                return null; // no rating yet
             } }
     }
 }
