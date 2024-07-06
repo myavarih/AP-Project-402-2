@@ -50,6 +50,12 @@ namespace AP_Project.Front.Restaurant_Window
             }
             string path = sfd.FileName;
             StreamWriter sw = new StreamWriter(path);
+            double totalSell = filteredOrders.Select(x => x.TotalCost).Sum();
+            double onlinePaymentPercent = filteredOrders.Count(x => x.IsOnlinePaying) / filteredOrders.Count() * 100;
+            int totalCountOfOrders = filteredOrders.Count();
+            sw.WriteLine("Total Sell,Online Payment Percentage,Total Orders");
+            sw.WriteLine($"{totalSell},{onlinePaymentPercent},{totalCountOfOrders}");
+            sw.WriteLine();
             sw.WriteLine("Order Code,User's Username,User Phone Number,Cart,Total Cost");
             string orderCart;
             foreach (var order in filteredOrders)
@@ -57,12 +63,6 @@ namespace AP_Project.Front.Restaurant_Window
                 orderCart = string.Join(" - ", order.Cart.Select(x => x.Name + $" (x{x.Count})"));
                 sw.WriteLine($"{order.Code},{order.UserUsername},{order.UserPhoneNumber},{orderCart},{order.TotalCost}");
             }
-            double totalSell = filteredOrders.Select(x => x.TotalCost).Sum();
-            double onlinePaymentPercent = filteredOrders.Count(x => x.IsOnlinePaying) / filteredOrders.Count();
-            int totalCountOfOrders = filteredOrders.Count();
-            sw.WriteLine();
-            sw.WriteLine("Total Sell,Online Payment Percentage,Total Orders");
-            sw.WriteLine($"{totalSell},{onlinePaymentPercent},{totalCountOfOrders}");
             sw.Close();
         }
 
@@ -95,7 +95,7 @@ namespace AP_Project.Front.Restaurant_Window
                 phoneRegex.IsMatch((Data.GetUserByUsername(x.UserUsername) ?? new User("", "", "", "", "", "")).PhoneNumber) &&
                 x.Cart.Any(food => foodNameRegex.IsMatch(food.Name)) &&
                 x.TotalCost >= minPrice && x.TotalCost <= maxPrice).ToList();
-            vm.FilteredOrders = filteredOrders;
+            vm.FilteredOrders = new ObservableCollection<Order>(filteredOrders);
             DataContext = null;
             DataContext = vm;
         }

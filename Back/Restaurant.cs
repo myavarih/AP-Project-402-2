@@ -15,7 +15,7 @@ namespace AP_Project
             Address = address;
             DineIn = dineIn;
             Delivery = delivery;
-            TotalRate = totalRate;
+            // todo: HERE: Remove totalRate
             if (foods == null) foods = new List<Food>();
             if (orders == null) orders = new List<Order>();
             if (categories == null) categories = new List<string>() { "All" };
@@ -38,7 +38,11 @@ namespace AP_Project
                 else
                     return "Delivery";
             } }
-        public double? TotalRate { get; set; }
+        public double? TotalRate { get
+            {
+                return Orders.Select(x => x.Rating).Concat(Foods.Select(x => x.Scores.Sum(x => x.Score))).Where(x => x != null).Average();
+            }
+        }
         public List<Food> Foods { get; set; } = new List<Food>();
         public List<Order> Orders { get; set; } = new List<Order>();
         public List<string> Categories { get; set; } = new List<string>();
