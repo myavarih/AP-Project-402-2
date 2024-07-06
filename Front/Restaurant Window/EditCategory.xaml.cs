@@ -24,10 +24,12 @@ namespace AP_Project.Front.Restaurant_Window
         {
             InitializeComponent();
             DataContext = Data.CurrentRestaurant;
+            Data.CurrentRestaurant.Categories.RemoveAt(0); // remove "All" Category
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
+            Data.CurrentRestaurant.Categories.Insert(0, "All");
             NavigationService.GoBack();
         }
 
@@ -35,12 +37,15 @@ namespace AP_Project.Front.Restaurant_Window
         {
             Button button = sender as Button;
             string category = button.Tag.ToString();
+            if (category == "All")
+            {
+                MessageBox.Show("You cannot delete this category");
+                return;
+            }
             if (Data.CurrentRestaurant.Categories.Any(x => x == category))
             {
                 Data.CurrentRestaurant.Categories.Remove(category);
                 Data.CurrentRestaurant.Foods = Data.CurrentRestaurant.Foods.Where(x => x.Category != category).ToList(); // delete all the foods in this category as well
-                // todo: Refresh the list view -> temporary solution:
-
             }
             else
             {
@@ -54,6 +59,11 @@ namespace AP_Project.Front.Restaurant_Window
         {
             string newCat = NewCategoryTextBox.Text;
             NewCategoryTextBox.Text = "";
+            if (newCat == "All")
+            {
+                MessageBox.Show("The category name cannot be \"All\"! Try another one!");
+                return;
+            }
             if (Data.CurrentRestaurant.Categories.Any(x => x == newCat))
             {
                 MessageBox.Show("There is already a category with this name!");

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -21,6 +23,7 @@ namespace AP_Project.Front.Restaurant_Window
     /// </summary>
     public partial class OrderReserveHistory : Page
     {
+        List<Order> filteredOrders;
         public OrderReserveHistory()
         {
             InitializeComponent();
@@ -34,7 +37,30 @@ namespace AP_Project.Front.Restaurant_Window
 
         private void GetReportButton_Click(object sender, RoutedEventArgs e)
         {
-            // todo : csv
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "*.csv";
+            bool? isAnyPathSelected = sfd.ShowDialog();
+            if (isAnyPathSelected != true)
+            {
+                MessageBox.Show("Report Cancelled");
+                return;
+            }
+            string path = sfd.FileName;
+            StreamWriter sw = new StreamWriter(path);
+            sw.WriteLine("Order Code,User's Username,User Phone Number,Cart,Total Cost");
+            string orderCart;
+            foreach (var order in filteredOrders)
+            { 
+                orderCart = string.Join(" - ", order.Cart.Select(x => x.Name + $" (x{x.Count})"));
+                sw.WriteLine($"{order.Code},{order.UserUsername},{order.UserPhoneNumber},{orderCart},{order.TotalCost}");
+            }
+            double totalSell = filteredOrders.Select(x => x.TotalCost).Sum();
+            double onlinePaymentPercent = filteredOrders.Count(x => x.IsOnlinePaying) / filteredOrders.Count();
+            int totalCountOfOrders = filteredOrders.Count();
+            sw.WriteLine();
+            sw.WriteLine("Total Sell,Online Payment Percentage,Total Orders");
+            sw.WriteLine($"{totalSell},{onlinePaymentPercent},{totalCountOfOrders}");
+            sw.Close();
         }
 
         private void ApplyFilters_Click(object sender, RoutedEventArgs e)
@@ -62,10 +88,10 @@ namespace AP_Project.Front.Restaurant_Window
                 MessageBox.Show("Max Prcie must be a non-negative number (double)!");
                 return;
             }
-            var filteredOrders = Data.CurrentRestaurant.Orders.Where(x => usernameRegex.IsMatch(x.UserUsername) &&
+            filteredOrders = Data.CurrentRestaurant.Orders.Where(x => usernameRegex.IsMatch(x.UserUsername) &&
                 phoneRegex.IsMatch((Data.GetUserByUsername(x.UserUsername) ?? new User("", "", "", "", "", "")).PhoneNumber) &&
                 x.Cart.Any(food => foodNameRegex.IsMatch(food.Name)) &&
-                x.TotalCost >= minPrice && x.TotalCost <= maxPrice);
+                x.TotalCost >= minPrice && x.TotalCost <= maxPrice).ToList();
             // filtered Orders must be shown (ViewModel)
         }
     }

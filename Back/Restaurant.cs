@@ -18,7 +18,7 @@ namespace AP_Project
             TotalRate = totalRate;
             if (foods == null) foods = new List<Food>();
             if (orders == null) orders = new List<Order>();
-            if (categories == null) categories = new List<string>();
+            if (categories == null) categories = new List<string>() { "All" };
             Foods = foods;
             Orders = orders;
             Categories = categories;
