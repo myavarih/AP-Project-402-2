@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging.Abstractions;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -21,10 +23,11 @@ namespace AP_Project.Front.Restaurant_Window
     /// </summary>
     public partial class OrderReserveHistory : Page
     {
+        ViewModelForOrderReserveHistory vm = new ViewModelForOrderReserveHistory();
         public OrderReserveHistory()
         {
             InitializeComponent();
-            DataContext = Data.CurrentRestaurant;
+            DataContext = vm;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -62,11 +65,12 @@ namespace AP_Project.Front.Restaurant_Window
                 MessageBox.Show("Max Prcie must be a non-negative number (double)!");
                 return;
             }
-            var filteredOrders = Data.CurrentRestaurant.Orders.Where(x => usernameRegex.IsMatch(x.UserUsername) &&
+            vm.FilteredOrders = new ObservableCollection<Order>(Data.CurrentRestaurant.Orders.Where(x => usernameRegex.IsMatch(x.UserUsername) &&
                 phoneRegex.IsMatch((Data.GetUserByUsername(x.UserUsername) ?? new User("", "", "", "", "", "")).PhoneNumber) &&
                 x.Cart.Any(food => foodNameRegex.IsMatch(food.Name)) &&
-                x.TotalCost >= minPrice && x.TotalCost <= maxPrice);
-            // filtered Orders must be shown (ViewModel)
+                x.TotalCost >= minPrice && x.TotalCost <= maxPrice));
+            DataContext = null;
+            DataContext = vm;
         }
     }
 }
