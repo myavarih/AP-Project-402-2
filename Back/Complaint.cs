@@ -26,6 +26,6 @@ namespace AP_Project.Back
         public string RestaurantUsername { get; set; } = "";
         public bool IsSolved { get; set; } = false;
         public DateTime CreatedTime { get; set; }
-
+        public string Response { get; set; } = "";
     }
 }
