@@ -28,12 +28,12 @@ namespace AP_Project.Front.Admin_Window
 
         private void AddRestaurantButton_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new AddRestaurant());
         }
 
         private void ViewRestaurantsButton_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new RestaurantsView());
         }
 
         private void ComplaintsButton_Click(object sender, RoutedEventArgs e)
@@ -43,7 +43,10 @@ namespace AP_Project.Front.Admin_Window
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Data.CurrentAdmin = null;
+            Application.Current.Windows[0].Close();
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
         }
     }
 }
