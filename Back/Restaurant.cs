@@ -41,10 +41,13 @@ namespace AP_Project
                     return "Delivery";
             }
         }
-        public double? TotalRate { get
+        public double? TotalRate
+        {
+            get
             {
                 return Orders.Select(x => x.Rating).Concat(Foods.Select(x => x.Scores.Sum(x => x.Score))).Where(x => x != null).Average();
             }
+        }
         private string _foodJson;
         public List<Food> Foods
         {

@@ -19,10 +19,6 @@ namespace AP_Project
                 DateTimeOffset dtos = new DateTimeOffset(CreatedTime);
                 return (int)dtos.ToUnixTimeSeconds();
             }
-            set
-            {
-
-            }
         }
         public string Text { get; set; } = "";
         public RestaurantComment? Reply { get; set; } = null;
@@ -31,11 +27,6 @@ namespace AP_Project
         public string RestaurantUsername { get; set; } = "";
         public string FoodName { get; set; } = "";
         public DateTime CreatedTime { get; set; }
-        public int Code { get
-            {
-                DateTimeOffset dtos = new DateTimeOffset(CreatedTime);
-                return (int)dtos.ToUnixTimeSeconds();
-            } }
         public double? Rate { get 
             {
                 ScoreForFood score = Data.GetRestaurantByUsername(RestaurantUsername).GetFoodByName(FoodName)

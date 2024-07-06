@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging.Abstractions;
+﻿using AP_Project.Back;
+using Microsoft.Extensions.Logging.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,10 +23,11 @@ namespace AP_Project.Front.User_Window
     public partial class FoodView : Page
     {
         Food food;
+        Restaurant restaurant;
         public FoodView(string restaurantUsername, string foodName)
         {
             InitializeComponent();
-            Restaurant restaurant = Data.GetRestaurantByUsername(restaurantUsername);
+            restaurant = Data.GetRestaurantByUsername(restaurantUsername);
             if (restaurant == null)
             {
                 MessageBox.Show("There is no such a Restaurant!");
@@ -37,16 +39,35 @@ namespace AP_Project.Front.User_Window
                 MessageBox.Show("There is no such a Food!");
                 return;
             }
+            DataContext = food;
         }
 
         private void CommentSubmit_Click(object sender, RoutedEventArgs e)
         {
-
+            // todo
         }
 
         private void SubmitRatingBtn_Click(object sender, RoutedEventArgs e)
         {
-            // todo
+            double rating;
+            if (!double.TryParse(RatingTextBox.Text, out rating) || rating < 0 || rating > 5)
+            {
+                MessageBox.Show("Rating must be a number (double) between 0 and 5!");
+                return;
+            }
+            ScoreForFood sff = food.Scores.FirstOrDefault(x => x.UserUsername == Data.CurrentUser.Username);
+            if (sff == null)
+            {
+                // fist time rating this food:
+                food.Scores.Add(new ScoreForFood(Data.CurrentUser.Username, restaurant.Username, food.Name, rating));
+                MessageBox.Show("Your rating to this food added.");
+            }
+            else
+            {
+                // updating the rating
+                sff.Score = rating;
+                MessageBox.Show("Your rating to this food updated.");
+            }
         }
     }
 }
