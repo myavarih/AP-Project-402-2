@@ -28,6 +28,7 @@ namespace AP_Project
         private void SearchRestaurants_Click(object sender, RoutedEventArgs e)
         {
             Data.Restaurants = Data.Restaurants.Concat(Data.restaurants).ToList();
+            Data.BaseUsers = Data.BaseUsers.Concat(Data.restaurants).ToList();
             NavigationService.Navigate(new SearchResaurants());
         }
 

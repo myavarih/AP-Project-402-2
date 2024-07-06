@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,20">
-            <Image Source="{Binding ImageName}" Width="200" Height="200" Margin="0,0,20,0"/>
+            <Image Name="FoodImage" Source="{Binding ImageName}" Width="200" Height="200" Margin="0,0,20,0"/>
             <StackPanel>
                 <TextBlock Text="{Binding Name}" FontSize="24" FontWeight="Bold"/>
                 <StackPanel Orientation="Horizontal">

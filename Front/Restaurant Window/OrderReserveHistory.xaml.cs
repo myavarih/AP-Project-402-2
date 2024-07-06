@@ -1,7 +1,9 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using Microsoft.Extensions.Logging.Abstractions;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -24,10 +26,11 @@ namespace AP_Project.Front.Restaurant_Window
     public partial class OrderReserveHistory : Page
     {
         List<Order> filteredOrders;
+        ViewModelForOrderReserveHistory vm = new ViewModelForOrderReserveHistory();
         public OrderReserveHistory()
         {
             InitializeComponent();
-            DataContext = Data.CurrentRestaurant;
+            DataContext = vm;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -92,7 +95,9 @@ namespace AP_Project.Front.Restaurant_Window
                 phoneRegex.IsMatch((Data.GetUserByUsername(x.UserUsername) ?? new User("", "", "", "", "", "")).PhoneNumber) &&
                 x.Cart.Any(food => foodNameRegex.IsMatch(food.Name)) &&
                 x.TotalCost >= minPrice && x.TotalCost <= maxPrice).ToList();
-            // filtered Orders must be shown (ViewModel)
+            vm.FilteredOrders = filteredOrders;
+            DataContext = null;
+            DataContext = vm;
         }
     }
 }
