@@ -26,12 +26,12 @@
                     <GridViewColumn Header="Body" DisplayMemberBinding="{Binding Body}" Width="250"/>
                     <GridViewColumn Header="User Username" DisplayMemberBinding="{Binding UserUsername}" Width="150"/>
                     <GridViewColumn Header="Restaurant Username" DisplayMemberBinding="{Binding RestaurantUsername}" Width="150"/>
-                    <GridViewColumn Header="Is Solved" DisplayMemberBinding="{Binding IsSolved}" Width="100"/>
+                    <GridViewColumn Header="Is Solved" DisplayMemberBinding="{Binding IsSolved, Mode=TwoWay}" Width="100"/>
                     <GridViewColumn Header="Created Time" DisplayMemberBinding="{Binding CreatedTime}" Width="150"/>
                     <GridViewColumn Header="Response" Width="250">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox Text="{Binding Response, UpdateSourceTrigger=PropertyChanged}" Width="230" TextChanged="CheckForSolved"/>
+                                <TextBox Text="{Binding Response, UpdateSourceTrigger=PropertyChanged}" Width="230" />
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>

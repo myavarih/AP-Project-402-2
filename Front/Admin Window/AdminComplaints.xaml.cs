@@ -30,9 +30,5 @@ namespace AP_Project.Front.Admin_Window
         {
             NavigationService.GoBack();
         }
-        private void CheckForSolved(object sender, RoutedEventArgs e)
-        {
-            
-        }
     }
 }
