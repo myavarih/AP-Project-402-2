@@ -27,7 +27,7 @@ namespace AP_Project.Front.Restaurant_Window
         public AddFood()
         {
             InitializeComponent();
-            newFood = new Food("", "", new BitmapImage(), 0, "", null, Data.CurrentRestaurant.Username, 0);
+            newFood = new Food("", "", new BitmapImage(), 0, "", Data.CurrentRestaurant.Username, 0);
             // count = 0, the restaurant should change it via Change Food Inventory
             DataContext = newFood;
         }
