@@ -23,11 +23,16 @@ namespace AP_Project.Front.Admin_Window
         public AdminComplaints()
         {
             InitializeComponent();
+            DataContext = Data.Complaints;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.GoBack();
+        }
+        private void CheckForSolved(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

@@ -31,7 +31,7 @@
                     <GridViewColumn Header="Response" Width="250">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBox Text="{Binding Response, UpdateSourceTrigger=PropertyChanged}" Width="230"/>
+                                <TextBox Text="{Binding Response, UpdateSourceTrigger=PropertyChanged}" Width="230" TextChanged="CheckForSolved"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
