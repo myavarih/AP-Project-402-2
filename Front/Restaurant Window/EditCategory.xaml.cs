@@ -25,11 +25,14 @@ namespace AP_Project.Front.Restaurant_Window
             InitializeComponent();
             DataContext = Data.CurrentRestaurant;
             Data.CurrentRestaurant.Categories.RemoveAt(0); // remove "All" Category
+            Data.CurrentRestaurant.Categories = Data.CurrentRestaurant.Categories;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             Data.CurrentRestaurant.Categories.Insert(0, "All");
+            Data.CurrentRestaurant.Categories = Data.CurrentRestaurant.Categories;
+            Data.Database.SaveChanges();
             NavigationService.GoBack();
         }
 
@@ -51,6 +54,8 @@ namespace AP_Project.Front.Restaurant_Window
             {
                 MessageBox.Show("There is no such a category to remove! (refresh the page)");
             }
+            Data.CurrentRestaurant.Categories = Data.CurrentRestaurant.Categories;
+            Data.Database.SaveChanges();
             DataContext = null;
             DataContext = Data.CurrentRestaurant;
         }
@@ -70,8 +75,9 @@ namespace AP_Project.Front.Restaurant_Window
                 return;
             }
             Data.CurrentRestaurant.Categories.Add(newCat);
+            Data.CurrentRestaurant.Categories = Data.CurrentRestaurant.Categories;
+            Data.Database.SaveChanges();
             // MessageBox.Show("Category Added.");
-            // todo: Refresh the list view -> temporary solution:
             DataContext = null;
             DataContext = Data.CurrentRestaurant;
         }

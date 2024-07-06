@@ -30,10 +30,7 @@ namespace AP_Project
         private void UserSignUpBtnClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new SignUp());
-            // totest
-            Data.CurrentUser = new User("000Ali000", "Abcd1234", "alimozdian@gmail.com", "Ali", "Mozdian", "09903322694");
-            Data.AddCurrentUser();
-            Data.CurrentUser = null;
+            Data.Database.SaveChanges();
         }
 
         private void LogInButton_Click(object sender, RoutedEventArgs e)
@@ -54,6 +51,7 @@ namespace AP_Project
                 var userWindow = new UserWindow();
                 userWindow.Show();
                 Application.Current.Windows[0].Close();
+                Data.Database.SaveChanges();
             }
             else if (buser is Restaurant)
             {
@@ -61,6 +59,7 @@ namespace AP_Project
                 var restaurantWindow = new RestaurantWindow();
                 restaurantWindow.Show();
                 Application.Current.Windows[0].Close();
+                Data.Database.SaveChanges();
             }
             else if (buser is Admin)
             {
@@ -68,16 +67,14 @@ namespace AP_Project
                 var adminWindow = new AdminWindow();
                 adminWindow.Show();
                 Application.Current.Windows[0].Close();
+                Data.Database.SaveChanges();
             }
         }
 
         private void ChangePasswordBtnClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new ChangePassword());
-            // totest
-            Data.CurrentRestaurant = new Restaurant("TestRest", "Passw0rd", "Toranj", "Tehran", "TehranVila, Sohrab Street", true, true);
-            Data.AddCurrentRestaurants();
-            Data.CurrentRestaurant = null;
+            Data.Database.SaveChanges();
         }
     }
 }

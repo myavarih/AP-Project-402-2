@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using AP_Project.Front.User_Window;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
 
@@ -12,12 +13,12 @@ namespace AP_Project
         public UserPanelPage()
         {
             InitializeComponent();
-            //Title.Text = "Welcome " + Data.CurrentUser.FirstName;
+            Title.Text = "Welcome " + Data.CurrentUser.FirstName;
         }
 
         private void Complaints_Click(object sender, RoutedEventArgs e)
         {
-            // todo
+            NavigationService.Navigate(new UserComplaints());
         }
 
         private void OrderHistory_Click(object sender, RoutedEventArgs e)
@@ -27,8 +28,6 @@ namespace AP_Project
 
         private void SearchRestaurants_Click(object sender, RoutedEventArgs e)
         {
-            Data.Restaurants = Data.Restaurants.Concat(Data.restaurants).ToList();
-            Data.BaseUsers = Data.BaseUsers.Concat(Data.restaurants).ToList();
             NavigationService.Navigate(new SearchResaurants());
         }
 
@@ -43,6 +42,7 @@ namespace AP_Project
             var mw = new MainWindow();
             mw.Show();
             Application.Current.Windows[0].Close();
+            Data.Database.SaveChanges();
         }
     }
 }

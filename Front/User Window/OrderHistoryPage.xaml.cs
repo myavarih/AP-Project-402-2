@@ -37,6 +37,8 @@ namespace AP_Project
                     return;
                 }
             }
+            Data.CurrentUser.Orders = Data.CurrentUser.Orders;
+            Data.Database.SaveChanges();
             NavigationService.GoBack();
         }
     }

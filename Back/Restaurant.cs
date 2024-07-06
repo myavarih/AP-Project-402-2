@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json;
 
 namespace AP_Project
 {
@@ -29,6 +30,7 @@ namespace AP_Project
         public string Address { get; set; } = "";
         public bool DineIn { get; set; }
         public bool Delivery { get; set; }
+        [NotMapped]
         public string ServingMode
         {
             get
@@ -41,38 +43,54 @@ namespace AP_Project
                     return "Delivery";
             }
         }
+        
+        public string foodJson { get; set; }
+        [NotMapped]
         public double? TotalRate
-        {
+        { 
             get
             {
                 return Orders.Select(x => x.Rating).Concat(Foods.Select(x => x.Scores.Sum(x => x.Score))).Where(x => x != null).Average();
             }
         }
-        private string _foodJson;
+        [NotMapped]
         public List<Food> Foods
         {
             get
             {
-                return JsonSerializer.Deserialize<List<Food>>(_foodJson) ?? new List<Food>();
+                return JsonSerializer.Deserialize<List<Food>>(foodJson) ?? new List<Food>();
             }
             set
             {
-                _foodJson = JsonSerializer.Serialize(Foods);
+                foodJson = JsonSerializer.Serialize(Foods);
             }
         }
-        private string _ordersJson;
+        public string ordersJson { get; set; }
+        [NotMapped]
         public List<Order> Orders
         {
             get
             {
-                return JsonSerializer.Deserialize<List<Order>>(_ordersJson) ?? new List<Order>();
+                return JsonSerializer.Deserialize<List<Order>>(ordersJson) ?? new List<Order>();
             }
             set
             {
-                _ordersJson = JsonSerializer.Serialize(Orders);
+                ordersJson = JsonSerializer.Serialize(Orders);
             }
         }
-        public List<string> Categories { get; set; } = new List<string>();
+        public string categoriesJson { get; set; }
+        [NotMapped]
+        public List<string> Categories
+        {
+            get
+            {
+                return JsonSerializer.Deserialize<List<string>>(categoriesJson) ?? new List<string>();
+            }
+            set
+            {
+                categoriesJson = JsonSerializer.Serialize(Categories);
+            }
+        }
 
         public Food GetFoodByName(string name)
         {

@@ -55,16 +55,19 @@ namespace AP_Project.Front.Restaurant_Window
                 return;
             }
             Data.CurrentRestaurant.Foods.Add(newFood);
-            MessageBox.Show("The food has been added.");
+            //MessageBox.Show("The food has been added.");
             string currentPath = AppDomain.CurrentDomain.BaseDirectory;
             File.Copy(ImagePath, currentPath + @"\Images\" + newFood.Name + newFood.RestaurantUsername, true);
             newFood.ImageName = (BitmapImage)ImageName.Source;
             NavigationService.GoBack();
+            Data.CurrentRestaurant.Foods = Data.CurrentRestaurant.Foods;
+            Data.Database.SaveChanges();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+            Data.Database.SaveChanges();
         }
 
         private void BrowseImageButton_Click(object sender, RoutedEventArgs e)

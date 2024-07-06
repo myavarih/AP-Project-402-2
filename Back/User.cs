@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -39,12 +40,13 @@ namespace AP_Project
         public string Address { get; set; } = null; // not essential
         public Gender? Gender { get; set; } = null; // not essential
         public SpecialService? SpecialService { get; set; } = null; // upgrade later (in profile)
-        private string _ordersJson;
+        public string ordersJson;
+        [NotMapped]
         public List<Order> Orders { get {
-                return JsonSerializer.Deserialize<List<Order>>(_ordersJson) ?? new List<Order>();
+                return JsonSerializer.Deserialize<List<Order>>(ordersJson) ?? new List<Order>();
             } set 
             {
-                _ordersJson =  JsonSerializer.Serialize(Orders);
+                ordersJson =  JsonSerializer.Serialize(Orders);
             } }
     }
 }

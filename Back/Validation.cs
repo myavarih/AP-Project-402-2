@@ -51,9 +51,9 @@ namespace AP_Project
             if (!EmailRegex.IsMatch(user.Email))
                 throw new Exception("Email Format Error");
 
-            if (Data.Users.Any(u => u.Username == user.Username))
+            if (Data.Database.Users.Any(u => u.Username == user.Username))
                 throw new Exception("Username Already Used!");
-            if (Data.Users.Any(u => u.PhoneNumber == user.PhoneNumber))
+            if (Data.Database.Users.Any(u => u.PhoneNumber == user.PhoneNumber))
                 throw new Exception("Phone Number Already Used!");
         }
         public static string RestaurantPasswordGenerator()
