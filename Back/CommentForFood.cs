@@ -19,6 +19,6 @@ namespace AP_Project
             {
                 DateTimeOffset dtos = new DateTimeOffset(CreatedTime);
                 return (int)dtos.ToUnixTimeSeconds();
-            } }
+            } } // unique
     }
 }
