@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,11 +22,12 @@ namespace AP_Project.Front.Restaurant_Window
     /// </summary>
     public partial class AddFood : Page
     {
+        string ImagePath;
         Food newFood = null;
         public AddFood()
         {
             InitializeComponent();
-            newFood = new Food("", "", "", 0, "", null, Data.CurrentRestaurant.Username, 0);
+            newFood = new Food("", "", new BitmapImage(), 0, "", null, Data.CurrentRestaurant.Username, 0);
             // count = 0, the restaurant should change it via Change Food Inventory
             DataContext = newFood;
         }
@@ -49,12 +52,27 @@ namespace AP_Project.Front.Restaurant_Window
             }
             Data.CurrentRestaurant.Foods.Add(newFood);
             MessageBox.Show("The food has been added.");
+            File.Copy(ImagePath, @"C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\Images\" + newFood.Name + newFood.RestaurantUsername, true);
+            newFood.ImageName = (BitmapImage)ImageName.Source;
             NavigationService.GoBack();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+        }
+
+        private void BrowseImageButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Image files (*.png;*.jpg)|*.png;*.jpg";
+            bool? result = openFileDialog.ShowDialog();
+
+            if (result == true)
+            {
+                ImagePath = openFileDialog.FileName;
+                ImageName.Source = new BitmapImage(new Uri(ImagePath));
+            }
         }
     }
 }

@@ -1,0 +1,30 @@
+﻿<Page x:Class="AP_Project.Front.Admin_Window.AdminPanel"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AP_Project.Front.Admin_Window"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AdminPanel">
+
+    <Grid>
+        <!-- Title Section -->
+        <TextBlock Name="AdminTitle"
+                   Text="{Binding AdminUsername, StringFormat=Admin Panel - {0}}"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="10" />
+
+        <!-- Main Buttons Section -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="AddRestaurantButton" Content="Add New Restaurant" Width="200" Height="40" Margin="5" Click="AddRestaurantButton_Click" />
+            <Button x:Name="ViewRestaurantsButton" Content="View Restaurants" Width="200" Height="40" Margin="5" Click="ViewRestaurantsButton_Click" />
+            <Button x:Name="ComplaintsButton" Content="Complaints" Width="200" Height="40" Margin="5" Click="ComplaintsButton_Click" />
+        </StackPanel>
+
+        <!-- Logout Button -->
+        <Button x:Name="LogoutButton" Content="Logout" Width="100" Height="40" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" Click="LogoutButton_Click" />
+    </Grid>
+</Page>

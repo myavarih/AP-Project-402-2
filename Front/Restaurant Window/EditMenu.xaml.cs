@@ -29,6 +29,8 @@ namespace AP_Project.Front.Restaurant_Window
         private void AddFood_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new AddFood()); // done
+            DataContext = null;
+            DataContext = Data.CurrentRestaurant;
         }
         private void RemoveFood_Click(object sender, RoutedEventArgs e)
         {
@@ -61,6 +63,8 @@ namespace AP_Project.Front.Restaurant_Window
                 return;
             }
             NavigationService.Navigate(new EditFood(food.Name)); // give me the food somehow for the next page (done)
+            DataContext = null;
+            DataContext = Data.CurrentRestaurant;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
