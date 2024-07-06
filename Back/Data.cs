@@ -1,5 +1,6 @@
 ﻿// Ignore Spelling: Admins
 
+using AP_Project.Back;
 using System.Windows.Media.Imaging;
 
 namespace AP_Project
@@ -12,6 +13,7 @@ namespace AP_Project
         public static List<User> Users { get; set; } = new List<User>();
         public static List<Restaurant> Restaurants { get; set; } = new List<Restaurant>();
         public static List<Admin> Admins { get; set; } = new List<Admin>();
+        public static List<Complaint> Complaints { get; set; } = new List<Complaint>();
 
         public static List<Order> UnfinalizedOrders { get; set; } = new List<Order>();
 

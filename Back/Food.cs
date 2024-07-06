@@ -29,6 +29,7 @@ namespace AP_Project
         public double? Rating { get; set; }
         public string RestaurantUsername { get; set; } = "";
         public int Count {  get; set; }
+        public List<CommentForFood> CommentsForFood { get; set; } = new List<CommentForFood>();
 
         public static Food DeepCopy(Food food)
         {
