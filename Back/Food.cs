@@ -38,8 +38,6 @@ namespace AP_Project
         }
         public string Name { get; set; } = ""; // Should be Unique (in the scale of a restaurant)
         public string Ingredients { get; set; } = "";
-        public string ImagePath { get; set; }
-        [NotMapped]
         public BitmapImage ImageName { get; set; } // calculate after Database Load
         public double Price {  get; set; }
         public string Category { get; set; } = "";
