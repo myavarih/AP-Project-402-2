@@ -41,7 +41,9 @@ namespace AP_Project.Front.Restaurant_Window
                 return;
             }
             Data.CurrentRestaurant.Foods.Remove(food);
-            MessageBox.Show($"{food.Name} removed.");
+            // MessageBox.Show($"{food.Name} removed.");
+            DataContext = null;
+            DataContext = Data.CurrentRestaurant;
         }
 
         private void EditCategories_Click(object sender, RoutedEventArgs e)

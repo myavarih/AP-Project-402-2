@@ -9,13 +9,20 @@
         <ListView Name="OrderListView" ItemsSource="{Binding Orders}" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="Auto" Margin="0,40,0,40">
             <ListView.View>
                 <GridView>
+                    <GridViewColumn Header="Order Code" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Code}" FontWeight="Bold" Margin="10,0"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                     <GridViewColumn Header="Food Names" Width="300">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
                                 <ItemsControl ItemsSource="{Binding Cart}">
                                     <ItemsControl.ItemsPanel>
                                         <ItemsPanelTemplate>
-                                            <StackPanel Orientation="Horizontal"/>
+                                            <StackPanel Orientation="Vertical"/>
                                         </ItemsPanelTemplate>
                                     </ItemsControl.ItemsPanel>
                                     <ItemsControl.ItemTemplate>

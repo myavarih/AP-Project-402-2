@@ -23,6 +23,17 @@ namespace AP_Project.Front.Restaurant_Window
         public OrderReserveHistory()
         {
             InitializeComponent();
+            DataContext = Data.CurrentRestaurant;
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GetReportButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

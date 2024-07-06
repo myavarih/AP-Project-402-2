@@ -17,7 +17,7 @@
                 <Button Content="Edit Food Categories" Width="150" Height="40" Margin="10" Click="EditCategories_Click"/>
             </StackPanel>
 
-            <ListView Name="FoodListView" Height="500" ItemsSource="{Binding Foods}">
+            <ListView Name="FoodListView" Height="500" ItemsSource="{Binding Foods , Mode=TwoWay}">
                 <ListView.View>
                     <GridView>
                         <!-- Image Column -->

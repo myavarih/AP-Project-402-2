@@ -24,11 +24,11 @@
             </StackPanel>
         </StackPanel>
 
-        <ListView Name="CategoriesListView" Width="350" Height="300" Grid.Row="1" HorizontalAlignment="Center" ItemsSource="{Binding Categories}">
+        <ListView Name="CategoriesListView" Width="350" Height="300" Grid.Row="1" HorizontalAlignment="Center" ItemsSource="{Binding Categories, Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal" Margin="10" VerticalAlignment="Center">
-                        <TextBlock Text="{Binding ., Mode =TwoWay}" FontSize="18" FontWeight="Bold" Width="150" Margin="0,0,10,0"/>
+                        <TextBlock Text="{Binding}" FontSize="18" FontWeight="Bold" Width="150" Margin="0,0,10,0"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
                             <Button Content="Remove" Width="75" Height="30" Margin="5" Click="RemoveCategoryButton_Click" Tag="{Binding}"/>
                         </StackPanel>

@@ -43,7 +43,7 @@ namespace AP_Project.Front.Restaurant_Window
 
         private void OrderReserveHIstory_Click(object sender, RoutedEventArgs e)
         {
-            // todo
+            NavigationService.Navigate(new OrderReserveHistory());
         }
 
         private void Logout_Click(object sender, RoutedEventArgs e)

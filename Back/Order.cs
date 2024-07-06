@@ -38,5 +38,9 @@ namespace AP_Project
             Comment = "";
         }
         public string Comment { get; set; }
+        public string UserPhoneNumber { get 
+            {
+                return Data.GetUserByUsername(UserUsername).PhoneNumber;
+            } }
     }
 }
