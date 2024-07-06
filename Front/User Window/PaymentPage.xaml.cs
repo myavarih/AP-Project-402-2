@@ -82,6 +82,9 @@ namespace AP_Project.Front.User_Window
             }
             user.Orders.Add(order);
             restaurant.Orders.Add(order);
+            user.Orders = user.Orders;
+            restaurant.Orders = restaurant.Orders;
+            Data.Database.SaveChanges();
             foreach (var food in order.Cart)
             {
                 Food restFood = restaurant.GetFoodByName(food.Name);
@@ -100,11 +103,13 @@ namespace AP_Project.Front.User_Window
             NavigationService.GoBack();
             NavigationService.GoBack();
             NavigationService.GoBack();
+            Data.Database.SaveChanges();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+            Data.Database.SaveChanges();
         }
     }
 }

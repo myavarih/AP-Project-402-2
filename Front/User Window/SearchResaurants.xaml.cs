@@ -63,16 +63,19 @@ namespace AP_Project
                     break;
             }
             RestaurantsListView.ItemsSource = filteredRestaurants;
+            Data.Database.SaveChanges();
 
         }
         private void InfoButton_Click(object sender, EventArgs e)
         {
             NavigationService.Navigate(new RestaurantViewPage((sender as Button).Tag.ToString()));
+            Data.Database.SaveChanges(); Data.Database.SaveChanges();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.GoBack(); 
+            NavigationService.GoBack();
+            Data.Database.SaveChanges();
         }
     }
 }

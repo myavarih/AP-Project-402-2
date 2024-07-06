@@ -42,6 +42,7 @@ namespace AP_Project
                 Data.CurrentUser.SpecialService = (SpecialService?)ServiceComboBox.SelectedIndex;
             }
             NavigationService.GoBack();
+            Data.Database.SaveChanges();
         }
     }
 }

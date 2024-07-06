@@ -52,6 +52,7 @@ namespace AP_Project.Front.Restaurant_Window
             var mw = new MainWindow();
             mw.Show();
             Application.Current.Windows[0].Close();
+            Data.Database.SaveChanges();
         }
     }
 }

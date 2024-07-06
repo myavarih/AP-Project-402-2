@@ -35,6 +35,7 @@ namespace AP_Project.Front.Restaurant_Window
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
+            Data.Database.SaveChanges();
             NavigationService.GoBack();
         }
 
@@ -88,7 +89,7 @@ namespace AP_Project.Front.Restaurant_Window
             if (MaxPriceFilterTextBox.Text == "") { maxPrice = double.MaxValue; }
             else if (!double.TryParse(MaxPriceFilterTextBox.Text, out maxPrice) || maxPrice < 0)
             {
-                MessageBox.Show("Max Prcie must be a non-negative number (double)!");
+                MessageBox.Show("Max Price must be a non-negative number (double)!");
                 return;
             }
             filteredOrders = Data.CurrentRestaurant.Orders.Where(x => usernameRegex.IsMatch(x.UserUsername) &&

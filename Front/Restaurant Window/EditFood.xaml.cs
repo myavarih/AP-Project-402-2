@@ -61,6 +61,8 @@ namespace AP_Project.Front.Restaurant_Window
             File.Copy(ImagePath, @"C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\Images\" + food.Name + food.RestaurantUsername, true);
             food.ImageName = (BitmapImage)ImageBox.Source;
             NavigationService.GoBack();
+            Data.CurrentRestaurant.Foods = Data.CurrentRestaurant.Foods;
+            Data.Database.SaveChanges();
         }
 
         private void BrowseButton_Click(object sender, RoutedEventArgs e)

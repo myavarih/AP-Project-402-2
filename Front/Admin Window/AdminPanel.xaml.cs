@@ -38,7 +38,7 @@ namespace AP_Project.Front.Admin_Window
 
         private void ComplaintsButton_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService.Navigate(new AdminComplaints());
         }
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)

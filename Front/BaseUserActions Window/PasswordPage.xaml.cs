@@ -38,7 +38,7 @@ namespace AP_Project
             }
             Data.CurrentUser.Password = PasswordTxtBx.Text;
             Data.AddCurrentUser();
-
+            Data.Database.SaveChanges();
             NavigationService.GoBack();
             NavigationService.GoBack();
         }
@@ -46,6 +46,7 @@ namespace AP_Project
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             NavigationService.GoBack();
+            Data.Database.SaveChanges();
         }
     }
 }

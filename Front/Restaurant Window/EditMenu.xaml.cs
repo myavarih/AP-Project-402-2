@@ -43,6 +43,8 @@ namespace AP_Project.Front.Restaurant_Window
                 return;
             }
             Data.CurrentRestaurant.Foods.Remove(food);
+            Data.CurrentRestaurant.Foods = Data.CurrentRestaurant.Foods;
+            Data.Database.SaveChanges();
             // MessageBox.Show($"{food.Name} removed.");
             DataContext = null;
             DataContext = Data.CurrentRestaurant;
@@ -69,6 +71,7 @@ namespace AP_Project.Front.Restaurant_Window
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
+            Data.Database.SaveChanges();
             NavigationService.GoBack();
         }
     }

@@ -37,6 +37,8 @@ namespace AP_Project.Front.Restaurant_Window
                     return;
                 }
             }
+            Data.CurrentRestaurant.Foods = Data.CurrentRestaurant.Foods;
+            Data.Database.SaveChanges();
             NavigationService.GoBack();
         }
     }

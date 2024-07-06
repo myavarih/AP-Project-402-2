@@ -38,11 +38,13 @@ namespace AP_Project
             }
             BaseUser buser = Data.GetBaseUserByUsername(UsernameTextBox.Text);
             buser.Password = NewPasswordBox.Password;
+            Data.Database.SaveChanges();
             NavigationService.GoBack();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
+            Data.Database.SaveChanges();
             NavigationService.GoBack();
         }
     }
