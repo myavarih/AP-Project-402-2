@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AP_Project.Back;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -11,18 +12,13 @@ namespace AP_Project
 {
     class Food
     {
-        public Food()
-        {
-        }
-
-        public Food(string name, string ingredients, BitmapImage imageName, double price, string category, double? rating, string restaurantUsername, int count)
+        public Food(string name, string ingredients, BitmapImage imageName, double price, string category, string restaurantUsername, int count)
         {
             Name = name;
             Ingredients = ingredients;
             ImageName = imageName;
             Price = price;
             Category = category;
-            Rating = rating;
             RestaurantUsername = restaurantUsername;
             Count = count;
         }
@@ -43,18 +39,25 @@ namespace AP_Project
         public BitmapImage ImageName { get; set; } // calculate after Database Load
         public double Price {  get; set; }
         public string Category { get; set; } = "";
-        public double? Rating { get; set; }
+        public double? Rating { get
+            {
+                if (Scores.Any()) return Scores.Average(x => x.Score);
+                return null;
+            }
+        }
+        public List<ScoreForFood> Scores { get; set; } = new List<ScoreForFood>();
         public string RestaurantUsername { get; set; } = "";
-        public int Count {  get; set; }
-        public List<CommentForFood> CommentsForFood { get; set; } = new List<CommentForFood>();
+        public int Count { get; set; }
+        public List<CommentForFood> Comments { get; set; } = new List<CommentForFood>();
 
         public static Food DeepCopy(Food food)
         {
+            // for adding to the cart of an Order
             if (food == null)
             {
                 return null;
             }
-            Food newFood = new Food(food.Name, food.Ingredients, food.ImageName, food.Price, food.Category, food.Rating, food.RestaurantUsername, food.Count);
+            Food newFood = new Food(food.Name, food.Ingredients, food.ImageName, food.Price, food.Category, food.RestaurantUsername, food.Count);
             return newFood;
         }
     }

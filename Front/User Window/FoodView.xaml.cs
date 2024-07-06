@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,22 @@ namespace AP_Project.Front.User_Window
     /// </summary>
     public partial class FoodView : Page
     {
-        public FoodView()
+        Food food;
+        public FoodView(string restaurantUsername, string foodName)
         {
             InitializeComponent();
+            Restaurant restaurant = Data.GetRestaurantByUsername(restaurantUsername);
+            if (restaurant == null)
+            {
+                MessageBox.Show("There is no such a Restaurant!");
+                return;
+            }
+            food = restaurant.GetFoodByName(foodName);
+            if (food == null)
+            {
+                MessageBox.Show("There is no such a Food!");
+                return;
+            }
         }
 
         private void CommentSubmit_Click(object sender, RoutedEventArgs e)
@@ -32,7 +46,7 @@ namespace AP_Project.Front.User_Window
 
         private void SubmitRatingBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            // todo
         }
     }
 }

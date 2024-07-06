@@ -31,6 +31,17 @@ namespace AP_Project
         public string RestaurantUsername { get; set; } = "";
         public string FoodName { get; set; } = "";
         public DateTime CreatedTime { get; set; }
-        
+        public int Code { get
+            {
+                DateTimeOffset dtos = new DateTimeOffset(CreatedTime);
+                return (int)dtos.ToUnixTimeSeconds();
+            } }
+        public double? Rate { get 
+            {
+                ScoreForFood score = Data.GetRestaurantByUsername(RestaurantUsername).GetFoodByName(FoodName)
+                    .Scores.FirstOrDefault(x => x.UserUsername == this.UserUsername);
+                if (score != null) return score.Score;
+                return null; // no rating yet
+            } }
     }
 }
