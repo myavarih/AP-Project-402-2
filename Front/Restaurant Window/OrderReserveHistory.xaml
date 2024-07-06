@@ -32,31 +32,36 @@
                 <!-- Filter by User Username -->
                 <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="10">
                     <TextBlock Text="Filter by User Username:" VerticalAlignment="Center"/>
-                    <TextBox Width="150" Text="{Binding UsernameFilter, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+                    <TextBox Name="UsernameFilterTextBox" Width="150" Margin="5"/>
                 </StackPanel>
 
                 <!-- Filter by User Phone Number -->
                 <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Margin="10">
                     <TextBlock Text="Filter by User Phone Number:" VerticalAlignment="Center"/>
-                    <TextBox Width="150" Text="{Binding PhoneNumberFilter, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+                    <TextBox Name="PhoneNumberFilterTextBox" Width="150" Margin="5"/>
                 </StackPanel>
 
                 <!-- Filter by Food -->
                 <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" Margin="10">
                     <TextBlock Text="Filter by Food:" VerticalAlignment="Center"/>
-                    <TextBox Width="150" Text="{Binding FoodFilter, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+                    <TextBox Name="FoodFilterTextBox" Width="150" Margin="5"/>
                 </StackPanel>
 
                 <!-- Filter by Min Price -->
                 <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Margin="10">
                     <TextBlock Text="Filter by Min Price:" VerticalAlignment="Center"/>
-                    <TextBox Width="80" Text="{Binding MinPriceFilter, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+                    <TextBox Name="MinPriceFilterTextBox" Width="80" Margin="5"/>
                 </StackPanel>
 
                 <!-- Filter by Max Price -->
                 <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" Margin="10">
                     <TextBlock Text="Filter by Max Price:" VerticalAlignment="Center"/>
-                    <TextBox Width="80" Text="{Binding MaxPriceFilter, UpdateSourceTrigger=PropertyChanged}" Margin="5"/>
+                    <TextBox Name="MaxPriceFilterTextBox" Width="80" Margin="5"/>
+                </StackPanel>
+                
+                <!--- Apply Filter -->
+                <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Margin="10">
+                    <Button Content="Apply Filters" Width="100" HorizontalAlignment="Right" Click="ApplyFilters_Click"/>
                 </StackPanel>
             </Grid>
         </Border>
