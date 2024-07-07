@@ -76,6 +76,10 @@ namespace AP_Project.Front.User_Window
                 DataContext = food;
             }
         }
+        private void AddReplyButton_Click(object sender, RoutedEventArgs e)
+        {
+            // 
+        }
 
         private void RemoveCommentButton_Click(object sender, RoutedEventArgs e)
         {

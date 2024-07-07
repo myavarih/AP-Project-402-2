@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:AP_Project.Front.User_Window"
       mc:Ignorable="d" 
-      d:DesignHeight="750" d:DesignWidth="1150"
+      d:DesignHeight="750" d:DesignWidth="1450"
       Title="FoodView">
 
     <Grid Margin="20">
@@ -62,6 +62,13 @@
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <Button Content="Edit" Click="EditCommentButton_Click" Tag="{Binding Code}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Add Reply" Width="100">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Add Reply" Click="AddReplyButton_Click" Tag="{Binding Code}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
