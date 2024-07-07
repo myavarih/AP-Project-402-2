@@ -22,7 +22,7 @@ namespace AP_Project
             Categories = categories;
         }
 
-        public Restaurant(string username, string password) : base(username, password) 
+        public Restaurant() : base()
         {
         }
 
@@ -31,7 +31,6 @@ namespace AP_Project
         public string Address { get; set; } = "";
         public bool DineIn { get; set; }
         public bool Delivery { get; set; }
-        [NotMapped]
         public string ServingMode
         {
             get
@@ -44,9 +43,6 @@ namespace AP_Project
                     return "Delivery";
             }
         }
-
-        public string foodJson { get; set; }
-        [NotMapped]
         public double? TotalRate
         { 
             get
@@ -54,44 +50,9 @@ namespace AP_Project
                 return Orders.Select(x => x.Rating).Concat(Foods.Select(x => x.Scores.Sum(x => x.Score))).Where(x => x != null).Average();
             }
         }
-        [NotMapped]
-        public List<Food> Foods
-        {
-            get
-            {
-                return JsonSerializer.Deserialize<List<Food>>(foodJson ?? "[]") ?? new List<Food>();
-            }
-            set
-            {
-                foodJson = JsonSerializer.Serialize(Foods);
-            }
-        }
-        public string ordersJson { get; set; }
-        [NotMapped]
-        public List<Order> Orders
-        {
-            get
-            {
-                return JsonSerializer.Deserialize<List<Order>>(ordersJson ?? "[]") ?? new List<Order>();
-            }
-            set
-            {
-                ordersJson = JsonSerializer.Serialize(Orders);
-            }
-        }
-        public string categoriesJson { get; set; }
-        [NotMapped]
-        public List<string> Categories
-        {
-            get
-            {
-                return JsonSerializer.Deserialize<List<string>>(categoriesJson ?? "[]") ?? new List<string>();
-            }
-            set
-            {
-                categoriesJson = JsonSerializer.Serialize(Categories);
-            }
-        }
+        public List<Food> Foods { get; set; } = new List<Food>();
+        public List<Order> Orders { get; set; } = new List<Order>();
+        public List<string> Categories { get; set; } = new List<string>();
 
         public Food GetFoodByName(string name)
         {

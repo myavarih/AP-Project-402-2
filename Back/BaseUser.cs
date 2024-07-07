@@ -11,7 +11,6 @@ namespace AP_Project
     {
 
         // public int Id { get; set; } = GenerateUniqueId(); // Auto Generated & unique
-        [Key]
         public string Username { get; set; } // unique!!!
         public string Password { get; set; }
 
@@ -19,6 +18,10 @@ namespace AP_Project
         {
             Username = username;
             Password = password;
+        }
+
+        protected BaseUser()
+        {
         }
 
         //private static int GenerateUniqueId()

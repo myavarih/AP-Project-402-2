@@ -14,6 +14,10 @@ namespace AP_Project
     
     class User : BaseUser
     {
+        public User() : base()
+        {
+        }
+
         public User(string username, string password, string email, string firstName, string lastName, string phoneNumber) : base(username, password)
         {
             Email = email;
@@ -40,13 +44,6 @@ namespace AP_Project
         public string Address { get; set; } = null; // not essential
         public Gender? Gender { get; set; } = null; // not essential
         public SpecialService? SpecialService { get; set; } = null; // upgrade later (in profile)
-        public string ordersJson;
-        [NotMapped]
-        public List<Order> Orders { get {
-                return JsonSerializer.Deserialize<List<Order>>(ordersJson ?? "[]") ?? new List<Order>();
-            } set 
-            {
-                ordersJson =  JsonSerializer.Serialize(Orders);
-            } }
+        public List<Order> Orders { get; set; } = new List<Order>();
     }
 }

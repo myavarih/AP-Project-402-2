@@ -23,6 +23,9 @@ namespace AP_Project
         public MainWindow()
         {
             InitializeComponent();
+            // Database database = new Database();
+            // database.SaveChanges();
+            Database.Load();
         }
     }
 }

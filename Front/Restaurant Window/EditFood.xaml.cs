@@ -23,7 +23,7 @@ namespace AP_Project.Front.Restaurant_Window
     public partial class EditFood : Page // give me a Food Object for DataContext // todo : Ali (done)
     {
         Food food;
-        string ImagePath;
+        string ImagePath = "";
         public EditFood(string foodName)
         {
             InitializeComponent();
@@ -58,8 +58,12 @@ namespace AP_Project.Front.Restaurant_Window
                 MessageBox.Show($"There is no category in this restaurant named \"{food.Category}\"!");
                 return;
             }
-            File.Copy(ImagePath, @"C:\Users\myava\OneDrive\Documents\GitHub\AP-Project-402-2\Images\" + food.Name + food.RestaurantUsername, true);
-            food.ImageName = (BitmapImage)ImageBox.Source;
+            if (ImagePath != "")
+            {
+                string currentPath = AppDomain.CurrentDomain.BaseDirectory;
+                File.Copy(ImagePath, currentPath + food.Name + food.RestaurantUsername, true);
+                food.ImageName = (BitmapImage)ImageBox.Source;
+            }
             NavigationService.GoBack();
             Data.CurrentRestaurant.Foods = Data.CurrentRestaurant.Foods;
             Data.Database.SaveChanges();
