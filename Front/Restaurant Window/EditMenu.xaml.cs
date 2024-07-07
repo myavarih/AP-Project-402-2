@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AP_Project.Front.User_Window;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -77,6 +78,15 @@ namespace AP_Project.Front.Restaurant_Window
         private void ViewFood_Click(object sender, RoutedEventArgs e)
         {
             // link it to user viewfood
+            Button button = sender as Button;
+            string foodName = button.Tag.ToString();
+            Food food = Data.CurrentRestaurant.GetFoodByName(foodName);
+            if (food == null)
+            {
+                MessageBox.Show("There is no such a food! Weird!");
+                return;
+            }
+            NavigationService.Navigate(new FoodView(Data.CurrentRestaurant.Username, foodName));
         }
     }
 }
