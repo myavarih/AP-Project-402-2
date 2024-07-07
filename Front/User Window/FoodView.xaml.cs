@@ -44,80 +44,118 @@ namespace AP_Project.Front.User_Window
 
         private void CommentSubmit_Click(object sender, RoutedEventArgs e)
         {
-            string commentText = NewCommentTextBox.Text;
-            if (commentText != "")
+            if (Data.CurrentRestaurant == null)
             {
-                MessageBox.Show("Empty Comment!!! For real dude?!!");
-                return;
-            }
-            CommentForFood newComment = new CommentForFood(commentText, Data.CurrentUser.Username, restaurant.Username, food.Name);
-            food.Comments.Add(newComment);
-            DataContext = null;
-            DataContext = food;
-        }
-        private void EditCommentButton_Click(object sender, RoutedEventArgs e)
-        {
-            Button button = sender as Button;
-            int code = (int) button.Tag;
-            CommentForFood comment = food.GetCommentByCode(code);
-            if (comment != null)
-            {
-                MessageBox.Show("There is no such a comment!");
-                return;
-            }
-            // Open the InputDialog to edit the comment text
-            InputDialoge inputDialog = new InputDialoge(comment.Text);
-            if (inputDialog.ShowDialog() == true)
-            {
-                comment.Text = inputDialog.InputText;
-                comment.IsEdited = true;
-                ComplaintsListView.Items.Refresh();
+                string commentText = NewCommentTextBox.Text;
+                if (commentText == "")
+                {
+                    MessageBox.Show("Empty Comment!!! For real dude?!!");
+                    return;
+                }
+                CommentForFood newComment = new CommentForFood(commentText, Data.CurrentUser.Username, restaurant.Username, food.Name);
+                food.Comments.Add(newComment);
                 DataContext = null;
                 DataContext = food;
             }
         }
+        private void EditCommentButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (Data.CurrentRestaurant == null)
+            {
+                Button button = sender as Button;
+                int code = (int)button.Tag;
+                CommentForFood comment = food.GetCommentByCode(code);
+                if (comment == null)
+                {
+                    MessageBox.Show("There is no such a comment!");
+                    return;
+                }
+                // Open the InputDialog to edit the comment text
+                InputDialoge inputDialog = new InputDialoge(comment.Text);
+                if (inputDialog.ShowDialog() == true)
+                {
+                    comment.Text = inputDialog.InputText;
+                    comment.IsEdited = true;
+                    ComplaintsListView.Items.Refresh();
+                    DataContext = null;
+                    DataContext = food;
+                }
+            }
+        }
         private void AddReplyButton_Click(object sender, RoutedEventArgs e)
         {
-            // 
+            if ( Data.CurrentRestaurant != null)
+            {
+                Button button = sender as Button;
+                int code = (int)button.Tag;
+                CommentForFood comment = food.GetCommentByCode(code);
+                if (comment == null)
+                {
+                    MessageBox.Show("There is no such a comment!");
+                    return;
+                }
+                // Open the InputDialog to edit the comment text
+                InputDialoge inputDialog = new InputDialoge(comment.Reply);
+                if (inputDialog.ShowDialog() == true)
+                {
+                    comment.Reply = inputDialog.InputText;
+                    ComplaintsListView.Items.Refresh();
+                    DataContext = null;
+                    DataContext = food;
+                }
+            }
         }
 
         private void RemoveCommentButton_Click(object sender, RoutedEventArgs e)
         {
-            // todo
-            Button button = sender as Button;
-            int code = (int)button.Tag;
-            CommentForFood comment = food.GetCommentByCode(code);
-            if (comment == null)
+            if (Data.CurrentRestaurant == null)
             {
-                MessageBox.Show("There is no such a comment!");
-                return;
+                Button button = sender as Button;
+                int code = (int)button.Tag;
+                CommentForFood comment = food.GetCommentByCode(code);
+                if (comment == null)
+                {
+                    MessageBox.Show("There is no such a comment!");
+                    return;
+                }
+                food.Comments.Remove(comment);
+                DataContext = null;
+                DataContext = food;
             }
-            food.Comments.Remove(comment);
-            DataContext = null;
-            DataContext = food;
         }
 
         private void SubmitRatingBtn_Click(object sender, RoutedEventArgs e)
         {
-            double rating;
-            if (!double.TryParse(RatingTextBox.Text, out rating) || rating < 0 || rating > 5)
+            if (Data.CurrentRestaurant == null)
             {
-                MessageBox.Show("Rating must be a number (double) between 0 and 5!");
-                return;
+                double rating;
+                if (!double.TryParse(RatingTextBox.Text, out rating) || rating < 0 || rating > 5)
+                {
+                    MessageBox.Show("Rating must be a number (double) between 0 and 5!");
+                    return;
+                }
+                ScoreForFood sff = food.Scores.FirstOrDefault(x => x.UserUsername == Data.CurrentUser.Username);
+                if (sff == null)
+                {
+                    // fist time rating this food:
+                    food.Scores.Add(new ScoreForFood(Data.CurrentUser.Username, restaurant.Username, food.Name, rating));
+                    MessageBox.Show("Your rating to this food added.");
+                }
+                else
+                {
+                    // updating the rating
+                    sff.Score = rating;
+                    MessageBox.Show("Your rating to this food updated.");
+                }
+                DataContext = null;
+                DataContext = food;
             }
-            ScoreForFood sff = food.Scores.FirstOrDefault(x => x.UserUsername == Data.CurrentUser.Username);
-            if (sff == null)
-            {
-                // fist time rating this food:
-                food.Scores.Add(new ScoreForFood(Data.CurrentUser.Username, restaurant.Username, food.Name, rating));
-                MessageBox.Show("Your rating to this food added.");
-            }
-            else
-            {
-                // updating the rating
-                sff.Score = rating;
-                MessageBox.Show("Your rating to this food updated.");
-            }
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.GoBack();
+            Data.Database.SaveChanges();
         }
     }
 }

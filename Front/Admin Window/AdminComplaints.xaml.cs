@@ -23,11 +23,12 @@ namespace AP_Project.Front.Admin_Window
         public AdminComplaints()
         {
             InitializeComponent();
-            ComplaintsListView.ItemsSource = Data.Database.Complaints.ToList();
+            ComplaintsListView.ItemsSource = Data.Database.Complaints;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
+            Data.Database.SaveChanges();
             NavigationService.GoBack();
         }
     }

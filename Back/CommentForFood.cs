@@ -29,7 +29,7 @@ namespace AP_Project
             }
         }
         public string Text { get; set; } = "";
-        public RestaurantComment? Reply { get; set; } = null;
+        public string? Reply { get; set; } = null;
         public bool IsEdited { get; set; } = false;
         public string UserUsername { get; set; } = "";
         public string RestaurantUsername { get; set; } = "";
