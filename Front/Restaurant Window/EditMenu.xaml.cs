@@ -74,5 +74,9 @@ namespace AP_Project.Front.Restaurant_Window
             Data.Database.SaveChanges();
             NavigationService.GoBack();
         }
+        private void ViewFood_Click(object sender, RoutedEventArgs e)
+        {
+            // link it to user viewfood
+        }
     }
 }

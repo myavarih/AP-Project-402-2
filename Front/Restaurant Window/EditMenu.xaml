@@ -51,6 +51,7 @@
                                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
                                         <Button Content="Edit" Width="75" Height="30" Margin="5" Click="EditFood_Click" Tag="{Binding Name}"/>
                                         <Button Content="Remove" Width="75" Height="30" Margin="5" Click="RemoveFood_Click" Tag="{Binding Name}"/>
+                                        <Button Content="View" Width="75" Height="30" Margin="5" Click="ViewFood_Click" Tag="{Binding Name}"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
