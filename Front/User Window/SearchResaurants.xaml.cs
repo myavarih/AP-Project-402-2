@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,7 @@ namespace AP_Project
         public SearchResaurants()
         {
             InitializeComponent();
-            RestaurantsListView.ItemsSource = Data.Database.Restaurants;
+            RestaurantsListView.ItemsSource = Data.Database.Restaurants.ToList();
         }
 
         private void ApplyFiltersButton_Click(object sender, RoutedEventArgs e)

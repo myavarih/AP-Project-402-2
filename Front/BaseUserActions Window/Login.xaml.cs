@@ -25,6 +25,14 @@ namespace AP_Project
         public Login()
         {
             InitializeComponent();
+            Data.BaseUsers = Data.Database.Users.ToList().Select(x => (BaseUser)x).Concat(Data.Database.Restaurants.ToList().Select(x => (BaseUser)x)).Concat(Data.Database.Admins.ToList().Select(x => (BaseUser)x)).ToList();
+            if (!Data.BaseUsers.Any(x => x.Username == "Admin"))
+            {
+                // first time adding admin
+                Data.AddAdmin(new Admin("Admin", "Aa123456"));
+                Data.Database.Admins = Data.Database.Admins;
+                Data.Database.SaveChanges();
+            } 
         }
 
         private void UserSignUpBtnClick(object sender, RoutedEventArgs e)
