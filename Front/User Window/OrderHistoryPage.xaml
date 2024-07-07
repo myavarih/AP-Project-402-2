@@ -41,7 +41,13 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="Time" DisplayMemberBinding="{Binding TimeCreated}" Width="150"/>
+                    <GridViewColumn Header="Time Created" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding TimeCreated, StringFormat='{}{0:MM/dd/yyyy HH:mm}'}" Margin="10,0"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                     <GridViewColumn Header="Restaurant Name" DisplayMemberBinding="{Binding RestaurantName}" Width="150"/>
                     <GridViewColumn Header="Rating" Width="100">
                         <GridViewColumn.CellTemplate>
