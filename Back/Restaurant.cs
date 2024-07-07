@@ -44,7 +44,7 @@ namespace AP_Project
                     return "Delivery";
             }
         }
-        
+
         public string foodJson { get; set; }
         [NotMapped]
         public double? TotalRate
@@ -59,7 +59,7 @@ namespace AP_Project
         {
             get
             {
-                return JsonSerializer.Deserialize<List<Food>>(foodJson) ?? new List<Food>();
+                return JsonSerializer.Deserialize<List<Food>>(foodJson ?? "[]") ?? new List<Food>();
             }
             set
             {
@@ -72,7 +72,7 @@ namespace AP_Project
         {
             get
             {
-                return JsonSerializer.Deserialize<List<Order>>(ordersJson) ?? new List<Order>();
+                return JsonSerializer.Deserialize<List<Order>>(ordersJson ?? "[]") ?? new List<Order>();
             }
             set
             {
@@ -85,7 +85,7 @@ namespace AP_Project
         {
             get
             {
-                return JsonSerializer.Deserialize<List<string>>(categoriesJson) ?? new List<string>();
+                return JsonSerializer.Deserialize<List<string>>(categoriesJson ?? "[]") ?? new List<string>();
             }
             set
             {

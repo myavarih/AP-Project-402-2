@@ -24,7 +24,7 @@ namespace AP_Project
             InitializeComponent();
             if (Data.CurrentUser.SpecialService != null)
                 ServiceComboBox.SelectedIndex = (int)Data.CurrentUser.SpecialService;
-            this.DataContext = Data.CurrentUser;
+            DataContext = Data.CurrentUser;
         }
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {

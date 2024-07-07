@@ -15,7 +15,8 @@ namespace AP_Project
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlite(@"Data Source=.\DB.db");
+            string currentPath = AppDomain.CurrentDomain.BaseDirectory;
+            optionsBuilder.UseSqlite(@"Data Source=" + currentPath + @"\DB.db");
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Restaurant> Restaurants { get; set; }

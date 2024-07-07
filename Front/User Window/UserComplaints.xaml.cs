@@ -24,7 +24,7 @@ namespace AP_Project.Front.User_Window
         public UserComplaints()
         {
             InitializeComponent();
-            ComplaintsListView.ItemsSource = Data.Database.Complaints;
+            ComplaintsListView.ItemsSource = Data.Database.Complaints.ToList();
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

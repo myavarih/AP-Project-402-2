@@ -9,7 +9,7 @@ namespace AP_Project
     {
         public static Database Database { get; set; } = new Database();
 
-        public static List<BaseUser> BaseUsers { get; set; } = Database.Users.Select(x => (BaseUser)x).Concat(Database.Restaurants.Select(x => (BaseUser)x)).Concat(Database.Admins.Select(x => (BaseUser)x)).ToList();
+        public static List<BaseUser> BaseUsers { get; set; } = new List<BaseUser>();
         //public static List<User> Users { get; set; } = new List<User>();
         //public static List<Restaurant> Restaurants { get; set; } = new List<Restaurant>();
         //public static List<Admin> Admins { get; set; } = new List<Admin>();

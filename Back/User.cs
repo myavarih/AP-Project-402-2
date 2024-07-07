@@ -43,7 +43,7 @@ namespace AP_Project
         public string ordersJson;
         [NotMapped]
         public List<Order> Orders { get {
-                return JsonSerializer.Deserialize<List<Order>>(ordersJson) ?? new List<Order>();
+                return JsonSerializer.Deserialize<List<Order>>(ordersJson ?? "[]") ?? new List<Order>();
             } set 
             {
                 ordersJson =  JsonSerializer.Serialize(Orders);

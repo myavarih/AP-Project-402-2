@@ -24,7 +24,7 @@ namespace AP_Project.Front.Admin_Window
         public RestaurantsView()
         {
             InitializeComponent();
-            RestaurantsListView.ItemsSource = Data.Database.Restaurants;
+            RestaurantsListView.ItemsSource = Data.Database.Restaurants.ToList();
         }
 
         private void ApplyFiltersButton_Click(object sender, RoutedEventArgs e)
