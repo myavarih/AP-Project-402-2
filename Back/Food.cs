@@ -48,6 +48,11 @@ namespace AP_Project
         public int Count { get; set; }
         public List<CommentForFood> Comments { get; set; } = new List<CommentForFood>();
 
+        public CommentForFood GetCommentByCode(int code)
+        {
+            return Comments.FirstOrDefault(x => x.Code == code);
+        }
+
         public static Food DeepCopy(Food food)
         {
             // for adding to the cart of an Order
