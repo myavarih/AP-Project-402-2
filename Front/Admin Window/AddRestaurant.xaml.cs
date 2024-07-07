@@ -41,7 +41,7 @@ namespace AP_Project.Front.Admin_Window
             Data.AddRestaurant(newRestaurant);
             Data.Database.Restaurants = Data.Database.Restaurants;
             Data.Database.SaveChanges();
-            MessageBox.Show("The restaurant successfully created.");
+            MessageBox.Show("The restaurant successfully created.\nYour Password Is: " + newRestaurant.Password);
             NavigationService.GoBack();
         }
 

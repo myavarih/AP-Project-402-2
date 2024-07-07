@@ -28,7 +28,7 @@ namespace AP_Project
             RestaurantsListView.ItemsSource = Data.Database.Restaurants.ToList();
         }
 
-        private void ApplyFiltersButton_Click(object sender, RoutedEventArgs e)
+        private void ApplyFiltersButton_Click(object sender, RoutedEventArgs e) // Bug : When we click on Apply Filter All Restaurants are gone!
         {
             string name = NameFilterTextBox.Text;
             if (name == null || name == "") { name = ".*"; }
@@ -47,7 +47,7 @@ namespace AP_Project
                 return;
             }
             string servingMode = ServingModeFilterComboBox.Text;
-            var filteredRestaurants = Data.Database.Restaurants.Where(x => nameRegex.IsMatch(x.Name) && cityRegex.IsMatch(x.City) && x.TotalRate >= minRate);
+            var filteredRestaurants = Data.Database.Restaurants.ToList().Where(x => nameRegex.IsMatch(x.Name) && cityRegex.IsMatch(x.City) && x.TotalRate >= minRate);
             switch (servingMode)
             {
                 case "Delivery":
@@ -63,9 +63,8 @@ namespace AP_Project
                     // no filter
                     break;
             }
-            RestaurantsListView.ItemsSource = filteredRestaurants;
+            RestaurantsListView.ItemsSource = filteredRestaurants.ToList();
             Data.Database.SaveChanges();
-
         }
         private void InfoButton_Click(object sender, EventArgs e)
         {

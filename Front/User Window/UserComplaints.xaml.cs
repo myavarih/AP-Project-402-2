@@ -41,8 +41,10 @@ namespace AP_Project.Front.User_Window
             }
             Complaint newComplaint = new Complaint(TitleTextBox.Text, BodyTextBox.Text, Data.CurrentUser.Username, Data.Database.Restaurants.First(r => RestaurantNameTextBox.Text == r.Name).Username, DateTime.Now, "");
             Data.Database.Complaints.Add(newComplaint);
+            Data.Database.Complaints = Data.Database.Complaints;
+            Data.Database.SaveChanges();
             ComplaintsListView.ItemsSource = null;
-            ComplaintsListView.ItemsSource = Data.Database.Complaints;
+            ComplaintsListView.ItemsSource = Data.Database.Complaints.ToList();
         }
     }
 }

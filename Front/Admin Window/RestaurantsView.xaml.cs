@@ -27,7 +27,7 @@ namespace AP_Project.Front.Admin_Window
             RestaurantsListView.ItemsSource = Data.Database.Restaurants.ToList();
         }
 
-        private void ApplyFiltersButton_Click(object sender, RoutedEventArgs e)
+        private void ApplyFiltersButton_Click(object sender, RoutedEventArgs e) // Bug : When we click on Apply Filter All Restaurants are gone!
         {
             string name = NameFilterTextBox.Text;
             if (name == null || name == "") { name = ".*"; }
@@ -45,7 +45,7 @@ namespace AP_Project.Front.Admin_Window
                 MessageBox.Show("The Min Rate Should Be A Non-negative Number (double)!");
                 return;
             }
-            var filteredRestaurants = Data.Database.Restaurants.Where(x => nameRegex.IsMatch(x.Name) && cityRegex.IsMatch(x.City) && x.TotalRate >= minRate);
+            var filteredRestaurants = Data.Database.Restaurants.ToList().Where(x => nameRegex.IsMatch(x.Name) && cityRegex.IsMatch(x.City) && x.TotalRate >= minRate);
             int indexComplaints = HasComplaintFilterComboBox.SelectedIndex;
             switch (indexComplaints)
             {
@@ -68,7 +68,7 @@ namespace AP_Project.Front.Admin_Window
                 default:
                     break;
             }
-            RestaurantsListView.ItemsSource = filteredRestaurants;
+            RestaurantsListView.ItemsSource = filteredRestaurants.ToList();
             Data.Database.SaveChanges();
         }
 

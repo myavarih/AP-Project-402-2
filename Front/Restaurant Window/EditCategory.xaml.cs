@@ -24,7 +24,8 @@ namespace AP_Project.Front.Restaurant_Window
         {
             InitializeComponent();
             DataContext = Data.CurrentRestaurant;
-            Data.CurrentRestaurant.Categories.RemoveAt(0); // remove "All" Category
+            if (Data.CurrentRestaurant.Categories.Count > 0 ) 
+                Data.CurrentRestaurant.Categories.RemoveAt(0); // remove "All" Category
             Data.CurrentRestaurant.Categories = Data.CurrentRestaurant.Categories;
         }
 
@@ -75,6 +76,9 @@ namespace AP_Project.Front.Restaurant_Window
                 return;
             }
             Data.CurrentRestaurant.Categories.Add(newCat);
+            //Data.CurrentRestaurant.Categories = Data.CurrentRestaurant.Categories.Concat([newCat]).ToList();
+            //var x = Data.CurrentRestaurant.Categories;
+            //Data.CurrentRestaurant.Categories = x;
             Data.CurrentRestaurant.Categories = Data.CurrentRestaurant.Categories;
             Data.Database.SaveChanges();
             // MessageBox.Show("Category Added.");

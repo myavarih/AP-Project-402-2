@@ -44,9 +44,9 @@ namespace AP_Project.Front.Admin_Window
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
             Data.CurrentAdmin = null;
-            Application.Current.Windows[0].Close();
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
+            Application.Current.Windows[0].Close();
         }
     }
 }
