@@ -44,29 +44,54 @@ namespace AP_Project.Front.User_Window
 
         private void CommentSubmit_Click(object sender, RoutedEventArgs e)
         {
-            // todo
+            string commentText = NewCommentTextBox.Text;
+            if (commentText != "")
+            {
+                MessageBox.Show("Empty Comment!!! For real dude?!!");
+                return;
+            }
+            CommentForFood newComment = new CommentForFood(commentText, Data.CurrentUser.Username, restaurant.Username, food.Name);
+            food.Comments.Add(newComment);
+            DataContext = null;
+            DataContext = food;
         }
         private void EditCommentButton_Click(object sender, RoutedEventArgs e)
         {
-            // open a new Window
-
-            //Sample usage of InputDialoge : 
-            //private void EditCommentButton_Click(object sender, RoutedEventArgs e)
-            //{
-            //    Button button = sender as Button;
-            //    CommentForFood comment = button.Tag as CommentForFood;
-
-            //    // Open the InputDialog to edit the comment text
-            //    InputDialog inputDialog = new InputDialog(comment.Text);
-            //    if (inputDialog.ShowDialog() == true)
-            //    {
-            //        comment.Text = inputDialog.InputText;
-            //        comment.IsEdited = true;
-            //        ComplaintsListView.Items.Refresh();
-            //    }
-            //}
+            Button button = sender as Button;
+            int code = (int) button.Tag;
+            CommentForFood comment = food.GetCommentByCode(code);
+            if (comment != null)
+            {
+                MessageBox.Show("There is no such a comment!");
+                return;
+            }
+            // Open the InputDialog to edit the comment text
+            InputDialoge inputDialog = new InputDialoge(comment.Text);
+            if (inputDialog.ShowDialog() == true)
+            {
+                comment.Text = inputDialog.InputText;
+                comment.IsEdited = true;
+                ComplaintsListView.Items.Refresh();
+                DataContext = null;
+                DataContext = food;
+            }
         }
 
+        private void RemoveCommentButton_Click(object sender, RoutedEventArgs e)
+        {
+            // todo
+            Button button = sender as Button;
+            int code = (int)button.Tag;
+            CommentForFood comment = food.GetCommentByCode(code);
+            if (comment == null)
+            {
+                MessageBox.Show("There is no such a comment!");
+                return;
+            }
+            food.Comments.Remove(comment);
+            DataContext = null;
+            DataContext = food;
+        }
 
         private void SubmitRatingBtn_Click(object sender, RoutedEventArgs e)
         {

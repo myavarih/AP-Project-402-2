@@ -52,16 +52,23 @@
             <ListView ItemsSource="{Binding Comments}" Height="150" Margin="0,10,0,0" x:Name="ComplaintsListView">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Text" DisplayMemberBinding="{Binding Text}" Width="250"/>
                         <GridViewColumn Header="User" DisplayMemberBinding="{Binding UserUsername}" Width="150"/>
                         <GridViewColumn Header="Rate" DisplayMemberBinding="{Binding Rate}" Width="100"/>
+                        <GridViewColumn Header="Text" DisplayMemberBinding="{Binding Text}" Width="250"/>
                         <GridViewColumn Header="Created Time" DisplayMemberBinding="{Binding CreatedTime}" Width="150"/>
                         <GridViewColumn Header="Is Edited" DisplayMemberBinding="{Binding IsEdited}" Width="100"/>
                         <GridViewColumn Header="Reply" DisplayMemberBinding="{Binding Reply}" Width="250"/>
                         <GridViewColumn Header="Edit" Width="100">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button Content="Edit" Click="EditCommentButton_Click" Tag="{Binding}"/>
+                                    <Button Content="Edit" Click="EditCommentButton_Click" Tag="{Binding Code}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Remove" Width="100">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Remove" Click="RemoveCommentButton_Click" Tag="{Binding Code}"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>

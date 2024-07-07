@@ -11,7 +11,15 @@ namespace AP_Project
 {
     internal class CommentForFood
     {
-        [Key]
+        public CommentForFood(string text, string userUsername, string restaurantUsername, string foodName)
+        {
+            Text = text;
+            UserUsername = userUsername;
+            RestaurantUsername = restaurantUsername;
+            FoodName = foodName;
+            CreatedTime = DateTime.Now;
+            IsEdited = false;
+        }
         public int Code
         {
             get
