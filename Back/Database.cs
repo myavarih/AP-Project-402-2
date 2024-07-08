@@ -32,7 +32,14 @@ namespace AP_Project
         }
         public static void Load()
         {
-            Data.Database = JsonSerializer.Deserialize<Database>(File.ReadAllText("database.json")) ?? new Database();
+            try
+            {
+                Data.Database = JsonSerializer.Deserialize<Database>(File.ReadAllText("database.json")) ?? new Database();
+            }
+            catch
+            {
+                Data.Database = new Database();
+            }
         }
     }
 }
