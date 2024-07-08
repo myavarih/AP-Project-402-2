@@ -66,14 +66,21 @@ namespace AP_Project
         private string ConvertBitmapImageToBase64(BitmapImage bitmapImage)
         {
             if (bitmapImage == null) return null;
-
-            using (MemoryStream memoryStream = new MemoryStream())
+            try
             {
-                BitmapEncoder encoder = new PngBitmapEncoder();
-                encoder.Frames.Add(BitmapFrame.Create(bitmapImage));
-                encoder.Save(memoryStream);
-                byte[] imageBytes = memoryStream.ToArray();
-                return Convert.ToBase64String(imageBytes);
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    BitmapEncoder encoder = new PngBitmapEncoder();
+                    encoder.Frames.Add(BitmapFrame.Create(bitmapImage));
+                    encoder.Save(memoryStream);
+                    byte[] imageBytes = memoryStream.ToArray();
+                    return Convert.ToBase64String(imageBytes);
+                }
+
+            }
+            catch
+            {
+                return "";
             }
         }
 

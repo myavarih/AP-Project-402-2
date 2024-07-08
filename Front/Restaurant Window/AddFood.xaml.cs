@@ -56,12 +56,21 @@ namespace AP_Project.Front.Restaurant_Window
             }
             Data.CurrentRestaurant.Foods.Add(newFood);
             //MessageBox.Show("The food has been added.");
-            string currentPath = AppDomain.CurrentDomain.BaseDirectory;
-            File.Copy(ImagePath, currentPath + newFood.Name + newFood.RestaurantUsername, true);
-            newFood.ImageName = (BitmapImage)ImageName.Source;
+            try
+            {
+                string currentPath = AppDomain.CurrentDomain.BaseDirectory;
+                File.Copy(ImagePath, currentPath + newFood.Name + newFood.RestaurantUsername, true);
+                newFood.ImageName = (BitmapImage)ImageName.Source;
+            }
+            catch
+            {
+                MessageBox.Show("No Image? ok :)");
+            }
             NavigationService.GoBack();
             Data.CurrentRestaurant.Foods = Data.CurrentRestaurant.Foods;
             Data.Database.SaveChanges();
+            DataContext = null;
+            DataContext = Data.CurrentRestaurant;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

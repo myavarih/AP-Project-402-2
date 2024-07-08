@@ -57,6 +57,10 @@ namespace AP_Project.Front.User_Window
                 DataContext = null;
                 DataContext = food;
             }
+            else
+            {
+                MessageBox.Show("Restaurants cannot submit comments!");
+            }
         }
         private void EditCommentButton_Click(object sender, RoutedEventArgs e)
         {
@@ -81,6 +85,10 @@ namespace AP_Project.Front.User_Window
                     DataContext = food;
                 }
             }
+            else
+            {
+                MessageBox.Show("Restaurants cannot edit comments!");
+            }
         }
         private void AddReplyButton_Click(object sender, RoutedEventArgs e)
         {
@@ -104,6 +112,11 @@ namespace AP_Project.Front.User_Window
                     DataContext = food;
                 }
             }
+            else
+            {
+                MessageBox.Show("Users cannot reply to a comment!");
+            }
+
         }
 
         private void RemoveCommentButton_Click(object sender, RoutedEventArgs e)
@@ -121,6 +134,10 @@ namespace AP_Project.Front.User_Window
                 food.Comments.Remove(comment);
                 DataContext = null;
                 DataContext = food;
+            }
+            else
+            {
+                MessageBox.Show("Restaurants cannot remove comments!");
             }
         }
 
@@ -149,6 +166,10 @@ namespace AP_Project.Front.User_Window
                 }
                 DataContext = null;
                 DataContext = food;
+            }
+            else
+            {
+                MessageBox.Show("Restaurants cannot sumbit rating!");
             }
         }
 

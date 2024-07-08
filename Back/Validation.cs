@@ -69,7 +69,7 @@ namespace AP_Project
             if (restaurant.Address == "")
                 throw new Exception("Address field cannot be empty!");
             if (!restaurant.DineIn && !restaurant.Delivery)
-                throw new Exception("At leas one of the two types of service should be available (Delivery or DineIn)");
+                throw new Exception("At least one of the two types of service should be available (Delivery or DineIn)");
 
         }
         public static string RestaurantPasswordGenerator()
@@ -106,7 +106,7 @@ namespace AP_Project
             {
                 throw new Exception("Wrong Password!");
             }
-            if (!PasswordRegex.IsMatch(password))
+            if (!PasswordRegex.IsMatch(newPassword))
             {
                 throw new Exception("Password Format Error!");
             }
